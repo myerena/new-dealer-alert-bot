@@ -239,10 +239,7 @@ def _step_crawl(
     logger.info(f"Crawl complete: {stats.sources_crawled} sources, {stats.leads_found} leads")
 
     # Retry failed sources (403s) with browser fetcher
-    failed_sources = [
-        s for s in sources
-        if s.fetch_error_count > 0 and s.fetch_error_count < 10
-    ]
+    failed_sources = [s for s in sources if s.fetch_error_count > 0 and s.fetch_error_count < 10]
     if failed_sources and not dry_run:
         _step_browser_retry(config, db, stats, failed_sources)
 
@@ -260,16 +257,12 @@ def _step_browser_retry(
         logger.info("Playwright not available — skipping browser retry")
         return
 
-    logger.info(
-        f"Retrying {len(failed_sources)} failed sources with browser fetcher"
-    )
+    logger.info(f"Retrying {len(failed_sources)} failed sources with browser fetcher")
 
     extractor = LeadExtractor(hot_min_mentions=config.hot_lead_min_mentions)
     manager = BrowserFetchManager(headless=True, max_concurrent=2)
 
-    urls_with_ids = [
-        (s.id or 0, s.url) for s in failed_sources
-    ]
+    urls_with_ids = [(s.id or 0, s.url) for s in failed_sources]
 
     try:
         results = asyncio.run(manager.fetch_urls(urls_with_ids))
@@ -290,9 +283,7 @@ def _step_browser_retry(
             db.add_lead(lead)
             stats.leads_found += 1
 
-    browser_leads = sum(
-        len(extractor.extract(r)) for r in results if not r.error
-    )
+    browser_leads = sum(len(extractor.extract(r)) for r in results if not r.error)
     logger.info(f"Browser retry: {len(results)} sources, {browser_leads} additional leads")
 
 
@@ -311,6 +302,27 @@ def _step_email(
         return
 
     from .collectors import EmailCollector
+    from .models import SourceCategory, SourceType
+
+    # Ensure an "Email Inbox" source exists so email leads
+    # have a valid source_id (avoids FOREIGN KEY errors)
+    email_source_url = f"email://{config.email_address}"
+    if not db.source_exists(email_source_url):
+        db.add_source(
+            Source(
+                url=email_source_url,
+                source_type=SourceType.HTML,
+                category=SourceCategory.OTHER,
+                name="Email Inbox",
+                geography="national",
+                priority=1,
+                notes="Virtual source for email newsletter leads",
+            )
+        )
+
+    # Look up the email source ID
+    email_sources = [s for s in db.get_all_sources() if s.url == email_source_url]
+    email_source_id = email_sources[0].id if email_sources else 0
 
     collector = EmailCollector(
         credentials_file=config.gmail_credentials_file,
@@ -330,8 +342,11 @@ def _step_email(
     extractor = LeadExtractor(hot_min_mentions=config.hot_lead_min_mentions)
 
     for result in results:
+        # Assign the email source ID to each result
+        result.source_id = email_source_id
         leads = extractor.extract(result)
         for lead in leads:
+            lead.source_id = email_source_id
             if not dry_run:
                 db.add_lead(lead)
             stats.leads_found += 1
