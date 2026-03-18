@@ -12,6 +12,55 @@ from .keywords import KeywordMatch, find_keyword_matches
 
 logger = logging.getLogger(__name__)
 
+# Automotive-related terms for relevance filtering
+_AUTOMOTIVE_TERMS = {
+    "dealer",
+    "dealership",
+    "auto",
+    "car",
+    "vehicle",
+    "motor",
+    "automotive",
+    "franchise",
+    "lot",
+    "showroom",
+    "service department",
+    "service center",
+    "body shop",
+    "collision",
+    "repair",
+    "maintenance",
+    # Common automotive brands
+    "ford",
+    "chevrolet",
+    "chevy",
+    "toyota",
+    "honda",
+    "nissan",
+    "hyundai",
+    "kia",
+    "dodge",
+    "ram",
+    "jeep",
+    "chrysler",
+    "subaru",
+    "mazda",
+    "bmw",
+    "mercedes",
+    "audi",
+    "volkswagen",
+    "vw",
+    "gmc",
+    "buick",
+    "cadillac",
+    "lincoln",
+    "volvo",
+    "acura",
+    "lexus",
+    "infiniti",
+    "genesis",
+}
+
 
 class LeadExtractor:
     """Extracts leads from fetched content by combining signals.
@@ -76,9 +125,7 @@ class LeadExtractor:
 
         leads = []
         for cluster in clusters:
-            lead = self._cluster_to_lead(
-                cluster, entities, fetch_result
-            )
+            lead = self._cluster_to_lead(cluster, entities, fetch_result)
             leads.append(lead)
 
         return leads
@@ -95,30 +142,43 @@ class LeadExtractor:
         strong_count = strengths.count("strong")
         medium_count = strengths.count("medium")
 
-        if (
-            strong_count >= 1
-            or len(cluster) >= self.hot_min_mentions
-        ):
+        # Start with initial score
+        if strong_count >= 1 or len(cluster) >= self.hot_min_mentions:
             score = LeadScore.HOT
         elif medium_count >= 1:
             score = LeadScore.WARM
         else:
             score = LeadScore.COLD
 
+        # Apply relevance filter: check if automotive terms appear near keyword matches
+        if score == LeadScore.HOT:
+            best_match = cluster[0]
+            context_start = max(0, best_match.position - 200)
+            context_end = min(
+                len(fetch_result.content), best_match.position + len(best_match.match_text) + 200
+            )
+            context_window = fetch_result.content[context_start:context_end].lower()
+
+            # Check if any automotive term appears in the context window
+            has_automotive_term = any(term in context_window for term in _AUTOMOTIVE_TERMS)
+
+            # If no automotive terms found, downgrade to COLD
+            if not has_automotive_term:
+                score = LeadScore.COLD
+
         # Best snippet comes from the strongest match
         best_match = cluster[0]
         keywords = list(dict.fromkeys(m.keyword for m in cluster))
 
         # Use first available entity data
-        dealer_name = (
-            entities.dealer_names[0] if entities.dealer_names else ""
-        )
+        dealer_name = entities.dealer_names[0] if entities.dealer_names else ""
         city = entities.cities[0] if entities.cities else ""
         state = entities.states[0] if entities.states else ""
 
-        # Generate a human-readable summary
+        # Generate a human-readable summary with full raw_text for context
         summary = self._generate_summary(
             context=best_match.context,
+            raw_text=fetch_result.content,
             keywords=keywords,
             dealer_name=dealer_name,
             city=city,
@@ -131,7 +191,7 @@ class LeadExtractor:
             source_id=fetch_result.source_id,
             source_url=fetch_result.url,
             title=best_match.match_text,
-            snippet=best_match.context[:500],
+            snippet=best_match.context[:1500],
             summary=summary,
             dealer_name=dealer_name,
             dealer_group="",
@@ -143,12 +203,13 @@ class LeadExtractor:
             score=score,
             mention_count=len(cluster),
             discovered_at=datetime.utcnow(),
-            raw_text=fetch_result.content[:2000],
+            raw_text=fetch_result.content[:5000],
         )
 
     @staticmethod
     def _generate_summary(
         context: str,
+        raw_text: str,
         keywords: list[str],
         dealer_name: str,
         city: str,
@@ -158,11 +219,11 @@ class LeadExtractor:
     ) -> str:
         """Generate a human-readable summary of a lead.
 
-        Extracts the most meaningful sentences from the context
+        Extracts the most meaningful sentences from the full raw_text
         around the keyword match, focusing on WHO, WHAT, WHERE.
         """
-        # Clean up the context
-        text = context.strip()
+        # Use raw_text for more context, fallback to context if needed
+        text = (raw_text or context or "").strip()
         if not text:
             return ""
 
@@ -175,9 +236,7 @@ class LeadExtractor:
                 continue
             # Keep sentences that mention keywords, dealers, or locations
             sent_lower = sent.lower()
-            is_relevant = any(
-                kw.lower() in sent_lower for kw in keywords
-            )
+            is_relevant = any(kw.lower() in sent_lower for kw in keywords)
             if dealer_name and dealer_name.lower() in sent_lower:
                 is_relevant = True
             if city and city.lower() in sent_lower:
@@ -221,13 +280,16 @@ class LeadExtractor:
         else:
             summary = f"Signal: {action}{location}."
 
-        # Add the best context sentence
+        # Add up to 3 relevant context sentences
         if relevant:
-            # Pick the most informative sentence (longest, up to 200 chars)
-            best_sentence = max(relevant[:3], key=len)
-            if len(best_sentence) > 200:
-                best_sentence = best_sentence[:200] + "..."
-            summary += f" \"{best_sentence}\""
+            # Pick the most informative sentences (up to 3, max 200 chars each)
+            selected = []
+            for sent in relevant[:3]:
+                if len(sent) > 200:
+                    sent = sent[:200] + "..."
+                selected.append(sent)
+            if selected:
+                summary += f' "{" ".join(selected)}"'
 
         # Source domain
         from urllib.parse import urlparse

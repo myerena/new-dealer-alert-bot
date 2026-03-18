@@ -17,6 +17,7 @@ from flask import Flask, jsonify, render_template_string, request
 from .config import Config
 from .db import Database
 from .models import LeadScore
+from .output.dedup import deduplicate_leads
 
 logger = logging.getLogger(__name__)
 
@@ -351,30 +352,33 @@ def create_app(config: Config | None = None) -> Flask:
         since = datetime.utcnow() - timedelta(hours=hours)
         leads = db.get_leads_since(since)
 
-        return jsonify([
-            {
-                "id": ld.id,
-                "score": ld.score.value,
-                "dealer_name": ld.dealer_name,
-                "city": ld.city,
-                "state": ld.state,
-                "title": ld.title,
-                "summary": ld.summary,
-                "snippet": ld.snippet[:500],
-                "keywords": ld.keywords_matched,
-                "people": ld.people,
-                "source_url": ld.source_url,
-                "discovered": (
-                    ld.discovered_at.strftime("%Y-%m-%d %H:%M")
-                    if ld.discovered_at
-                    else ""
-                ),
-                "feedback": ld.feedback,
-                "feedback_notes": ld.feedback_notes,
-                "mention_count": ld.mention_count,
-            }
-            for ld in leads
-        ])
+        # Apply deduplication
+        leads = deduplicate_leads(leads)
+
+        return jsonify(
+            [
+                {
+                    "id": ld.id,
+                    "score": ld.score.value,
+                    "dealer_name": ld.dealer_name,
+                    "city": ld.city,
+                    "state": ld.state,
+                    "title": ld.title,
+                    "summary": ld.summary,
+                    "snippet": ld.snippet[:500],
+                    "keywords": ld.keywords_matched,
+                    "people": ld.people,
+                    "source_url": ld.source_url,
+                    "discovered": (
+                        ld.discovered_at.strftime("%Y-%m-%d %H:%M") if ld.discovered_at else ""
+                    ),
+                    "feedback": ld.feedback,
+                    "feedback_notes": ld.feedback_notes,
+                    "mention_count": ld.mention_count,
+                }
+                for ld in leads
+            ]
+        )
 
     @app.route("/api/feedback", methods=["POST"])
     def api_feedback():
@@ -395,26 +399,16 @@ def create_app(config: Config | None = None) -> Flask:
         since = datetime.utcnow() - timedelta(hours=hours)
         leads = db.get_leads_since(since)
 
-        return jsonify({
-            "total": len(leads),
-            "hot": sum(
-                1 for ld in leads if ld.score == LeadScore.HOT
-            ),
-            "warm": sum(
-                1 for ld in leads if ld.score == LeadScore.WARM
-            ),
-            "cold": sum(
-                1 for ld in leads if ld.score == LeadScore.COLD
-            ),
-            "good": sum(
-                1 for ld in leads if ld.feedback == "good"
-            ),
-            "bad": sum(
-                1 for ld in leads if ld.feedback == "bad"
-            ),
-            "unreviewed": sum(
-                1 for ld in leads if not ld.feedback
-            ),
-        })
+        return jsonify(
+            {
+                "total": len(leads),
+                "hot": sum(1 for ld in leads if ld.score == LeadScore.HOT),
+                "warm": sum(1 for ld in leads if ld.score == LeadScore.WARM),
+                "cold": sum(1 for ld in leads if ld.score == LeadScore.COLD),
+                "good": sum(1 for ld in leads if ld.feedback == "good"),
+                "bad": sum(1 for ld in leads if ld.feedback == "bad"),
+                "unreviewed": sum(1 for ld in leads if not ld.feedback),
+            }
+        )
 
     return app
