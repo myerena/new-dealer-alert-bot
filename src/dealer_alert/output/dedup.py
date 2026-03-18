@@ -22,9 +22,22 @@ logger = logging.getLogger(__name__)
 
 # Words to strip when normalizing dealer names
 STRIP_WORDS = {
-    "inc", "llc", "ltd", "corp", "corporation", "group", "auto",
-    "automotive", "motors", "motor", "dealership", "dealer", "the",
-    "of", "and", "&",
+    "inc",
+    "llc",
+    "ltd",
+    "corp",
+    "corporation",
+    "group",
+    "auto",
+    "automotive",
+    "motors",
+    "motor",
+    "dealership",
+    "dealer",
+    "the",
+    "of",
+    "and",
+    "&",
 }
 
 
@@ -56,18 +69,16 @@ def leads_are_similar(a: Lead, b: Lead, name_threshold: float = 0.7) -> bool:
     name_b = normalize_name(b.dealer_name)
 
     if not name_a or not name_b:
-        # Fall back to keyword overlap if no dealer names
-        kw_a = set(a.keywords_matched)
-        kw_b = set(b.keywords_matched)
-        if not kw_a or not kw_b:
-            return False
-        overlap = len(kw_a & kw_b) / max(len(kw_a), len(kw_b))
-        if overlap < 0.5:
-            return False
-        # Check title similarity
-        title_a = a.title.lower()[:50]
-        title_b = b.title.lower()[:50]
-        return _simple_similarity(title_a, title_b) > 0.6
+        # Without dealer names, only dedup if same source URL
+        # (same article parsed multiple times)
+        if a.source_url and a.source_url == b.source_url:
+            return True
+        # Or very high title similarity (>0.85)
+        title_a = a.title.lower()[:80]
+        title_b = b.title.lower()[:80]
+        if title_a and title_b:
+            return _simple_similarity(title_a, title_b) > 0.85
+        return False
 
     # Name similarity
     name_sim = _simple_similarity(name_a, name_b)
@@ -81,8 +92,8 @@ def leads_are_similar(a: Lead, b: Lead, name_threshold: float = 0.7) -> bool:
     if a.city and b.city:
         return loc_a == loc_b
 
-    # If one is missing location, name match alone is enough
-    return name_sim > 0.85
+    # If one is missing location, require very high name match
+    return name_sim > 0.9
 
 
 def merge_leads(leads: list[Lead]) -> Lead:
@@ -116,9 +127,7 @@ def merge_leads(leads: list[Lead]) -> Lead:
                 seen_kw.add(kw)
 
     # Use best available data for each field
-    dealer_name = max(
-        (ld.dealer_name for ld in leads), key=len, default=""
-    )
+    dealer_name = max((ld.dealer_name for ld in leads), key=len, default="")
     city = max((ld.city for ld in leads), key=len, default="")
     state = max((ld.state for ld in leads), key=len, default="")
 
@@ -176,7 +185,7 @@ def deduplicate_leads(leads: list[Lead]) -> list[Lead]:
     merged_count = len(merged)
     if original_count != merged_count:
         logger.info(
-            f"Dedup: {original_count} leads → {merged_count} "
+            f"Dedup: {original_count} leads -> {merged_count} "
             f"({original_count - merged_count} duplicates merged)"
         )
 
