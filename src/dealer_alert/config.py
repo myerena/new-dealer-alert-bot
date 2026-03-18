@@ -46,6 +46,19 @@ class Config:
         default_factory=lambda: ["hiring", "construction", "coming-soon", "teaser"]
     )
 
+    # Email collector
+    email_address: str = ""
+    email_app_password: str = ""
+    email_imap_host: str = "imap.gmail.com"
+    email_imap_port: int = 993
+    email_folder: str = "INBOX"
+    email_max_per_run: int = 100
+    email_mark_read: bool = True
+
+    # Social monitor
+    social_max_concurrent: int = 5
+    social_delay_seconds: float = 2.0
+
     @classmethod
     def load(cls, env_file: Path | None = None) -> Config:
         """Load config from .env file and environment variables."""
@@ -76,5 +89,28 @@ class Config:
                 warm_raw.split(",")
                 if warm_raw
                 else ["hiring", "construction", "coming-soon", "teaser"]
+            ),
+            # Email collector
+            email_address=os.getenv("GMAIL_ADDRESS", ""),
+            email_app_password=os.getenv("GMAIL_APP_PASSWORD", ""),
+            email_imap_host=os.getenv(
+                "EMAIL_IMAP_HOST", "imap.gmail.com"
+            ),
+            email_imap_port=int(
+                os.getenv("EMAIL_IMAP_PORT", "993")
+            ),
+            email_folder=os.getenv("EMAIL_FOLDER", "INBOX"),
+            email_max_per_run=int(
+                os.getenv("EMAIL_MAX_PER_RUN", "100")
+            ),
+            email_mark_read=_bool(
+                os.getenv("EMAIL_MARK_READ", "true")
+            ),
+            # Social monitor
+            social_max_concurrent=int(
+                os.getenv("SOCIAL_MAX_CONCURRENT", "5")
+            ),
+            social_delay_seconds=float(
+                os.getenv("SOCIAL_DELAY_SECONDS", "2")
             ),
         )

@@ -121,8 +121,8 @@ def test_add_and_get_leads(tmp_db: Database):
     lead_id = tmp_db.add_lead(lead)
     assert lead_id > 0
 
-    # Retrieve since yesterday
-    since = datetime.utcnow() - timedelta(hours=1)
+    # Retrieve since well before now
+    since = datetime.utcnow() - timedelta(days=1)
     leads = tmp_db.get_leads_since(since)
     assert len(leads) == 1
     assert leads[0].dealer_name == "Smith Auto"

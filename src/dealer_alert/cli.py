@@ -6,6 +6,8 @@ Commands:
     digest        Generate a lead digest from recent crawl data
     add-source    Manually add a source URL to the registry
     status        Show current registry and lead stats
+    check-email   Poll the inbox for newsletter content
+    check-social  Scrape social media profiles for lead signals
 """
 
 from __future__ import annotations
@@ -292,6 +294,211 @@ def status(ctx):
             table.add_row(cat, str(count), str(cat_enabled.get(cat, 0)))
 
         console.print(table)
+
+
+@main.command("check-email")
+@click.option(
+    "--hours",
+    default=24,
+    help="Only fetch emails from the last N hours",
+)
+@click.option(
+    "--dry-run",
+    is_flag=True,
+    help="Connect and count but don't download",
+)
+@click.pass_context
+def check_email(ctx, hours, dry_run):
+    """Poll the Gmail inbox for newsletter content and extract leads."""
+    from .collectors import EmailCollector
+
+    config: Config = ctx.obj["config"]
+    db: Database = ctx.obj["db"]
+    db.init_schema()
+
+    if not config.email_address or not config.email_app_password:
+        console.print(
+            "[red]Email not configured.[/red] "
+            "Set GMAIL_ADDRESS and GMAIL_APP_PASSWORD in .env"
+        )
+        return
+
+    collector = EmailCollector(
+        email_address=config.email_address,
+        app_password=config.email_app_password,
+        imap_host=config.email_imap_host,
+        imap_port=config.email_imap_port,
+        folder=config.email_folder,
+        max_emails=config.email_max_per_run,
+    )
+
+    since = datetime.utcnow() - timedelta(hours=hours)
+    console.print(
+        f"[bold]Checking inbox ({config.email_address})...[/bold]"
+    )
+
+    results = collector.collect(
+        since_date=since,
+        mark_read=config.email_mark_read and not dry_run,
+        dry_run=dry_run,
+    )
+
+    if not results:
+        console.print("[yellow]No new emails found.[/yellow]")
+        return
+
+    # Run through the lead extraction pipeline
+    extractor = LeadExtractor(
+        hot_min_mentions=config.hot_lead_min_mentions
+    )
+    total_leads = 0
+
+    for result in results:
+        leads = extractor.extract(result)
+        for lead in leads:
+            if not dry_run:
+                db.add_lead(lead)
+            total_leads += 1
+            score_color = {
+                "hot": "red", "warm": "yellow", "cold": "blue"
+            }[lead.score.value]
+            console.print(
+                f"  [{score_color}]{lead.score.value.upper()}"
+                f"[/{score_color}] "
+                f"{lead.dealer_name or 'Unknown'} — "
+                f"{lead.title[:60]}"
+            )
+
+    console.print(
+        f"\n[bold]Email check complete:[/bold] "
+        f"{len(results)} emails → {total_leads} leads"
+    )
+
+
+@main.command("check-social")
+@click.option(
+    "--dry-run",
+    is_flag=True,
+    help="Show what would be scraped without scraping",
+)
+@click.option(
+    "--url",
+    multiple=True,
+    help="Specific social URL(s) to scrape (repeatable)",
+)
+@click.option(
+    "--search",
+    "search_keywords",
+    default="",
+    help="Search X/Twitter for these keywords (comma-separated)",
+)
+@click.pass_context
+def check_social(ctx, dry_run, url, search_keywords):
+    """Scrape social media profiles for lead signals."""
+    config: Config = ctx.obj["config"]
+    db: Database = ctx.obj["db"]
+    db.init_schema()
+
+    if dry_run:
+        if url:
+            console.print(
+                f"[DRY RUN] Would scrape {len(url)} social URLs"
+            )
+        if search_keywords:
+            console.print(
+                f"[DRY RUN] Would search X for: {search_keywords}"
+            )
+        return
+
+    # Gather URLs from CLI args and from DB (social source type)
+    social_urls = list(url)
+
+    # Also pull social-type sources from the registry
+    all_sources = db.get_all_sources(enabled_only=True)
+    for source in all_sources:
+        if source.source_type.value == "social":
+            social_urls.append(source.url)
+
+    if not social_urls and not search_keywords:
+        console.print(
+            "[yellow]No social URLs provided and none "
+            "in registry.[/yellow] "
+            "Use --url or add sources with type 'social'."
+        )
+        return
+
+    console.print(
+        f"[bold]Checking {len(social_urls)} social profiles...[/bold]"
+    )
+
+    asyncio.run(
+        _run_social_check(config, db, social_urls, search_keywords)
+    )
+
+
+async def _run_social_check(
+    config: Config,
+    db: Database,
+    social_urls: list[str],
+    search_keywords: str,
+):
+    """Run social media scraping and lead extraction."""
+    from .collectors import SocialMonitor
+
+    monitor = SocialMonitor()
+    extractor = LeadExtractor(
+        hot_min_mentions=config.hot_lead_min_mentions
+    )
+    total_leads = 0
+
+    # Scrape known profiles
+    if social_urls:
+        results = await monitor.collect_all(
+            social_urls,
+            max_concurrent=config.social_max_concurrent,
+        )
+
+        for result in results:
+            if result.error:
+                console.print(
+                    f"  [red]ERROR[/red] {result.url}: "
+                    f"{result.error[:80]}"
+                )
+                continue
+
+            leads = extractor.extract(result)
+            for lead in leads:
+                db.add_lead(lead)
+                total_leads += 1
+                score_color = {
+                    "hot": "red", "warm": "yellow", "cold": "blue"
+                }[lead.score.value]
+                console.print(
+                    f"  [{score_color}]{lead.score.value.upper()}"
+                    f"[/{score_color}] "
+                    f"{lead.dealer_name or 'Unknown'} — "
+                    f"{lead.title[:60]}"
+                )
+
+    # Keyword search on X/Twitter
+    if search_keywords:
+        keywords = [
+            kw.strip() for kw in search_keywords.split(",")
+        ]
+        console.print(
+            f"[bold]Searching X for: {', '.join(keywords)}[/bold]"
+        )
+        search_results = await monitor.keyword_search(keywords)
+        for result in search_results:
+            leads = extractor.extract(result)
+            for lead in leads:
+                db.add_lead(lead)
+                total_leads += 1
+
+    console.print(
+        f"\n[bold]Social check complete:[/bold] "
+        f"{total_leads} leads found"
+    )
 
 
 if __name__ == "__main__":
