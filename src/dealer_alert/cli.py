@@ -590,6 +590,51 @@ def find_newsletters(ctx, limit, subscribe, dry_run):
         )
 
 
+@main.command("browser-fetch")
+@click.argument("url")
+@click.option("--headless/--visible", default=True, help="Run browser headless or visible")
+@click.pass_context
+def browser_fetch(ctx, url, headless):
+    """Fetch a single URL using headless browser (bypasses bot detection)."""
+    from .fetcher.browser import BrowserFetcher
+
+    config: Config = ctx.obj["config"]
+    db: Database = ctx.obj["db"]
+    db.init_schema()
+
+    console.print(f"[bold]Browser fetching: {url}[/bold]")
+    fetcher = BrowserFetcher(headless=headless)
+    result = asyncio.run(fetcher.fetch(0, url))
+
+    if result.error:
+        console.print(f"[red]Error:[/red] {result.error}")
+        return
+
+    console.print(f"  Status: {result.status_code}")
+    console.print(f"  Content: {len(result.content)} chars")
+    console.print(f"  Links: {len(result.links)}")
+
+    # Run through lead extraction
+    extractor = LeadExtractor(hot_min_mentions=config.hot_lead_min_mentions)
+    leads = extractor.extract(result)
+
+    if leads:
+        for lead in leads:
+            db.add_lead(lead)
+            score_color = {
+                "hot": "red", "warm": "yellow", "cold": "blue"
+            }[lead.score.value]
+            console.print(
+                f"  [{score_color}]{lead.score.value.upper()}"
+                f"[/{score_color}] "
+                f"{lead.dealer_name or 'Unknown'} — "
+                f"{lead.title[:60]}"
+            )
+        console.print(f"\n[bold]{len(leads)} leads extracted[/bold]")
+    else:
+        console.print("[yellow]No leads found in page content[/yellow]")
+
+
 @main.command("run-all")
 @click.option("--crawl-limit", default=100, help="Max sources to crawl")
 @click.option("--email-hours", default=24, help="Email lookback window in hours")

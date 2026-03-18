@@ -238,6 +238,63 @@ def _step_crawl(
 
     logger.info(f"Crawl complete: {stats.sources_crawled} sources, {stats.leads_found} leads")
 
+    # Retry failed sources (403s) with browser fetcher
+    failed_sources = [
+        s for s in sources
+        if s.fetch_error_count > 0 and s.fetch_error_count < 10
+    ]
+    if failed_sources and not dry_run:
+        _step_browser_retry(config, db, stats, failed_sources)
+
+
+def _step_browser_retry(
+    config: Config,
+    db: Database,
+    stats: PipelineStats,
+    failed_sources: list[Source],
+):
+    """Retry failed sources using headless browser (handles 403s)."""
+    try:
+        from .fetcher.browser import BrowserFetchManager
+    except ImportError:
+        logger.info("Playwright not available — skipping browser retry")
+        return
+
+    logger.info(
+        f"Retrying {len(failed_sources)} failed sources with browser fetcher"
+    )
+
+    extractor = LeadExtractor(hot_min_mentions=config.hot_lead_min_mentions)
+    manager = BrowserFetchManager(headless=True, max_concurrent=2)
+
+    urls_with_ids = [
+        (s.id or 0, s.url) for s in failed_sources
+    ]
+
+    try:
+        results = asyncio.run(manager.fetch_urls(urls_with_ids))
+    except Exception as exc:
+        logger.error(f"Browser fetch batch failed: {exc}")
+        return
+
+    for result in results:
+        if result.error:
+            logger.debug(f"Browser retry failed: {result.url}: {result.error[:80]}")
+            continue
+
+        stats.sources_crawled += 1
+        db.update_source_fetched(result.source_id, result.content_hash)
+
+        leads = extractor.extract(result)
+        for lead in leads:
+            db.add_lead(lead)
+            stats.leads_found += 1
+
+    browser_leads = sum(
+        len(extractor.extract(r)) for r in results if not r.error
+    )
+    logger.info(f"Browser retry: {len(results)} sources, {browser_leads} additional leads")
+
 
 def _step_email(
     config: Config,
