@@ -546,3 +546,522 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-03-18 07:31:43,656 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_123143.json
 2026-03-18 07:31:43,656 [INFO] dealer_alert.runner: ============================================================
 2026-03-18 07:33:31,680 [INFO] dealer_alert.output.report: Report written to data\digests\report_20260318_123331.html
+2026-03-18 08:21:41,744 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 08:21:41,744 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 08:21:41,746 [INFO] dealer_alert.runner: Crawling 100 sources
+2026-03-18 08:21:42,312 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/closing-the-gap-miamis-homelessness-progress-the-final-push "HTTP/1.1 200 OK"
+2026-03-18 08:21:42,350 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/events "HTTP/1.1 200 OK"
+2026-03-18 08:21:42,352 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-small-business-credit-initiative "HTTP/1.1 200 OK"
+2026-03-18 08:21:43,079 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-smart-cities-part-1-investment-tech "HTTP/1.1 200 OK"
+2026-03-18 08:21:43,080 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/northeastern-expands-miami-universitys-14th-campus-will-focus-tech-finance-and-health "HTTP/1.1 200 OK"
+2026-03-18 08:21:43,082 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fed-exec-reveals-what-needs-happen-interest-rates-are-lowered "HTTP/1.1 200 OK"
+2026-03-18 08:21:43,083 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/legislative-updates-december-2024-changes-impacting-miami-businesses "HTTP/1.1 200 OK"
+2026-03-18 08:21:43,085 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-permanently-host-large-air-cargo-trade-show "HTTP/1.1 200 OK"
+2026-03-18 08:21:43,086 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-relatively-insulated-coming-recession-panelists-say-0 "HTTP/1.1 200 OK"
+2026-03-18 08:21:43,088 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman "HTTP/1.1 200 OK"
+2026-03-18 08:21:44,458 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/revolutionizing-transportation-miami-dades-innovative-master-plan "HTTP/1.1 200 OK"
+2026-03-18 08:21:44,603 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-of-commerce-to-honor-benjamin-le%C3%B3n-with-2025-sand-in-my-shoes-award-press-release "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,288 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-employers-must-act-on-dhs-employment-authorization "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,378 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/real-estate-developer-tony-cho-brings-climate-and-innovation-hub-little-haiti "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,420 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-commerce-announces-2023-2024-board-officers-directors "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,508 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-2021-goals-conference "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,509 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ethical-leadership-studies-list-195-doctoral-students "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,555 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-critical-housing-needs-programs-during-covid-19 "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,578 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/2021-member-directory "HTTP/1.1 200 OK"
+2026-03-18 08:21:45,681 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/inside-our-tallahassee-fly-in-how-miami-shows-up-for-what-matters "HTTP/1.1 200 OK"
+2026-03-18 08:21:46,729 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ultimate-ceo-christine-barney-motivating-through-engagement-not-fear "HTTP/1.1 200 OK"
+2026-03-18 08:21:47,009 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-relatively-insulated-coming-recession-panelists-say "HTTP/1.1 200 OK"
+2026-03-18 08:21:47,439 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-smart-cities-part-2-miami-tech-education-and-talent-development "HTTP/1.1 200 OK"
+2026-03-18 08:21:47,578 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-2021-resilient-solutions-summit "HTTP/1.1 200 OK"
+2026-03-18 08:21:47,662 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/building-the-future-and-transforming-south-florida "HTTP/1.1 200 OK"
+2026-03-18 08:21:47,756 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/navigating-workforce-shortages-in-the-financial-services-sector "HTTP/1.1 200 OK"
+2026-03-18 08:21:47,844 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-sfbc-mini-summit-regional-transit-workforce-housing "HTTP/1.1 200 OK"
+2026-03-18 08:21:47,909 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-throws-down-gauntlet-denver-metro-chamber-commerce-friendly-wager "HTTP/1.1 200 OK"
+2026-03-18 08:21:48,017 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-real-estate-developers-forum "HTTP/1.1 200 OK"
+2026-03-18 08:21:48,245 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-mayor-levine-cava-celebrated-international-womens-day-her-first-town-hall "HTTP/1.1 200 OK"
+2026-03-18 08:21:49,086 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-venture-capitalists-inclusion-must-be-defining-characteristic-local-tech-ecosystem "HTTP/1.1 200 OK"
+2026-03-18 08:21:49,388 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-healthcare-committee-the-epidemic-of-opioid-addiction "HTTP/1.1 200 OK"
+2026-03-18 08:21:49,747 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-announces-newly-elected-board "HTTP/1.1 200 OK"
+2026-03-18 08:21:49,811 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-legislative-brief-july-2025-recap-gmcc-advocacy-updates "HTTP/1.1 200 OK"
+2026-03-18 08:21:49,920 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-partners-fipl-campaign-school-community-leadership-training-may-24-26 "HTTP/1.1 200 OK"
+2026-03-18 08:21:50,026 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/strengthening-our-political-voice-cfgm "HTTP/1.1 200 OK"
+2026-03-18 08:21:50,119 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-august-trustee-luncheon-technology-companies-new-miami "HTTP/1.1 200 OK"
+2026-03-18 08:21:50,265 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/health-foundation-south-florida-miami-dade-county-and-coalition-chambers-commerce-launch "HTTP/1.1 200 OK"
+2026-03-18 08:21:50,471 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fifa-announces-miami-host-city-world-cup-2026 "HTTP/1.1 200 OK"
+2026-03-18 08:21:50,495 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fiu-names-kenneth-jessell-universitys-next-president "HTTP/1.1 200 OK"
+2026-03-18 08:21:51,419 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/sand-my-shoesr-south-florida-album "HTTP/1.1 200 OK"
+2026-03-18 08:21:51,717 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-colleges-north-campus-vaccination-site-opens-begins-administering-johnson-johnson "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,164 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/university-leaders-work-improve-local-spaces-children "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,263 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1 "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,354 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/commissioner-mcghee-urges-us-department-defense-continue-utilize-homestead-air-reserve-base "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,483 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/legacy-project-honors-healthcare-heroes-baptist-health-west-kendall-baptist-hospital "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,508 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/knight-foundation-invests-15m-boost-miamis-tech-talent-innovation "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,720 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/desantis-wants-legislature-allocate-additional-200-million-teacher-pay "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,845 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/mental-health-and-burnout-webinar "HTTP/1.1 200 OK"
+2026-03-18 08:21:52,888 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/real-estate-developments-in-south-florida-insights-from-industry-leaders "HTTP/1.1 200 OK"
+2026-03-18 08:21:53,877 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/spotlight-on-alfred-sanchez "HTTP/1.1 200 OK"
+2026-03-18 08:21:53,922 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/tallahassee-fly "HTTP/1.1 200 OK"
+2026-03-18 08:21:54,614 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-2022-sofl-economic-summit-be-held-march-30th "HTTP/1.1 200 OK"
+2026-03-18 08:21:54,643 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-universal-connectivity "HTTP/1.1 200 OK"
+2026-03-18 08:21:54,665 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/celebrating-excellence-the-chambers-25th-annual-health-care-heroes-awards-honors-remarkable-healthcare-professionals "HTTP/1.1 200 OK"
+2026-03-18 08:21:54,775 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dades-transportation-vision-insights-from-japan-mission "HTTP/1.1 200 OK"
+2026-03-18 08:21:55,037 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-women-leaders-2020 "HTTP/1.1 200 OK"
+2026-03-18 08:21:55,066 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-emerging-leaders-help-bring-comfort-and-support-nicu-families-holtz-childrens-hospital "HTTP/1.1 200 OK"
+2026-03-18 08:21:55,159 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-webinar-series "HTTP/1.1 200 OK"
+2026-03-18 08:21:55,217 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-insurance-reform-special-session-2-time-means-business "HTTP/1.1 200 OK"
+2026-03-18 08:21:56,104 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/slesnick-offers-insight-ethical-leadership-public-life "HTTP/1.1 200 OK"
+2026-03-18 08:21:56,230 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-greater-miami-chamber-of-commerce-announces-sand-in-my-shoes-honoree-trish-and-dan-bell-press-release "HTTP/1.1 200 OK"
+2026-03-18 08:21:56,647 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for email://newdealerchecker@gmail.com: Request URL has an unsupported protocol 'email://'.
+2026-03-18 08:21:56,787 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-launches-2025-small-business-membership-scholarship-program-sponsored-by-fiserv-to-empower-diverse-local-entrepreneurs "HTTP/1.1 200 OK"
+2026-03-18 08:21:57,023 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/from-vision-to-reality-south-dades-bus-rapid-transit-opening_greater_miami_chamber "HTTP/1.1 200 OK"
+2026-03-18 08:21:57,109 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0 "HTTP/1.1 200 OK"
+2026-03-18 08:21:57,316 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/key-takeaways-from-the-november-trustee-luncheon-alvah-chapman-awards "HTTP/1.1 200 OK"
+2026-03-18 08:21:57,366 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/regulators-approve-fpl-main-street-recovery-credit-program-provide-relief-small-businesses "HTTP/1.1 200 OK"
+2026-03-18 08:21:57,421 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/small-business-owners-are-experiencing-significant-health-insurance-savings-switching-ght-0 "HTTP/1.1 200 OK"
+2026-03-18 08:21:57,488 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/surfside-small-business-recovery-fund "HTTP/1.1 200 OK"
+2026-03-18 08:21:58,414 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-legislative-brief-2025-state-budget-recap-gmcc-advocacy-updates "HTTP/1.1 200 OK"
+2026-03-18 08:21:58,500 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/tj-villamil-leads-floridas-international-trade-and-development-team "HTTP/1.1 200 OK"
+2026-03-18 08:21:58,942 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/swiftdox-supports-climate-change-initiatives "HTTP/1.1 200 OK"
+2026-03-18 08:21:58,967 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-of-commerce-will-present-cesar-l.-alvarez-with-the-2026-sand-in-my-shoes-award "HTTP/1.1 200 OK"
+2026-03-18 08:21:59,344 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0 "HTTP/1.1 200 OK"
+2026-03-18 08:21:59,437 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/local-boosters-say-prospects-magic-city-have-never-looked-brighter "HTTP/1.1 200 OK"
+2026-03-18 08:21:59,511 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-beacon-council-names-rodrick-miller-president-chief-executive-officer "HTTP/1.1 200 OK"
+2026-03-18 08:21:59,620 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/unveiling-the-live-local-act-series-insights-for-developers-and-investors "HTTP/1.1 200 OK"
+2026-03-18 08:21:59,665 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-economy-expanding-strongly-anchored-solid-fundamentals "HTTP/1.1 200 OK"
+2026-03-18 08:21:59,762 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo "HTTP/1.1 200 OK"
+2026-03-18 08:22:00,618 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/driving-positive-change-in-2024 "HTTP/1.1 200 OK"
+2026-03-18 08:22:00,692 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fiu-and-greater-miami-chamber-of-commerce-uncover-local-workforce-development-trends-business-landscape "HTTP/1.1 200 OK"
+2026-03-18 08:22:01,188 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-greater-miami-chamber-of-commerce-and-miami-dade-county-announce-trade-mission-to-japan-press-release "HTTP/1.1 200 OK"
+2026-03-18 08:22:01,224 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/honorable-maurice-ferre-honorable-francis-suarez-recipients-award "HTTP/1.1 200 OK"
+2026-03-18 08:22:01,679 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/spotlight-on-apprenticeship-success "HTTP/1.1 200 OK"
+2026-03-18 08:22:01,730 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-insurance-regulation-creates-big-changes "HTTP/1.1 200 OK"
+2026-03-18 08:22:01,757 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmccs-novo-nonprofit-business-awards-accepting-nominations-until-june-10-0 "HTTP/1.1 200 OK"
+2026-03-18 08:22:01,799 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel "HTTP/1.1 200 OK"
+2026-03-18 08:22:02,024 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-senate-district-39-forum "HTTP/1.1 200 OK"
+2026-03-18 08:22:02,063 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/2019-impact-covid-survey-results "HTTP/1.1 200 OK"
+2026-03-18 08:22:02,996 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-local-phase-3-covid-vaccine-trial "HTTP/1.1 200 OK"
+2026-03-18 08:22:03,043 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/avmed-greater-miami-chamber-commerce-partner-form-greater-health-trust-ght-providing-corporate "HTTP/1.1 200 OK"
+2026-03-18 08:22:03,452 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/board-directors-meeting "HTTP/1.1 200 OK"
+2026-03-18 08:22:03,990 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-tourism-way-down-hybrid-meetings-tv-production-parks-are-keys-recovery-plan "HTTP/1.1 200 OK"
+2026-03-18 08:22:04,017 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/floridas-most-active-vc-firm-landing-miami-and-its-adding-familiar-tech-name "HTTP/1.1 200 OK"
+2026-03-18 08:22:04,101 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/empowering-businesses-through-apprenticeships "HTTP/1.1 200 OK"
+2026-03-18 08:22:04,193 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-latest-rounds-ppp-loans "HTTP/1.1 200 OK"
+2026-03-18 08:22:04,286 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-governor-signs-covid-19-liability-protection-bill "HTTP/1.1 200 OK"
+2026-03-18 08:22:04,337 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-seen-gmccs-2022-sand-my-shoes-award "HTTP/1.1 200 OK"
+2026-03-18 08:22:04,364 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-launches-ceo-ambassador-program-manny-medina-marcelo-claure-jorge-perez-boost "HTTP/1.1 200 OK"
+2026-03-18 08:22:06,565 [ERROR] dealer_alert.runner: Crawl step failed: table leads has no column named summary
+2026-03-18 08:22:06,566 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 08:22:09,282 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 08:22:09,806 [INFO] dealer_alert.collectors.email_collector: Found 2 unread emails
+2026-03-18 08:22:11,043 [INFO] dealer_alert.collectors.email_collector: Collected 2 emails as FetchResults
+2026-03-18 08:22:11,049 [ERROR] dealer_alert.runner: Email step failed: table leads has no column named summary
+2026-03-18 08:22:11,049 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 08:22:11,861 [INFO] httpx: HTTP Request: GET https://www.linkedin.com/company/wardsauto/ "HTTP/1.1 200 OK"
+2026-03-18 08:22:13,904 [INFO] dealer_alert.collectors.social_monitor: Social monitor collected 1 results from 1 URLs
+2026-03-18 08:22:13,907 [INFO] dealer_alert.runner: Social check complete: 1 profiles
+2026-03-18 08:22:13,908 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 08:22:14,682 [INFO] dealer_alert.runner: Promoted 100 new sources to registry
+2026-03-18 08:22:14,683 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 08:22:14,796 [INFO] dealer_alert.output.digest: CSV digest written to data\digests\digest_20260318_132214.csv
+2026-03-18 08:22:14,798 [INFO] dealer_alert.output.digest: JSON digest written to data\digests\digest_20260318_132214.json
+2026-03-18 08:22:14,798 [INFO] dealer_alert.runner: Digest: 9 leads (9 hot, 0 warm, 0 cold)
+2026-03-18 08:22:14,799 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:22:14,799 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 08:22:14,800 [INFO] dealer_alert.runner:   Duration: 33.1s
+2026-03-18 08:22:14,802 [INFO] dealer_alert.runner:   Sources crawled: 2
+2026-03-18 08:22:14,803 [INFO] dealer_alert.runner:   Emails processed: 2
+2026-03-18 08:22:14,803 [INFO] dealer_alert.runner:   Social profiles: 1
+2026-03-18 08:22:14,804 [INFO] dealer_alert.runner:   Leads found: 0
+2026-03-18 08:22:14,804 [INFO] dealer_alert.runner:   New sources discovered: 5
+2026-03-18 08:22:14,804 [INFO] dealer_alert.runner:   Errors: 2
+2026-03-18 08:22:14,805 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_132214.csv
+2026-03-18 08:22:14,806 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_132214.json
+2026-03-18 08:22:14,806 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:22:27,641 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 08:22:27,642 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-18 08:22:28,011 [INFO] werkzeug: 127.0.0.1 - - [18/Mar/2026 08:22:28] "GET / HTTP/1.1" 200 -
+2026-03-18 08:22:28,062 [INFO] werkzeug: 127.0.0.1 - - [18/Mar/2026 08:22:28] "GET /api/leads HTTP/1.1" 200 -
+2026-03-18 08:22:28,310 [INFO] werkzeug: 127.0.0.1 - - [18/Mar/2026 08:22:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-18 08:43:08,615 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 08:43:08,615 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 08:43:08,617 [INFO] dealer_alert.runner: Crawling 100 sources
+2026-03-18 08:43:09,132 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-relatively-insulated-coming-recession-panelists-say-0 "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,158 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-relatively-insulated-coming-recession-panelists-say "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,183 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ethical-leadership-studies-list-195-doctoral-students "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,185 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/2021-member-directory "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,186 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/inside-our-tallahassee-fly-in-how-miami-shows-up-for-what-matters "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,188 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/real-estate-developer-tony-cho-brings-climate-and-innovation-hub-little-haiti "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,190 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-employers-must-act-on-dhs-employment-authorization "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,191 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/revolutionizing-transportation-miami-dades-innovative-master-plan "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,193 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-commerce-announces-2023-2024-board-officers-directors "HTTP/1.1 200 OK"
+2026-03-18 08:43:09,339 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-critical-housing-needs-programs-during-covid-19 "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,197 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-2021-goals-conference "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,232 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-2021-resilient-solutions-summit "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,265 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ultimate-ceo-christine-barney-motivating-through-engagement-not-fear "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,324 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-mayor-levine-cava-celebrated-international-womens-day-her-first-town-hall "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,348 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-smart-cities-part-2-miami-tech-education-and-talent-development "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,350 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/building-the-future-and-transforming-south-florida "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,401 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/navigating-workforce-shortages-in-the-financial-services-sector "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,477 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-venture-capitalists-inclusion-must-be-defining-characteristic-local-tech-ecosystem "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,502 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-throws-down-gauntlet-denver-metro-chamber-commerce-friendly-wager "HTTP/1.1 200 OK"
+2026-03-18 08:43:11,529 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-commerce-announces-newly-elected-fy2021-2022-board-directors-officers "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,288 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,325 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-sfbc-mini-summit-regional-transit-workforce-housing "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,413 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-real-estate-developers-forum "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,448 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-legislative-brief-july-2025-recap-gmcc-advocacy-updates "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,513 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-partners-fipl-campaign-school-community-leadership-training-may-24-26 "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,514 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-healthcare-committee-the-epidemic-of-opioid-addiction "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,609 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fifa-announces-miami-host-city-world-cup-2026 "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,642 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-announces-newly-elected-board "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,643 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/strengthening-our-political-voice-cfgm "HTTP/1.1 200 OK"
+2026-03-18 08:43:13,698 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,359 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fiu-names-kenneth-jessell-universitys-next-president "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,405 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/health-foundation-south-florida-miami-dade-county-and-coalition-chambers-commerce-launch "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,501 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-august-trustee-luncheon-technology-companies-new-miami "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,575 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/university-leaders-work-improve-local-spaces-children "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,608 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/sand-my-shoesr-south-florida-album "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,637 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-colleges-north-campus-vaccination-site-opens-begins-administering-johnson-johnson "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,699 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/real-estate-developments-in-south-florida-insights-from-industry-leaders "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,741 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/commissioner-mcghee-urges-us-department-defense-continue-utilize-homestead-air-reserve-base "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,764 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/legacy-project-honors-healthcare-heroes-baptist-health-west-kendall-baptist-hospital "HTTP/1.1 200 OK"
+2026-03-18 08:43:15,765 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/mental-health-and-burnout-webinar "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,430 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/knight-foundation-invests-15m-boost-miamis-tech-talent-innovation "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,472 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/desantis-wants-legislature-allocate-additional-200-million-teacher-pay "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,583 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/celebrating-excellence-the-chambers-25th-annual-health-care-heroes-awards-honors-remarkable-healthcare-professionals "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,652 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/tallahassee-fly "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,687 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/spotlight-on-alfred-sanchez "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,718 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dades-transportation-vision-insights-from-japan-mission "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,784 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-universal-connectivity "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,824 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-2022-sofl-economic-summit-be-held-march-30th "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,865 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-insurance-reform-special-session-2-time-means-business "HTTP/1.1 200 OK"
+2026-03-18 08:43:17,889 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-webinar-series "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,496 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-women-leaders-2020 "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,543 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-greater-miami-chamber-of-commerce-announces-sand-in-my-shoes-honoree-trish-and-dan-bell-press-release "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,654 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-emerging-leaders-help-bring-comfort-and-support-nicu-families-holtz-childrens-hospital "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,735 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/slesnick-offers-insight-ethical-leadership-public-life "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,765 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0 "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,822 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/from-vision-to-reality-south-dades-bus-rapid-transit-opening_greater_miami_chamber "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,871 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-launches-2025-small-business-membership-scholarship-program-sponsored-by-fiserv-to-empower-diverse-local-entrepreneurs "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,903 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/regulators-approve-fpl-main-street-recovery-credit-program-provide-relief-small-businesses "HTTP/1.1 200 OK"
+2026-03-18 08:43:19,905 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for email://newdealerchecker@gmail.com: Request URL has an unsupported protocol 'email://'.
+2026-03-18 08:43:19,968 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/key-takeaways-from-the-november-trustee-luncheon-alvah-chapman-awards "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,583 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/small-business-owners-are-experiencing-significant-health-insurance-savings-switching-ght-0 "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,614 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/swiftdox-supports-climate-change-initiatives "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,724 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-legislative-brief-2025-state-budget-recap-gmcc-advocacy-updates "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,801 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/tj-villamil-leads-floridas-international-trade-and-development-team "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,846 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-economy-expanding-strongly-anchored-solid-fundamentals "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,910 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/surfside-small-business-recovery-fund "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,949 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-of-commerce-will-present-cesar-l.-alvarez-with-the-2026-sand-in-my-shoes-award "HTTP/1.1 200 OK"
+2026-03-18 08:43:21,978 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/driving-positive-change-in-2024 "HTTP/1.1 200 OK"
+2026-03-18 08:43:22,025 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/local-boosters-say-prospects-magic-city-have-never-looked-brighter "HTTP/1.1 200 OK"
+2026-03-18 08:43:22,064 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0 "HTTP/1.1 200 OK"
+2026-03-18 08:43:23,653 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo "HTTP/1.1 200 OK"
+2026-03-18 08:43:23,695 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/unveiling-the-live-local-act-series-insights-for-developers-and-investors "HTTP/1.1 200 OK"
+2026-03-18 08:43:23,798 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/spotlight-on-apprenticeship-success "HTTP/1.1 200 OK"
+2026-03-18 08:43:23,878 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/honorable-maurice-ferre-honorable-francis-suarez-recipients-award "HTTP/1.1 200 OK"
+2026-03-18 08:43:23,924 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-beacon-council-names-rodrick-miller-president-chief-executive-officer "HTTP/1.1 200 OK"
+2026-03-18 08:43:24,003 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-greater-miami-chamber-of-commerce-and-miami-dade-county-announce-trade-mission-to-japan-press-release "HTTP/1.1 200 OK"
+2026-03-18 08:43:24,042 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-senate-district-39-forum "HTTP/1.1 200 OK"
+2026-03-18 08:43:24,076 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fiu-and-greater-miami-chamber-of-commerce-uncover-local-workforce-development-trends-business-landscape "HTTP/1.1 200 OK"
+2026-03-18 08:43:24,108 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel "HTTP/1.1 200 OK"
+2026-03-18 08:43:24,145 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-insurance-regulation-creates-big-changes "HTTP/1.1 200 OK"
+2026-03-18 08:43:25,716 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/board-directors-meeting "HTTP/1.1 200 OK"
+2026-03-18 08:43:25,790 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmccs-novo-nonprofit-business-awards-accepting-nominations-until-june-10-0 "HTTP/1.1 200 OK"
+2026-03-18 08:43:25,864 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-local-phase-3-covid-vaccine-trial "HTTP/1.1 200 OK"
+2026-03-18 08:43:25,955 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/avmed-greater-miami-chamber-commerce-partner-form-greater-health-trust-ght-providing-corporate "HTTP/1.1 200 OK"
+2026-03-18 08:43:26,001 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/empowering-businesses-through-apprenticeships "HTTP/1.1 200 OK"
+2026-03-18 08:43:26,085 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/2019-impact-covid-survey-results "HTTP/1.1 200 OK"
+2026-03-18 08:43:26,119 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-tourism-way-down-hybrid-meetings-tv-production-parks-are-keys-recovery-plan "HTTP/1.1 200 OK"
+2026-03-18 08:43:26,160 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-latest-rounds-ppp-loans "HTTP/1.1 200 OK"
+2026-03-18 08:43:26,207 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-permanently-host-large-air-cargo-trade-show "HTTP/1.1 200 OK"
+2026-03-18 08:43:26,231 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/floridas-most-active-vc-firm-landing-miami-and-its-adding-familiar-tech-name "HTTP/1.1 200 OK"
+2026-03-18 08:43:27,796 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-launches-ceo-ambassador-program-manny-medina-marcelo-claure-jorge-perez-boost "HTTP/1.1 200 OK"
+2026-03-18 08:43:27,856 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/northeastern-expands-miami-universitys-14th-campus-will-focus-tech-finance-and-health "HTTP/1.1 200 OK"
+2026-03-18 08:43:27,930 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-smart-cities-part-1-investment-tech "HTTP/1.1 200 OK"
+2026-03-18 08:43:28,023 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-seen-gmccs-2022-sand-my-shoes-award "HTTP/1.1 200 OK"
+2026-03-18 08:43:28,088 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/florida-governor-signs-covid-19-liability-protection-bill "HTTP/1.1 200 OK"
+2026-03-18 08:43:28,146 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/legislative-updates-december-2024-changes-impacting-miami-businesses "HTTP/1.1 200 OK"
+2026-03-18 08:43:28,227 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/events "HTTP/1.1 200 OK"
+2026-03-18 08:43:28,244 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1 "HTTP/1.1 200 OK"
+2026-03-18 08:43:29,097 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fed-exec-reveals-what-needs-happen-interest-rates-are-lowered "HTTP/1.1 200 OK"
+2026-03-18 08:43:29,148 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-of-commerce-to-honor-benjamin-le%C3%B3n-with-2025-sand-in-my-shoes-award-press-release "HTTP/1.1 200 OK"
+2026-03-18 08:43:31,844 [ERROR] dealer_alert.runner: Crawl step failed: table leads has no column named summary
+2026-03-18 08:43:31,845 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 08:43:32,778 [INFO] dealer_alert.collectors.email_collector: Refreshing expired Gmail token...
+2026-03-18 08:43:33,137 [INFO] dealer_alert.collectors.email_collector: Gmail token cached at data\gmail_token.json
+2026-03-18 08:43:33,139 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 08:43:33,663 [INFO] dealer_alert.collectors.email_collector: Found 0 unread emails
+2026-03-18 08:43:33,663 [INFO] dealer_alert.collectors.email_collector: Collected 0 emails as FetchResults
+2026-03-18 08:43:33,664 [INFO] dealer_alert.runner: Email check complete: 0 emails processed
+2026-03-18 08:43:33,664 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 08:43:34,466 [INFO] httpx: HTTP Request: GET https://www.linkedin.com/company/wardsauto/ "HTTP/1.1 200 OK"
+2026-03-18 08:43:36,508 [INFO] dealer_alert.collectors.social_monitor: Social monitor collected 1 results from 1 URLs
+2026-03-18 08:43:36,511 [INFO] dealer_alert.runner: Social check complete: 1 profiles
+2026-03-18 08:43:36,511 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 08:43:37,174 [INFO] dealer_alert.runner: Promoted 100 new sources to registry
+2026-03-18 08:43:37,175 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 08:43:37,209 [INFO] dealer_alert.output.digest: CSV digest written to data\digests\digest_20260318_134337.csv
+2026-03-18 08:43:37,210 [INFO] dealer_alert.output.digest: JSON digest written to data\digests\digest_20260318_134337.json
+2026-03-18 08:43:37,210 [INFO] dealer_alert.runner: Digest: 9 leads (9 hot, 0 warm, 0 cold)
+2026-03-18 08:43:37,210 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:43:37,211 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 08:43:37,211 [INFO] dealer_alert.runner:   Duration: 28.6s
+2026-03-18 08:43:37,211 [INFO] dealer_alert.runner:   Sources crawled: 16
+2026-03-18 08:43:37,212 [INFO] dealer_alert.runner:   Emails processed: 0
+2026-03-18 08:43:37,213 [INFO] dealer_alert.runner:   Social profiles: 1
+2026-03-18 08:43:37,213 [INFO] dealer_alert.runner:   Leads found: 0
+2026-03-18 08:43:37,213 [INFO] dealer_alert.runner:   New sources discovered: 1
+2026-03-18 08:43:37,214 [INFO] dealer_alert.runner:   Errors: 1
+2026-03-18 08:43:37,214 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_134337.csv
+2026-03-18 08:43:37,217 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_134337.json
+2026-03-18 08:43:37,217 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:43:55,456 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 08:43:55,457 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-18 08:43:55,823 [INFO] werkzeug: 127.0.0.1 - - [18/Mar/2026 08:43:55] "GET / HTTP/1.1" 200 -
+2026-03-18 08:43:55,944 [INFO] werkzeug: 127.0.0.1 - - [18/Mar/2026 08:43:55] "GET /api/leads HTTP/1.1" 200 -
+2026-03-18 08:52:14,204 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 08:52:14,204 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 08:52:14,205 [INFO] dealer_alert.runner: Crawling 27 sources
+2026-03-18 08:52:14,599 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+general+manager&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:14,601 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+general+manager&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+general+manager&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:14,654 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:14,655 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:14,666 [INFO] httpx: HTTP Request: GET https://www.autonation.com/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:14,668 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.autonation.com/press-releases: Client error '403 Forbidden' for url 'https://www.autonation.com/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:14,674 [INFO] httpx: HTTP Request: GET https://www.dallaschamber.org/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:14,675 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dallaschamber.org/news/: Client error '403 Forbidden' for url 'https://www.dallaschamber.org/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:14,683 [INFO] httpx: HTTP Request: GET https://houston.org/news "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:14,684 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://houston.org/news: Client error '403 Forbidden' for url 'https://houston.org/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:14,741 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:14,799 [INFO] httpx: HTTP Request: GET https://www.dealernews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:14,816 [INFO] httpx: HTTP Request: GET https://www.lithiamotors.com/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:14,997 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:15,023 [INFO] httpx: HTTP Request: GET https://www.lithiadriveway.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 08:52:15,023 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.lithiamotors.com/news: Client error '404 Not Found' for url 'https://www.lithiadriveway.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 08:52:15,083 [INFO] httpx: HTTP Request: GET https://dealernews.com/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:16,502 [INFO] httpx: HTTP Request: GET https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/ "HTTP/1.1 404 Not Found"
+2026-03-18 08:52:16,641 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:16,789 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/: Client error '404 Not Found' for url 'https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 08:52:16,829 [INFO] httpx: HTTP Request: GET https://www.penskeautomotive.com/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:16,830 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.penskeautomotive.com/news/: Client error '403 Forbidden' for url 'https://www.penskeautomotive.com/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:16,836 [INFO] httpx: HTTP Request: GET https://www.nada.org/nada/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:16,836 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.nada.org/nada/press-releases: Client error '403 Forbidden' for url 'https://www.nada.org/nada/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:16,858 [INFO] httpx: HTTP Request: GET https://metroatlantachamber.com/about-the-chamber/news-and-events/ "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:16,862 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://metroatlantachamber.com/about-the-chamber/news-and-events/: Client error '403 Forbidden' for url 'https://metroatlantachamber.com/about-the-chamber/news-and-events/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:16,863 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/dealers "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:16,864 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.wardsauto.com/dealers: Client error '403 Forbidden' for url 'https://www.wardsauto.com/dealers'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:16,877 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:16,922 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:17,298 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:17,309 [INFO] httpx: HTTP Request: GET https://www.hendrickcars.com/news.htm "HTTP/1.1 200 OK"
+2026-03-18 08:52:17,362 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news "HTTP/1.1 200 OK"
+2026-03-18 08:52:17,930 [INFO] httpx: HTTP Request: GET https://www.txiada.org/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:18,911 [INFO] httpx: HTTP Request: GET https://www.businesswire.com/portal/site/home/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 08:52:18,912 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.businesswire.com/portal/site/home/news/: Client error '403 Forbidden' for url 'https://www.businesswire.com/portal/site/home/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 08:52:19,055 [INFO] httpx: HTTP Request: GET https://www.phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,101 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,115 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,129 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,143 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,157 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,159 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.phoenixchamber.com/news/: Exceeded maximum allowed redirects.
+2026-03-18 08:52:19,268 [INFO] httpx: HTTP Request: GET https://www.niada.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,328 [INFO] httpx: HTTP Request: GET https://www.uschamber.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 08:52:19,330 [INFO] httpx: HTTP Request: GET https://www.lachamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,341 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.uschamber.com/news: Client error '404 Not Found' for url 'https://www.uschamber.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 08:52:19,397 [INFO] httpx: HTTP Request: GET https://niada.com/dashboard/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:19,562 [INFO] httpx: HTTP Request: GET https://www.cbtnews.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:19,563 [INFO] httpx: HTTP Request: GET http://lachamber.com/news/ "HTTP/1.1 302 Found"
+2026-03-18 08:52:19,647 [INFO] httpx: HTTP Request: GET https://www.ciada.org/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:19,714 [INFO] httpx: HTTP Request: GET https://ciada.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:20,024 [INFO] httpx: HTTP Request: GET https://www.fiada.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 08:52:20,042 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:52:20,120 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.fiada.com/news: Client error '404 Not Found' for url 'https://www.fiada.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 08:52:20,127 [INFO] httpx: HTTP Request: GET https://lachamber.com/news/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:20,513 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers/ "HTTP/1.1 302 Moved Temporarily"
+2026-03-18 08:52:20,578 [INFO] httpx: HTTP Request: GET https://www.autonews.com/retail/ "HTTP/1.1 200 OK"
+2026-03-18 08:52:34,291 [INFO] dealer_alert.runner: Crawl complete: 27 sources, 95 leads
+2026-03-18 08:52:34,292 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 08:52:35,528 [INFO] dealer_alert.collectors.email_collector: No cached token found. Opening browser for Gmail authorization...
+2026-03-18 08:52:35,863 [INFO] google_auth_oauthlib.flow: Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=1070982058304-4835d8o37u7fvq00auvksf5235s47t48.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A50673%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.modify&state=6h6kaAB1oUQM3ouThhKLu6rgzQFAta&code_challenge=JcqjeUejyS4cHxR5YRuRHCcqGdX0kCABdvOQlqd9w4E&code_challenge_method=S256&access_type=offline
+2026-03-18 08:52:44,433 [INFO] google_auth_oauthlib.flow: "GET /?state=6h6kaAB1oUQM3ouThhKLu6rgzQFAta&iss=https://accounts.google.com&code=4/0AfrIepCSXw2ZBbxgLTgyf82v0BX4yrYOVfJ6LOiBMDaNvx6hlhMYb77UTPIPxgED1-s8SQ&scope=https://www.googleapis.com/auth/gmail.readonly%20https://www.googleapis.com/auth/gmail.modify HTTP/1.1" 200 65
+2026-03-18 08:52:44,791 [INFO] dealer_alert.collectors.email_collector: Gmail token cached at C:\Users\Bout Time\AppData\Local\DealerAlertBot\gmail_token.json
+2026-03-18 08:52:44,795 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 08:52:45,348 [INFO] dealer_alert.collectors.email_collector: Found 0 unread emails
+2026-03-18 08:52:45,348 [INFO] dealer_alert.collectors.email_collector: Collected 0 emails as FetchResults
+2026-03-18 08:52:45,349 [INFO] dealer_alert.runner: Email check complete: 0 emails processed
+2026-03-18 08:52:45,349 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 08:52:45,351 [INFO] dealer_alert.runner: No social sources registered — skipping
+2026-03-18 08:52:45,351 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 08:52:45,983 [INFO] dealer_alert.runner: Promoted 100 new sources to registry
+2026-03-18 08:52:45,983 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 08:52:45,996 [INFO] dealer_alert.output.dedup: Dedup: 95 leads -> 3 (92 duplicates merged)
+2026-03-18 08:52:45,998 [INFO] dealer_alert.output.digest: CSV digest written to C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135245.csv
+2026-03-18 08:52:45,999 [INFO] dealer_alert.output.digest: JSON digest written to C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135245.json
+2026-03-18 08:52:45,999 [INFO] dealer_alert.runner: Digest: 3 leads (3 hot, 0 warm, 0 cold)
+2026-03-18 08:52:45,999 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:52:46,000 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 08:52:46,000 [INFO] dealer_alert.runner:   Duration: 31.8s
+2026-03-18 08:52:46,000 [INFO] dealer_alert.runner:   Sources crawled: 27
+2026-03-18 08:52:46,001 [INFO] dealer_alert.runner:   Emails processed: 0
+2026-03-18 08:52:46,001 [INFO] dealer_alert.runner:   Social profiles: 0
+2026-03-18 08:52:46,001 [INFO] dealer_alert.runner:   Leads found: 95
+2026-03-18 08:52:46,002 [INFO] dealer_alert.runner:   New sources discovered: 2167
+2026-03-18 08:52:46,002 [INFO] dealer_alert.runner:   Errors: 15
+2026-03-18 08:52:46,003 [INFO] dealer_alert.runner:   Digest: C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135245.csv
+2026-03-18 08:52:46,003 [INFO] dealer_alert.runner:   Digest: C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135245.json
+2026-03-18 08:52:46,004 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:53:15,478 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 08:53:15,478 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 08:53:15,480 [INFO] dealer_alert.runner: Crawling 100 sources
+2026-03-18 08:53:15,901 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo "HTTP/1.1 200 OK"
+2026-03-18 08:53:15,966 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/4th-survey-results-impact-covid-19 "HTTP/1.1 200 OK"
+2026-03-18 08:53:16,001 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/irish-consulate-aims-expand-irish-presence-america-catering-miami-trade-nexus "HTTP/1.1 200 OK"
+2026-03-18 08:53:16,061 [INFO] httpx: HTTP Request: GET https://web.miamichamber.com/atlas/directory/search "HTTP/1.1 200 OK"
+2026-03-18 08:53:16,390 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/bdo-hosts-2022-giving-guide-reception "HTTP/1.1 200 OK"
+2026-03-18 08:53:16,913 [INFO] httpx: HTTP Request: GET https://dealernews.com/news/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:17,227 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-2/usitc-launches-probe-into-usmca-rules-what-used-car-dealers-need-to-know "HTTP/1.1 200 OK"
+2026-03-18 08:53:17,229 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/manufacturing/autotrader-names-best-new-cars "HTTP/1.1 200 OK"
+2026-03-18 08:53:17,259 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/car-culture/gas-prices-rise-sharply "HTTP/1.1 200 OK"
+2026-03-18 08:53:17,295 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/manufacturing/gm-recalls-2012-2013-buicks "HTTP/1.1 200 OK"
+2026-03-18 08:53:18,139 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-mayor-levine-cava-celebrated-international-womens-day-her-first-town-hall "HTTP/1.1 200 OK"
+2026-03-18 08:53:18,283 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0 "HTTP/1.1 200 OK"
+2026-03-18 08:53:19,182 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/closing-the-gap-miamis-homelessness-progress-the-final-push "HTTP/1.1 200 OK"
+2026-03-18 08:53:19,299 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/technology/carfax-recall-tool-hits-milestone "HTTP/1.1 200 OK"
+2026-03-18 08:53:19,477 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-2/byrider-rocked-launch-training-initiative "HTTP/1.1 200 OK"
+2026-03-18 08:53:19,480 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/2019-impact-covid-survey-results "HTTP/1.1 200 OK"
+2026-03-18 08:53:19,820 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-webinar-series-part-3 "HTTP/1.1 200 OK"
+2026-03-18 08:53:19,889 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/car-culture "HTTP/1.1 200 OK"
+2026-03-18 08:53:20,377 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/empowering-businesses-through-apprenticeships "HTTP/1.1 200 OK"
+2026-03-18 08:53:20,962 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/manufacturing "HTTP/1.1 200 OK"
+2026-03-18 08:53:21,166 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/technology "HTTP/1.1 200 OK"
+2026-03-18 08:53:21,593 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/recalls/chrysler-recalls-grand-cherokees "HTTP/1.1 200 OK"
+2026-03-18 08:53:21,651 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/healthy-west-kendall-gets-boost-leadership-miami "HTTP/1.1 200 OK"
+2026-03-18 08:53:21,773 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/workforce-housing-economic-development-chamber-session-told "HTTP/1.1 200 OK"
+2026-03-18 08:53:23,068 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/legal-compliance/odometer-trade-group-announces-conference "HTTP/1.1 200 OK"
+2026-03-18 08:53:23,218 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/when-recognition-changes-everything-the-real-power-of-novo-awards "HTTP/1.1 200 OK"
+2026-03-18 08:53:23,713 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/car-culture/postal-service-releases-lowrider-stamps "HTTP/1.1 200 OK"
+2026-03-18 08:53:23,929 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/recalls "HTTP/1.1 200 OK"
+2026-03-18 08:53:24,177 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page "HTTP/1.1 200 OK"
+2026-03-18 08:53:24,594 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-2 "HTTP/1.1 200 OK"
+2026-03-18 08:53:25,255 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-2/niada-offers-collections-leadership-boot-camps "HTTP/1.1 200 OK"
+2026-03-18 08:53:25,279 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dadecountychamber.org: [Errno 11001] getaddrinfo failed
+2026-03-18 08:53:25,410 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/technology/reputation-management-firm-names-coo "HTTP/1.1 200 OK"
+2026-03-18 08:53:25,546 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/electric/firm-releases-new-ev-research "HTTP/1.1 200 OK"
+2026-03-18 08:53:26,658 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/recalls/hyundai-recalls-multiple-models "HTTP/1.1 200 OK"
+2026-03-18 08:53:27,353 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-2/the-58-negative-equity-wall-how-used-car-dealers-can-navigate-the-2026-credit-surge "HTTP/1.1 200 OK"
+2026-03-18 08:53:27,424 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.chamberofdadecounty.com: [Errno 11001] getaddrinfo failed
+2026-03-18 08:53:27,507 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/technology/platform-launches-lease-end-marketplace "HTTP/1.1 200 OK"
+2026-03-18 08:53:28,246 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/legal-compliance "HTTP/1.1 200 OK"
+2026-03-18 08:53:28,784 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/electric/former-transportation-secretary-discusses-evs "HTTP/1.1 200 OK"
+2026-03-18 08:53:28,903 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-insights-summit-celebrating-excellence-and-innovation-in-human-resources "HTTP/1.1 200 OK"
+2026-03-18 08:53:28,934 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-2/dealer/ftc-sends-dealers-warning-letters "HTTP/1.1 200 OK"
+2026-03-18 08:53:29,105 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/electric/california-colorado-report-most-ev-registrations "HTTP/1.1 200 OK"
+2026-03-18 08:53:29,702 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/about "HTTP/1.1 200 OK"
+2026-03-18 08:53:30,634 [INFO] httpx: HTTP Request: GET https://www.indianachamber.com "HTTP/1.1 200 OK"
+2026-03-18 08:53:30,829 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/financial/jobless-claims-fall "HTTP/1.1 200 OK"
+2026-03-18 08:53:30,852 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/electric "HTTP/1.1 200 OK"
+2026-03-18 08:53:31,263 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/mdc-teams-local-government-and-academic-institutions-launch-miami-tech-works-first-meeting-feb "HTTP/1.1 200 OK"
+2026-03-18 08:53:31,266 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indianachamber.org: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.indianachamber.org'. (_ssl.c:1032)
+2026-03-18 08:53:31,870 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-commerce-presents-2022-chamber-legislative-champion-award-rep-demi "HTTP/1.1 200 OK"
+2026-03-18 08:53:32,573 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/manufacturing/report-ranks-best-cars-for-families "HTTP/1.1 200 OK"
+2026-03-18 08:53:32,649 [INFO] httpx: HTTP Request: GET https://usedcarnews.com/index.php/en/news-2 "HTTP/1.1 200 OK"
+2026-03-18 08:53:33,098 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fed-exec-reveals-what-needs-happen-interest-rates-are-lowered "HTTP/1.1 200 OK"
+2026-03-18 08:53:33,277 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for email://newdealerchecker@gmail.com: Request URL has an unsupported protocol 'email://'.
+2026-03-18 08:53:33,331 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.chamberofindiana.com: [Errno 11001] getaddrinfo failed
+2026-03-18 08:53:33,422 [INFO] httpx: HTTP Request: GET https://indianachamber.com "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:53:33,477 [INFO] httpx: HTTP Request: GET https://www.indianachamber.com/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:34,350 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/legal-compliance/tesla-dealership-arson-receives-prison-time "HTTP/1.1 200 OK"
+2026-03-18 08:53:34,778 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-permanently-host-large-air-cargo-trade-show "HTTP/1.1 200 OK"
+2026-03-18 08:53:35,129 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/immigration-policy-impact-survey "HTTP/1.1 200 OK"
+2026-03-18 08:53:35,221 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/technology/cox-automotive-celebrates-ev-battery-milestone "HTTP/1.1 200 OK"
+2026-03-18 08:53:35,371 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-healthcare-committee-the-epidemic-of-opioid-addiction "HTTP/1.1 200 OK"
+2026-03-18 08:53:35,507 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/event-recap/snap-at-risk-what-chicagos-businesses-need-to-know-about-food-security-now/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:35,667 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news "HTTP/1.1 200 OK"
+2026-03-18 08:53:36,577 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/careers/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:36,815 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/car-culture/mattel-launches-hot-wheels-legends-tour "HTTP/1.1 200 OK"
+2026-03-18 08:53:37,445 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/event-recap/chicago-at-a-crossroads-securing-chicagos-ai-advantage/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:37,491 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/driving-economic-success-at-the-2024-economic-summit "HTTP/1.1 200 OK"
+2026-03-18 08:53:37,521 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-emerging-leaders-help-bring-comfort-and-support-nicu-families-holtz-childrens-hospital "HTTP/1.1 200 OK"
+2026-03-18 08:53:38,234 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/recalls/ford-recalls-four-models "HTTP/1.1 200 OK"
+2026-03-18 08:53:38,240 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/developer-breaks-ground-apartments-opa-locka "HTTP/1.1 200 OK"
+2026-03-18 08:53:38,855 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-united-way-uber-partner-help-people-get-covid-vaccination-sites "HTTP/1.1 200 OK"
+2026-03-18 08:53:38,993 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/car-culture/georgia-man-charged-with-smuggling-drugs-in-car-batteries "HTTP/1.1 200 OK"
+2026-03-18 08:53:39,107 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/event-recap/michael-fassnacht-honored-with-chamber-pac-advocacy-champion-award/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:39,574 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-april-trustee-luncheon-spotlighting-women-sports-leadership "HTTP/1.1 200 OK"
+2026-03-18 08:53:39,867 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/events "HTTP/1.1 301 Moved Permanently"
+2026-03-18 08:53:39,948 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/events/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:40,506 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/chamber-bringing-professors-teach-leadership-miami-classes "HTTP/1.1 200 OK"
+2026-03-18 08:53:40,919 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/legal-compliance/feds-withdraw-statement-on-immigration-status-of-noncitizen-borrowers "HTTP/1.1 200 OK"
+2026-03-18 08:53:40,930 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ultimate-ceo-christine-barney-motivating-through-engagement-not-fear "HTTP/1.1 200 OK"
+2026-03-18 08:53:41,210 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/event-recap/rewiring-the-economy-what-the-fgs-global-radar-means-for-chicago-leaders/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:41,349 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-strategy-covid-beyond-part-2 "HTTP/1.1 200 OK"
+2026-03-18 08:53:41,628 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/electric/california-colorado-report-most-ev-registrations-2 "HTTP/1.1 200 OK"
+2026-03-18 08:53:42,038 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-smart-cities-part-2-miami-tech-education-and-talent-development "HTTP/1.1 200 OK"
+2026-03-18 08:53:42,603 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/events/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:42,950 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/technology/how-rates-new-auto-app-is-speeding-up-used-car-sales "HTTP/1.1 200 OK"
+2026-03-18 08:53:43,294 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/covid-19-daily-activities-and-going-out "HTTP/1.1 200 OK"
+2026-03-18 08:53:43,339 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/building-miamis-climate-future-lessons-from-the-2025-resilient-solutions-summit "HTTP/1.1 200 OK"
+2026-03-18 08:53:43,454 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/news/?_categories=chamber-news "HTTP/1.1 200 OK"
+2026-03-18 08:53:43,896 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-greater-miami-chamber-of-commerce-and-miami-dade-county-announce-trade-mission-to-japan-press-release "HTTP/1.1 200 OK"
+2026-03-18 08:53:44,559 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/legal-compliance/ftc-shuts-down-trucking-industry-scam "HTTP/1.1 200 OK"
+2026-03-18 08:53:44,711 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/how-miami-achieved-nations-lowest-homelessness-rate "HTTP/1.1 200 OK"
+2026-03-18 08:53:44,905 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dadecountychamber.com: All connection attempts failed
+2026-03-18 08:53:45,187 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/about/ "HTTP/1.1 200 OK"
+2026-03-18 08:53:45,429 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-women-leaders-2020 "HTTP/1.1 200 OK"
+2026-03-18 08:53:45,543 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-webinar-series-what-it-takes-be-table-part-1 "HTTP/1.1 200 OK"
+2026-03-18 08:53:45,585 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/recalls/rivian-recalls-two-models "HTTP/1.1 200 OK"
+2026-03-18 08:53:46,321 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/news/?_categories=advocacy-public-policy "HTTP/1.1 200 OK"
+2026-03-18 08:53:46,658 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/news-page/manufacturing/honda-recalls-two-models "HTTP/1.1 200 OK"
+2026-03-18 08:53:46,810 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/swiftdox-supports-climate-change-initiatives "HTTP/1.1 200 OK"
+2026-03-18 08:53:47,013 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/university-miami-joins-elite-group-north-americas-top-research-institutions "HTTP/1.1 200 OK"
+2026-03-18 08:53:47,466 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://dadecountychamber.com: All connection attempts failed
+2026-03-18 08:54:04,874 [INFO] dealer_alert.runner: Crawl complete: 100 sources, 128 leads
+2026-03-18 08:54:04,875 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 08:54:05,787 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 08:54:06,306 [INFO] dealer_alert.collectors.email_collector: Found 1 unread emails
+2026-03-18 08:54:06,917 [INFO] dealer_alert.collectors.email_collector: Collected 1 emails as FetchResults
+2026-03-18 08:54:06,919 [INFO] dealer_alert.runner: Email check complete: 1 emails processed
+2026-03-18 08:54:06,920 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 08:54:06,922 [INFO] dealer_alert.runner: No social sources registered — skipping
+2026-03-18 08:54:06,922 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 08:54:07,532 [INFO] dealer_alert.runner: Promoted 100 new sources to registry
+2026-03-18 08:54:07,532 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 08:54:07,550 [INFO] dealer_alert.output.dedup: Dedup: 223 leads -> 7 (216 duplicates merged)
+2026-03-18 08:54:07,551 [INFO] dealer_alert.output.digest: CSV digest written to C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135407.csv
+2026-03-18 08:54:07,552 [INFO] dealer_alert.output.digest: JSON digest written to C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135407.json
+2026-03-18 08:54:07,553 [INFO] dealer_alert.runner: Digest: 7 leads (7 hot, 0 warm, 0 cold)
+2026-03-18 08:54:07,553 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:54:07,553 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 08:54:07,554 [INFO] dealer_alert.runner:   Duration: 52.1s
+2026-03-18 08:54:07,554 [INFO] dealer_alert.runner:   Sources crawled: 100
+2026-03-18 08:54:07,554 [INFO] dealer_alert.runner:   Emails processed: 1
+2026-03-18 08:54:07,555 [INFO] dealer_alert.runner:   Social profiles: 0
+2026-03-18 08:54:07,555 [INFO] dealer_alert.runner:   Leads found: 128
+2026-03-18 08:54:07,555 [INFO] dealer_alert.runner:   New sources discovered: 1881
+2026-03-18 08:54:07,556 [INFO] dealer_alert.runner:   Errors: 7
+2026-03-18 08:54:07,556 [INFO] dealer_alert.runner:   Digest: C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135407.csv
+2026-03-18 08:54:07,556 [INFO] dealer_alert.runner:   Digest: C:\Users\Bout Time\AppData\Local\DealerAlertBot\digests\digest_20260318_135407.json
+2026-03-18 08:54:07,557 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 08:54:18,128 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 08:54:18,129 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-18 08:54:18,486 [INFO] werkzeug: 127.0.0.1 - - [18/Mar/2026 08:54:18] "GET / HTTP/1.1" 200 -
+2026-03-18 08:54:18,541 [INFO] dealer_alert.output.dedup: Dedup: 223 leads -> 7 (216 duplicates merged)
+2026-03-18 08:54:18,543 [INFO] werkzeug: 127.0.0.1 - - [18/Mar/2026 08:54:18] "GET /api/leads HTTP/1.1" 200 -

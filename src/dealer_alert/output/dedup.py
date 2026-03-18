@@ -69,16 +69,12 @@ def leads_are_similar(a: Lead, b: Lead, name_threshold: float = 0.7) -> bool:
     name_b = normalize_name(b.dealer_name)
 
     if not name_a or not name_b:
-        # Without dealer names, only dedup if same source URL
-        # (same article parsed multiple times)
-        if a.source_url and a.source_url == b.source_url:
-            return True
-        # Or very high title similarity (>0.85)
-        title_a = a.title.lower()[:80]
-        title_b = b.title.lower()[:80]
-        if title_a and title_b:
-            return _simple_similarity(title_a, title_b) > 0.85
-        return False
+        # Without dealer names, ONLY dedup if exact same source URL
+        # (same article parsed multiple times from different pages)
+        return bool(
+            a.source_url
+            and a.source_url == b.source_url
+        )
 
     # Name similarity
     name_sim = _simple_similarity(name_a, name_b)

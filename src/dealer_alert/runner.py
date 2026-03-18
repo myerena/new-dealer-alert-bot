@@ -407,14 +407,30 @@ def _step_promote_sources(
 
     unprocessed = db.get_unprocessed_discovered(limit=config.max_new_sources_per_crawl)
 
+    # Only promote URLs that look automotive-relevant
+    auto_url_terms = [
+        "dealer", "auto", "motor", "car", "vehicle",
+        "automotive", "nada", "niada", "iada",
+        "remarketing", "autonews", "cbt", "wards",
+    ]
+
     promoted = 0
     for disc in unprocessed:
-        url = disc["url"]
-        if not db.source_exists(url):
+        url = disc["url"].lower()
+
+        # Skip non-automotive URLs to avoid chamber noise
+        is_relevant = any(term in url for term in auto_url_terms)
+        if not is_relevant:
+            # Still mark as processed so we don't re-check
+            if not dry_run:
+                db.mark_discovered_processed(disc["id"])
+            continue
+
+        if not db.source_exists(disc["url"]):
             from .models import SourceCategory, SourceType
 
             source = Source(
-                url=url,
+                url=disc["url"],
                 source_type=SourceType(disc.get("source_type", "html")),
                 category=SourceCategory(disc.get("category", "other")),
                 geography=disc.get("geography", ""),
