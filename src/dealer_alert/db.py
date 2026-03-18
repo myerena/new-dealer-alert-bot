@@ -96,14 +96,20 @@ class Database:
     def connect(self):
         """Context manager for database connections.
 
-        Uses a 30-second timeout to handle concurrent access on Windows,
-        and WAL mode for better read/write concurrency.
+        Uses DELETE journal mode instead of WAL to avoid Windows file-locking
+        issues with .db-wal and .db-shm files. Includes 30s busy timeout
+        for concurrent access.
         """
-        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        conn = sqlite3.connect(
+            str(self.db_path),
+            timeout=30,
+            check_same_thread=False,
+        )
         conn.row_factory = sqlite3.Row
-        conn.execute("PRAGMA journal_mode=WAL")
+        conn.execute("PRAGMA journal_mode=DELETE")
         conn.execute("PRAGMA foreign_keys=ON")
         conn.execute("PRAGMA busy_timeout=30000")
+        conn.execute("PRAGMA synchronous=NORMAL")
         try:
             yield conn
             conn.commit()
