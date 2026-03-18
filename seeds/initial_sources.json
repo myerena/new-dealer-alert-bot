@@ -1,0 +1,245 @@
+[
+  {
+    "url": "https://www.autoremarketing.com/feed",
+    "source_type": "rss",
+    "category": "trade_media",
+    "name": "Auto Remarketing RSS",
+    "geography": "national",
+    "priority": 1,
+    "notes": "Major dealer-focused trade publication"
+  },
+  {
+    "url": "https://www.cbtnews.com/feed/",
+    "source_type": "rss",
+    "category": "trade_media",
+    "name": "CBT News RSS",
+    "geography": "national",
+    "priority": 1,
+    "notes": "Car Biz Today - dealership news and training"
+  },
+  {
+    "url": "https://www.niada.com/news/",
+    "source_type": "html",
+    "category": "trade_media",
+    "name": "NIADA News",
+    "geography": "national",
+    "priority": 1,
+    "notes": "National Independent Automobile Dealers Association"
+  },
+  {
+    "url": "https://www.usedcarnews.com/",
+    "source_type": "html",
+    "category": "trade_media",
+    "name": "Used Car News",
+    "geography": "national",
+    "priority": 2,
+    "notes": "Used car dealer industry news"
+  },
+  {
+    "url": "https://www.autonews.com/dealers",
+    "source_type": "html",
+    "category": "trade_media",
+    "name": "Automotive News - Dealers",
+    "geography": "national",
+    "priority": 1,
+    "notes": "Top automotive industry publication - dealer section"
+  },
+  {
+    "url": "https://www.dealernews.com/",
+    "source_type": "html",
+    "category": "trade_media",
+    "name": "Dealer News",
+    "geography": "national",
+    "priority": 2,
+    "notes": "Dealership industry news"
+  },
+  {
+    "url": "https://www.wardsauto.com/dealers",
+    "source_type": "html",
+    "category": "trade_media",
+    "name": "Wards Auto - Dealers",
+    "geography": "national",
+    "priority": 2,
+    "notes": "Wards Auto dealer section"
+  },
+  {
+    "url": "https://www.nada.org/nada/press-releases",
+    "source_type": "html",
+    "category": "state_association",
+    "name": "NADA Press Releases",
+    "geography": "national",
+    "priority": 2,
+    "notes": "National Automobile Dealers Association"
+  },
+  {
+    "url": "https://www.txiada.org/news",
+    "source_type": "html",
+    "category": "state_association",
+    "name": "Texas IADA News",
+    "geography": "TX",
+    "priority": 3,
+    "notes": "Texas Independent Automobile Dealers Association"
+  },
+  {
+    "url": "https://www.fiada.com/news",
+    "source_type": "html",
+    "category": "state_association",
+    "name": "Florida IADA News",
+    "geography": "FL",
+    "priority": 3,
+    "notes": "Florida Independent Automobile Dealers Association"
+  },
+  {
+    "url": "https://www.ciada.org/news",
+    "source_type": "html",
+    "category": "state_association",
+    "name": "California IADA News",
+    "geography": "CA",
+    "priority": 3,
+    "notes": "California Independent Automobile Dealers Association"
+  },
+  {
+    "url": "https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/",
+    "source_type": "html",
+    "category": "trade_media",
+    "name": "PR Newswire - Auto Dealers",
+    "geography": "national",
+    "priority": 3,
+    "notes": "Press releases tagged automobile dealers"
+  },
+  {
+    "url": "https://www.businesswire.com/portal/site/home/news/",
+    "source_type": "html",
+    "category": "trade_media",
+    "name": "BusinessWire News",
+    "geography": "national",
+    "priority": 4,
+    "notes": "Business press releases - filter for dealer/auto keywords"
+  },
+  {
+    "url": "https://www.uschamber.com/news",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "U.S. Chamber of Commerce News",
+    "geography": "national",
+    "priority": 4,
+    "notes": "National chamber - less granular but good for big expansions"
+  },
+  {
+    "url": "https://www.dallaschamber.org/news/",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "Dallas Regional Chamber",
+    "geography": "Dallas, TX",
+    "priority": 3,
+    "notes": "Major metro chamber"
+  },
+  {
+    "url": "https://www.houstonchamber.com/news/",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "Greater Houston Partnership",
+    "geography": "Houston, TX",
+    "priority": 3,
+    "notes": "Major metro chamber"
+  },
+  {
+    "url": "https://www.atlantachamber.com/news/",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "Metro Atlanta Chamber",
+    "geography": "Atlanta, GA",
+    "priority": 3,
+    "notes": "Major metro chamber"
+  },
+  {
+    "url": "https://www.miamichamber.com/news/",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "Greater Miami Chamber",
+    "geography": "Miami, FL",
+    "priority": 3,
+    "notes": "Major metro chamber"
+  },
+  {
+    "url": "https://www.phoenixchamber.com/news/",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "Greater Phoenix Chamber",
+    "geography": "Phoenix, AZ",
+    "priority": 3,
+    "notes": "Major metro chamber"
+  },
+  {
+    "url": "https://www.lachamber.com/news/",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "Los Angeles Area Chamber",
+    "geography": "Los Angeles, CA",
+    "priority": 3,
+    "notes": "Major metro chamber"
+  },
+  {
+    "url": "https://www.chicagolandchamber.org/news/",
+    "source_type": "html",
+    "category": "chamber",
+    "name": "Chicagoland Chamber",
+    "geography": "Chicago, IL",
+    "priority": 3,
+    "notes": "Major metro chamber"
+  },
+  {
+    "url": "https://www.lithiamotors.com/news",
+    "source_type": "html",
+    "category": "dealer_group",
+    "name": "Lithia Motors News",
+    "geography": "national",
+    "priority": 3,
+    "notes": "Top 5 dealer group - track for acquisitions/openings"
+  },
+  {
+    "url": "https://www.autonation.com/press-releases",
+    "source_type": "html",
+    "category": "dealer_group",
+    "name": "AutoNation Press Releases",
+    "geography": "national",
+    "priority": 3,
+    "notes": "Largest US dealer group"
+  },
+  {
+    "url": "https://www.penskeautomotive.com/news/",
+    "source_type": "html",
+    "category": "dealer_group",
+    "name": "Penske Automotive News",
+    "geography": "national",
+    "priority": 3,
+    "notes": "Major dealer group"
+  },
+  {
+    "url": "https://www.hendrickcars.com/news.htm",
+    "source_type": "html",
+    "category": "dealer_group",
+    "name": "Hendrick Automotive News",
+    "geography": "national",
+    "priority": 3,
+    "notes": "Major dealer group"
+  },
+  {
+    "url": "https://www.indeed.com/jobs?q=dealership+general+manager&sort=date",
+    "source_type": "html",
+    "category": "other",
+    "name": "Indeed - Dealership GM Jobs",
+    "geography": "national",
+    "priority": 4,
+    "notes": "Hiring signals for new/expanding dealerships"
+  },
+  {
+    "url": "https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date",
+    "source_type": "html",
+    "category": "other",
+    "name": "Indeed - Dealership Hiring",
+    "geography": "national",
+    "priority": 4,
+    "notes": "Broad dealership hiring signals"
+  }
+]

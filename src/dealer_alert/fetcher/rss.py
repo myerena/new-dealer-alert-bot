@@ -1,0 +1,54 @@
+"""RSS/Atom feed fetcher."""
+
+from __future__ import annotations
+
+import logging
+
+import feedparser
+
+from ..models import FetchResult
+from .base import BaseFetcher
+
+logger = logging.getLogger(__name__)
+
+
+class RSSFetcher(BaseFetcher):
+    """Fetch and parse RSS/Atom feeds."""
+
+    async def fetch(self, source_id: int, url: str, client, **kwargs) -> FetchResult:
+        """Fetch an RSS feed, return entries as structured content."""
+        try:
+            response = await client.get(url)
+            response.raise_for_status()
+        except Exception as e:
+            logger.warning(f"RSS fetch failed for {url}: {e}")
+            return self._make_result(source_id, url, error=str(e))
+
+        raw = response.text
+        feed = feedparser.parse(raw)
+
+        if feed.bozo and not feed.entries:
+            return self._make_result(
+                source_id, url, status_code=response.status_code,
+                error=f"Feed parse error: {feed.bozo_exception}"
+            )
+
+        # Build structured text from entries for keyword extraction
+        parts = []
+        links = []
+        for entry in feed.entries:
+            title = getattr(entry, "title", "")
+            summary = getattr(entry, "summary", "")
+            link = getattr(entry, "link", "")
+            parts.append(f"TITLE: {title}\n{summary}")
+            if link:
+                links.append(link)
+
+        content = "\n---\n".join(parts)
+        return self._make_result(
+            source_id=source_id,
+            url=url,
+            status_code=response.status_code,
+            content=content,
+            links=links,
+        )
