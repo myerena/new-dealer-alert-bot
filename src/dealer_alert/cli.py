@@ -471,5 +471,160 @@ async def _run_social_check(
     console.print(f"\n[bold]Social check complete:[/bold] {total_leads} leads found")
 
 
+@main.command("find-newsletters")
+@click.option(
+    "--limit",
+    default=50,
+    help="Max source URLs to scan for signup forms",
+)
+@click.option(
+    "--subscribe",
+    is_flag=True,
+    help="Actually submit signup forms (default: discover only)",
+)
+@click.option(
+    "--dry-run",
+    is_flag=True,
+    help="Show what would be submitted without submitting",
+)
+@click.pass_context
+def find_newsletters(ctx, limit, subscribe, dry_run):
+    """Discover newsletter signup forms across registered sources.
+
+    By default, only discovers and reports forms. Use --subscribe
+    to actually submit the email address to found forms.
+    """
+    from .collectors import AutoSubscriber
+
+    config: Config = ctx.obj["config"]
+    db: Database = ctx.obj["db"]
+    db.init_schema()
+
+    email_addr = config.email_address
+    if not email_addr:
+        console.print(
+            "[red]No email configured.[/red] "
+            "Set GMAIL_ADDRESS in .env"
+        )
+        return
+
+    sources = db.get_all_sources(enabled_only=True)
+    urls = [s.url for s in sources[:limit]]
+
+    if not urls:
+        console.print("[yellow]No sources in registry.[/yellow]")
+        return
+
+    console.print(
+        f"[bold]Scanning {len(urls)} sources for "
+        f"newsletter signups...[/bold]"
+    )
+
+    subscriber = AutoSubscriber(email=email_addr)
+    signups = asyncio.run(subscriber.discover_from_urls(urls))
+
+    if not signups:
+        console.print(
+            "[yellow]No signup forms found.[/yellow]"
+        )
+        return
+
+    # Display results
+    table = Table(title="Discovered Newsletter Signups")
+    table.add_column("Type", style="cyan", width=6)
+    table.add_column("Confidence", justify="right", width=6)
+    table.add_column("Source", width=30)
+    table.add_column("Signup URL / Action", width=45)
+    table.add_column("Context", width=30)
+
+    for s in sorted(signups, key=lambda x: -x.confidence):
+        conf_color = (
+            "green" if s.confidence >= 0.7
+            else "yellow" if s.confidence >= 0.4
+            else "red"
+        )
+        table.add_row(
+            s.signup_type,
+            f"[{conf_color}]{s.confidence:.0%}[/{conf_color}]",
+            _truncate(s.source_url, 30),
+            _truncate(s.signup_url or s.form_action, 45),
+            _truncate(s.context_text, 30),
+        )
+
+    console.print(table)
+
+    rss_count = sum(1 for s in signups if s.signup_type == "rss")
+    form_count = sum(
+        1 for s in signups if s.signup_type in ("form", "esp")
+    )
+    link_count = sum(
+        1 for s in signups if s.signup_type == "link"
+    )
+
+    console.print(
+        f"\n[bold]Found:[/bold] {rss_count} RSS feeds, "
+        f"{form_count} signup forms, {link_count} signup links"
+    )
+
+    # Register discovered RSS feeds as sources
+    rss_added = 0
+    for s in signups:
+        if s.signup_type == "rss" and not db.source_exists(s.signup_url):
+            from .models import SourceType
+
+            db.add_source(
+                Source(
+                    url=s.signup_url,
+                    source_type=SourceType.RSS,
+                    name=s.context_text[:50],
+                    notes="Auto-discovered RSS feed",
+                )
+            )
+            rss_added += 1
+
+    if rss_added:
+        console.print(
+            f"[green]Added {rss_added} new RSS feeds "
+            f"to source registry[/green]"
+        )
+
+    # Subscribe to forms if requested
+    if subscribe and form_count > 0:
+        console.print(
+            f"\n[bold]Subscribing {email_addr} to "
+            f"{form_count} forms...[/bold]"
+        )
+        results = asyncio.run(
+            subscriber.subscribe_all(signups, dry_run=dry_run)
+        )
+
+        success = sum(1 for r in results if r.success)
+        failed = sum(1 for r in results if not r.success)
+        console.print(
+            f"[bold]Results:[/bold] {success} succeeded, "
+            f"{failed} failed/manual"
+        )
+
+        for r in results:
+            if r.error:
+                console.print(
+                    f"  [red]FAIL[/red] "
+                    f"{_truncate(r.signup.form_action, 50)}: "
+                    f"{r.error[:60]}"
+                )
+    elif form_count > 0 and not subscribe:
+        console.print(
+            "\n[dim]Run with --subscribe to auto-submit forms, "
+            "or --subscribe --dry-run to preview.[/dim]"
+        )
+
+
+def _truncate(text: str, length: int) -> str:
+    """Truncate text with ellipsis."""
+    if len(text) <= length:
+        return text
+    return text[: length - 1] + "…"
+
+
 if __name__ == "__main__":
     main()
