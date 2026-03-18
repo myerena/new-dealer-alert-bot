@@ -502,10 +502,7 @@ def find_newsletters(ctx, limit, subscribe, dry_run):
 
     email_addr = config.email_address
     if not email_addr:
-        console.print(
-            "[red]No email configured.[/red] "
-            "Set GMAIL_ADDRESS in .env"
-        )
+        console.print("[red]No email configured.[/red] Set GMAIL_ADDRESS in .env")
         return
 
     sources = db.get_all_sources(enabled_only=True)
@@ -515,18 +512,13 @@ def find_newsletters(ctx, limit, subscribe, dry_run):
         console.print("[yellow]No sources in registry.[/yellow]")
         return
 
-    console.print(
-        f"[bold]Scanning {len(urls)} sources for "
-        f"newsletter signups...[/bold]"
-    )
+    console.print(f"[bold]Scanning {len(urls)} sources for newsletter signups...[/bold]")
 
     subscriber = AutoSubscriber(email=email_addr)
     signups = asyncio.run(subscriber.discover_from_urls(urls))
 
     if not signups:
-        console.print(
-            "[yellow]No signup forms found.[/yellow]"
-        )
+        console.print("[yellow]No signup forms found.[/yellow]")
         return
 
     # Display results
@@ -538,11 +530,7 @@ def find_newsletters(ctx, limit, subscribe, dry_run):
     table.add_column("Context", width=30)
 
     for s in sorted(signups, key=lambda x: -x.confidence):
-        conf_color = (
-            "green" if s.confidence >= 0.7
-            else "yellow" if s.confidence >= 0.4
-            else "red"
-        )
+        conf_color = "green" if s.confidence >= 0.7 else "yellow" if s.confidence >= 0.4 else "red"
         table.add_row(
             s.signup_type,
             f"[{conf_color}]{s.confidence:.0%}[/{conf_color}]",
@@ -554,12 +542,8 @@ def find_newsletters(ctx, limit, subscribe, dry_run):
     console.print(table)
 
     rss_count = sum(1 for s in signups if s.signup_type == "rss")
-    form_count = sum(
-        1 for s in signups if s.signup_type in ("form", "esp")
-    )
-    link_count = sum(
-        1 for s in signups if s.signup_type == "link"
-    )
+    form_count = sum(1 for s in signups if s.signup_type in ("form", "esp"))
+    link_count = sum(1 for s in signups if s.signup_type == "link")
 
     console.print(
         f"\n[bold]Found:[/bold] {rss_count} RSS feeds, "
@@ -583,40 +567,60 @@ def find_newsletters(ctx, limit, subscribe, dry_run):
             rss_added += 1
 
     if rss_added:
-        console.print(
-            f"[green]Added {rss_added} new RSS feeds "
-            f"to source registry[/green]"
-        )
+        console.print(f"[green]Added {rss_added} new RSS feeds to source registry[/green]")
 
     # Subscribe to forms if requested
     if subscribe and form_count > 0:
-        console.print(
-            f"\n[bold]Subscribing {email_addr} to "
-            f"{form_count} forms...[/bold]"
-        )
-        results = asyncio.run(
-            subscriber.subscribe_all(signups, dry_run=dry_run)
-        )
+        console.print(f"\n[bold]Subscribing {email_addr} to {form_count} forms...[/bold]")
+        results = asyncio.run(subscriber.subscribe_all(signups, dry_run=dry_run))
 
         success = sum(1 for r in results if r.success)
         failed = sum(1 for r in results if not r.success)
-        console.print(
-            f"[bold]Results:[/bold] {success} succeeded, "
-            f"{failed} failed/manual"
-        )
+        console.print(f"[bold]Results:[/bold] {success} succeeded, {failed} failed/manual")
 
         for r in results:
             if r.error:
                 console.print(
-                    f"  [red]FAIL[/red] "
-                    f"{_truncate(r.signup.form_action, 50)}: "
-                    f"{r.error[:60]}"
+                    f"  [red]FAIL[/red] {_truncate(r.signup.form_action, 50)}: {r.error[:60]}"
                 )
     elif form_count > 0 and not subscribe:
         console.print(
             "\n[dim]Run with --subscribe to auto-submit forms, "
             "or --subscribe --dry-run to preview.[/dim]"
         )
+
+
+@main.command("run-all")
+@click.option("--crawl-limit", default=100, help="Max sources to crawl")
+@click.option("--email-hours", default=24, help="Email lookback window in hours")
+@click.option("--dry-run", is_flag=True, help="Run without side effects")
+@click.pass_context
+def run_all(ctx, crawl_limit, email_hours, dry_run):
+    """Run the full pipeline: crawl → email → social → expand → digest."""
+    from .runner import run_pipeline
+
+    config: Config = ctx.obj["config"]
+
+    console.print("[bold]Starting full pipeline run...[/bold]")
+    if dry_run:
+        console.print("[yellow][DRY RUN][/yellow]")
+
+    stats = run_pipeline(
+        config=config,
+        crawl_limit=crawl_limit,
+        email_hours=email_hours,
+        dry_run=dry_run,
+    )
+
+    console.print(f"\n[bold]Pipeline complete in {stats.duration_seconds:.1f}s[/bold]")
+    console.print(f"  Sources crawled: {stats.sources_crawled}")
+    console.print(f"  Emails processed: {stats.emails_processed}")
+    console.print(f"  Social profiles: {stats.social_profiles_checked}")
+    console.print(f"  Leads found: {stats.leads_found}")
+    console.print(f"  New sources: {stats.new_sources_discovered}")
+    console.print(f"  Errors: {stats.errors}")
+    for f in stats.digest_files:
+        console.print(f"  [green]Digest:[/green] {f}")
 
 
 def _truncate(text: str, length: int) -> str:
