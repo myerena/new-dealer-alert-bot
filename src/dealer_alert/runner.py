@@ -25,7 +25,7 @@ from .db import Database
 from .expander import ExpansionEngine
 from .extractor import LeadExtractor
 from .fetcher import FetchManager
-from .models import Source
+from .models import FetchResult, Source
 from .output import DigestGenerator
 
 logger = logging.getLogger(__name__)
@@ -184,40 +184,48 @@ def _step_crawl(
 
     log_id = db.start_crawl_log() if not dry_run else 0
 
+    # Collect all fetch results first (async), then process/write (sync)
+    # This avoids SQLite concurrency issues on Windows
+    collected_results: list[FetchResult] = []
+
     async def _crawl():
         async for result in fetch_mgr.fetch_sources(sources, dry_run=dry_run):
-            stats.sources_crawled += 1
-
-            if result.error:
-                stats.errors += 1
-                if not dry_run:
-                    db.update_source_fetched(result.source_id, "", error=result.error)
-                continue
-
-            if not dry_run:
-                db.update_source_fetched(result.source_id, result.content_hash)
-
-            leads = extractor.extract(result)
-            for lead in leads:
-                if not dry_run:
-                    db.add_lead(lead)
-                stats.leads_found += 1
-
-            for lead in leads:
-                discovered = expander.expand_from_lead(lead)
-                for ds in discovered:
-                    if not dry_run:
-                        db.add_discovered_source(ds)
-                    stats.new_sources_discovered += 1
-
-            if result.links:
-                link_discovered = expander.expand_from_links(result.source_id, result.links)
-                for ds in link_discovered:
-                    if not dry_run:
-                        db.add_discovered_source(ds)
-                    stats.new_sources_discovered += 1
+            collected_results.append(result)
 
     asyncio.run(_crawl())
+
+    # Now process results and write to DB synchronously
+    for result in collected_results:
+        stats.sources_crawled += 1
+
+        if result.error:
+            stats.errors += 1
+            if not dry_run:
+                db.update_source_fetched(result.source_id, "", error=result.error)
+            continue
+
+        if not dry_run:
+            db.update_source_fetched(result.source_id, result.content_hash)
+
+        leads = extractor.extract(result)
+        for lead in leads:
+            if not dry_run:
+                db.add_lead(lead)
+            stats.leads_found += 1
+
+        for lead in leads:
+            discovered = expander.expand_from_lead(lead)
+            for ds in discovered:
+                if not dry_run:
+                    db.add_discovered_source(ds)
+                stats.new_sources_discovered += 1
+
+        if result.links:
+            link_discovered = expander.expand_from_links(result.source_id, result.links)
+            for ds in link_discovered:
+                if not dry_run:
+                    db.add_discovered_source(ds)
+                stats.new_sources_discovered += 1
 
     if not dry_run and log_id:
         db.finish_crawl_log(

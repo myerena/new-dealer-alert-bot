@@ -69,10 +69,10 @@
     "name": "NADA Press Releases",
     "geography": "national",
     "priority": 2,
-    "notes": "National Automobile Dealers Association"
+    "notes": "National Automobile Dealers Association — may block bots (403)"
   },
   {
-    "url": "https://www.txiada.org/news",
+    "url": "https://www.txiada.org/",
     "source_type": "html",
     "category": "state_association",
     "name": "Texas IADA News",
@@ -135,22 +135,22 @@
     "notes": "Major metro chamber"
   },
   {
-    "url": "https://www.houstonchamber.com/news/",
+    "url": "https://houston.org/news",
     "source_type": "html",
     "category": "chamber",
     "name": "Greater Houston Partnership",
     "geography": "Houston, TX",
     "priority": 3,
-    "notes": "Major metro chamber"
+    "notes": "Major metro chamber (houston.org is the correct domain)"
   },
   {
-    "url": "https://www.atlantachamber.com/news/",
+    "url": "https://metroatlantachamber.com/about-the-chamber/news-and-events/",
     "source_type": "html",
     "category": "chamber",
     "name": "Metro Atlanta Chamber",
     "geography": "Atlanta, GA",
     "priority": 3,
-    "notes": "Major metro chamber"
+    "notes": "Major metro chamber (correct domain)"
   },
   {
     "url": "https://www.miamichamber.com/news/",

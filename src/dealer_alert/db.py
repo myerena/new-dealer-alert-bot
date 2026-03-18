@@ -94,11 +94,16 @@ class Database:
 
     @contextmanager
     def connect(self):
-        """Context manager for database connections."""
-        conn = sqlite3.connect(str(self.db_path))
+        """Context manager for database connections.
+
+        Uses a 30-second timeout to handle concurrent access on Windows,
+        and WAL mode for better read/write concurrency.
+        """
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
         conn.row_factory = sqlite3.Row
         conn.execute("PRAGMA journal_mode=WAL")
         conn.execute("PRAGMA foreign_keys=ON")
+        conn.execute("PRAGMA busy_timeout=30000")
         try:
             yield conn
             conn.commit()
@@ -164,9 +169,7 @@ class Database:
                 rows = conn.execute("SELECT * FROM sources ORDER BY priority ASC").fetchall()
             return [self._row_to_source(r) for r in rows]
 
-    def update_source_fetched(
-        self, source_id: int, content_hash: str, error: str | None = None
-    ):
+    def update_source_fetched(self, source_id: int, content_hash: str, error: str | None = None):
         """Mark a source as fetched, updating hash and error count."""
         with self.connect() as conn:
             if error:
@@ -284,9 +287,7 @@ class Database:
     def mark_discovered_processed(self, disc_id: int):
         """Mark a discovered source as processed."""
         with self.connect() as conn:
-            conn.execute(
-                "UPDATE discovered_sources SET processed = 1 WHERE id = ?", (disc_id,)
-            )
+            conn.execute("UPDATE discovered_sources SET processed = 1 WHERE id = ?", (disc_id,))
 
     # ── Crawl log ───────────────────────────────────────────────────
 
@@ -297,8 +298,7 @@ class Database:
             return cursor.lastrowid or 0
 
     def finish_crawl_log(
-        self, log_id: int, sources_crawled: int, leads_found: int,
-        new_sources: int, errors: int
+        self, log_id: int, sources_crawled: int, leads_found: int, new_sources: int, errors: int
     ):
         """Finalize a crawl log entry."""
         with self.connect() as conn:
@@ -328,14 +328,10 @@ class Database:
             enabled=bool(row["enabled"]),
             parent_source_id=row["parent_source_id"],
             last_fetched_at=(
-                datetime.fromisoformat(row["last_fetched_at"])
-                if row["last_fetched_at"]
-                else None
+                datetime.fromisoformat(row["last_fetched_at"]) if row["last_fetched_at"] else None
             ),
             last_hash=row["last_hash"],
-            created_at=(
-                datetime.fromisoformat(row["created_at"]) if row["created_at"] else None
-            ),
+            created_at=(datetime.fromisoformat(row["created_at"]) if row["created_at"] else None),
             fetch_error_count=row["fetch_error_count"],
             notes=row["notes"],
         )
@@ -358,9 +354,7 @@ class Database:
             score=LeadScore(row["score"]),
             mention_count=row["mention_count"],
             discovered_at=(
-                datetime.fromisoformat(row["discovered_at"])
-                if row["discovered_at"]
-                else None
+                datetime.fromisoformat(row["discovered_at"]) if row["discovered_at"] else None
             ),
             raw_text=row["raw_text"],
         )
