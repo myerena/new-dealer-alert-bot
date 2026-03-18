@@ -635,6 +635,28 @@ def browser_fetch(ctx, url, headless):
         console.print("[yellow]No leads found in page content[/yellow]")
 
 
+@main.command("report")
+@click.option("--hours", default=24, help="Include leads from the last N hours")
+@click.option("--open", "open_browser", is_flag=True, help="Open report in browser")
+@click.pass_context
+def report(ctx, hours, open_browser):
+    """Generate an HTML dashboard report with charts and lead data."""
+    from .output.report import generate_report
+
+    config: Config = ctx.obj["config"]
+    db: Database = ctx.obj["db"]
+    db.init_schema()
+
+    console.print(f"[bold]Generating report (last {hours} hours)...[/bold]")
+    path = generate_report(config, db, since_hours=hours)
+    console.print(f"[green]Report:[/green] {path}")
+
+    if open_browser:
+        import webbrowser
+
+        webbrowser.open(str(path))
+
+
 @main.command("run-all")
 @click.option("--crawl-limit", default=100, help="Max sources to crawl")
 @click.option("--email-hours", default=24, help="Email lookback window in hours")

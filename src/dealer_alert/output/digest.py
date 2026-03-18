@@ -46,6 +46,11 @@ class DigestGenerator:
             logger.info("No leads found for digest period.")
             return {"leads": 0, "files": []}
 
+        # Deduplicate before reporting
+        from .dedup import deduplicate_leads
+
+        leads = deduplicate_leads(leads)
+
         # Group by score
         hot = [lead for lead in leads if lead.score == LeadScore.HOT]
         warm = [lead for lead in leads if lead.score == LeadScore.WARM]
