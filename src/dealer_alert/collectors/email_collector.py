@@ -1,27 +1,23 @@
-"""Email collector — polls a Gmail inbox via IMAP for newsletter content.
+"""Email collector — polls a Gmail inbox via OAuth2 for newsletter content.
 
 Connects to a dedicated inbox (e.g., newdealerchecker@gmail.com) that
 subscribes to trade newsletters, chamber digests, and dealer association
 bulletins. Extracts article text and links from HTML emails and feeds
 them into the standard lead extraction pipeline.
 
-Requires an App Password for Gmail (not the account password):
-  1. Enable 2FA on the Gmail account
-  2. Go to https://myaccount.google.com/apppasswords
-  3. Generate an app password for "Mail"
-  4. Set GMAIL_APP_PASSWORD in .env
+Uses Google OAuth2 for authentication:
+  1. Place your client_secret_*.json in the project root (or set path in .env)
+  2. First run opens a browser to authorize the Gmail account
+  3. Token is cached in data/gmail_token.json for subsequent runs
 """
 
 from __future__ import annotations
 
-import contextlib
-import email
-import email.policy
-import imaplib
+import base64
 import logging
 import re
 from datetime import datetime
-from email.message import EmailMessage
+from pathlib import Path
 from typing import NamedTuple
 
 from bs4 import BeautifulSoup
@@ -31,6 +27,12 @@ from ..models import FetchResult
 
 logger = logging.getLogger(__name__)
 
+# Gmail API scopes — readonly is all we need
+GMAIL_SCOPES = [
+    "https://www.googleapis.com/auth/gmail.readonly",
+    "https://www.googleapis.com/auth/gmail.modify",
+]
+
 
 class ParsedEmail(NamedTuple):
     """Parsed email content ready for lead extraction."""
@@ -38,44 +40,89 @@ class ParsedEmail(NamedTuple):
     message_id: str
     subject: str
     sender: str
-    date: datetime | None
+    date: str
     text_content: str
     html_content: str
     links: list[str]
 
 
+def _build_gmail_service(
+    credentials_file: Path,
+    token_file: Path,
+):
+    """Build an authenticated Gmail API service.
+
+    On first run, opens a browser for the user to authorize.
+    Subsequent runs use the cached token.
+    """
+    from google.auth.transport.requests import Request
+    from google.oauth2.credentials import Credentials
+    from google_auth_oauthlib.flow import InstalledAppFlow
+    from googleapiclient.discovery import build
+
+    creds = None
+
+    # Load cached token if it exists
+    if token_file.exists():
+        creds = Credentials.from_authorized_user_file(str(token_file), GMAIL_SCOPES)
+
+    # If no valid credentials, run the OAuth flow
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            logger.info("Refreshing expired Gmail token...")
+            creds.refresh(Request())
+        else:
+            if not credentials_file.exists():
+                raise FileNotFoundError(
+                    f"OAuth credentials file not found: {credentials_file}\n"
+                    "Download it from Google Cloud Console → "
+                    "APIs & Services → Credentials"
+                )
+            logger.info("No cached token found. Opening browser for Gmail authorization...")
+            flow = InstalledAppFlow.from_client_secrets_file(str(credentials_file), GMAIL_SCOPES)
+            creds = flow.run_local_server(port=0)
+
+        # Cache the token for next time
+        token_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(token_file, "w") as f:
+            f.write(creds.to_json())
+        logger.info(f"Gmail token cached at {token_file}")
+
+    return build("gmail", "v1", credentials=creds)
+
+
 class EmailCollector:
-    """Polls a Gmail inbox via IMAP and extracts newsletter content.
+    """Polls a Gmail inbox via OAuth2 and extracts newsletter content.
 
     Usage::
 
         collector = EmailCollector(
-            email_address="newdealerchecker@gmail.com",
-            app_password="xxxx xxxx xxxx xxxx",
+            credentials_file=Path("client_secret.json"),
+            token_file=Path("data/gmail_token.json"),
         )
-        results = collector.collect(mark_read=True)
+        results = collector.collect()
         for result in results:
             leads = extractor.extract(result)
     """
 
-    IMAP_HOST = "imap.gmail.com"
-    IMAP_PORT = 993
-
     def __init__(
         self,
-        email_address: str,
-        app_password: str,
-        imap_host: str = "",
-        imap_port: int = 0,
-        folder: str = "INBOX",
+        credentials_file: Path,
+        token_file: Path,
+        email_address: str = "",
         max_emails: int = 100,
     ):
+        self.credentials_file = credentials_file
+        self.token_file = token_file
         self.email_address = email_address
-        self.app_password = app_password
-        self.imap_host = imap_host or self.IMAP_HOST
-        self.imap_port = imap_port or self.IMAP_PORT
-        self.folder = folder
         self.max_emails = max_emails
+        self._service = None
+
+    def _get_service(self):
+        """Lazy-build the Gmail API service."""
+        if self._service is None:
+            self._service = _build_gmail_service(self.credentials_file, self.token_file)
+        return self._service
 
     def collect(
         self,
@@ -93,19 +140,47 @@ class EmailCollector:
         Returns:
             List of FetchResult objects, one per email.
         """
-        if dry_run:
-            return self._dry_run_collect(since_date)
-
-        results = []
         try:
-            conn = self._connect()
-            message_ids = self._search_unread(conn, since_date)
-            logger.info(
-                f"Found {len(message_ids)} unread emails in {self.folder}"
-            )
+            service = self._get_service()
+        except FileNotFoundError as exc:
+            logger.error(str(exc))
+            return []
+        except Exception as exc:
+            logger.error(f"Gmail auth failed: {exc}")
+            return []
 
-            for msg_id in message_ids[: self.max_emails]:
-                parsed = self._fetch_email(conn, msg_id)
+        # Build search query
+        query_parts = ["is:unread"]
+        if since_date:
+            date_str = since_date.strftime("%Y/%m/%d")
+            query_parts.append(f"after:{date_str}")
+        query = " ".join(query_parts)
+
+        try:
+            # List matching messages
+            response = (
+                service.users()
+                .messages()
+                .list(userId="me", q=query, maxResults=self.max_emails)
+                .execute()
+            )
+            messages = response.get("messages", [])
+
+            logger.info(f"Found {len(messages)} unread emails")
+
+            if dry_run:
+                return [
+                    FetchResult(
+                        source_id=0,
+                        url=f"email://{self.email_address}/dry-run",
+                        content=(f"[DRY RUN] {len(messages)} unread emails found"),
+                    )
+                ]
+
+            results = []
+            for msg_ref in messages[: self.max_emails]:
+                msg_id = msg_ref["id"]
+                parsed = self._fetch_email(service, msg_id)
                 if parsed is None:
                     continue
 
@@ -113,103 +188,51 @@ class EmailCollector:
                 results.append(result)
 
                 if mark_read:
-                    self._mark_read(conn, msg_id)
+                    self._mark_read(service, msg_id)
 
-            conn.close()
-            conn.logout()
+            logger.info(f"Collected {len(results)} emails as FetchResults")
+            return results
 
-        except imaplib.IMAP4.error as exc:
-            logger.error(f"IMAP error: {exc}")
         except Exception as exc:
-            logger.error(f"Email collection error: {exc}")
-
-        logger.info(f"Collected {len(results)} emails as FetchResults")
-        return results
-
-    def _connect(self) -> imaplib.IMAP4_SSL:
-        """Connect and authenticate to the IMAP server."""
-        logger.debug(f"Connecting to {self.imap_host}:{self.imap_port}")
-        conn = imaplib.IMAP4_SSL(self.imap_host, self.imap_port)
-        conn.login(self.email_address, self.app_password)
-        conn.select(self.folder, readonly=False)
-        return conn
-
-    def _search_unread(
-        self,
-        conn: imaplib.IMAP4_SSL,
-        since_date: datetime | None = None,
-    ) -> list[bytes]:
-        """Search for unread messages, optionally since a date."""
-        criteria = ["UNSEEN"]
-        if since_date:
-            date_str = since_date.strftime("%d-%b-%Y")
-            criteria.append(f"SINCE {date_str}")
-
-        search_str = "(" + " ".join(criteria) + ")"
-        status, data = conn.search(None, search_str)
-
-        if status != "OK" or not data[0]:
+            logger.error(f"Gmail API error: {exc}")
             return []
 
-        return data[0].split()
-
-    def _fetch_email(
-        self,
-        conn: imaplib.IMAP4_SSL,
-        msg_id: bytes,
-    ) -> ParsedEmail | None:
-        """Fetch and parse a single email message."""
+    def _fetch_email(self, service, msg_id: str) -> ParsedEmail | None:
+        """Fetch and parse a single email via the Gmail API."""
         try:
-            status, data = conn.fetch(msg_id, "(RFC822)")
-            if status != "OK" or not data[0]:
-                return None
-
-            raw = data[0][1]
-            msg = email.message_from_bytes(
-                raw, policy=email.policy.default
-            )
-            return self._parse_message(msg)
-
+            msg = service.users().messages().get(userId="me", id=msg_id, format="full").execute()
+            return self._parse_gmail_message(msg)
         except Exception as exc:
-            logger.warning(f"Failed to parse email {msg_id}: {exc}")
+            logger.warning(f"Failed to fetch email {msg_id}: {exc}")
             return None
 
-    def _parse_message(self, msg: EmailMessage) -> ParsedEmail:
-        """Extract useful content from an email message."""
-        message_id = msg.get("Message-ID", "")
-        subject = msg.get("Subject", "")
-        sender = msg.get("From", "")
-        date = msg.get("Date")
+    def _parse_gmail_message(self, msg: dict) -> ParsedEmail:
+        """Extract content from a Gmail API message response."""
+        headers = {h["name"].lower(): h["value"] for h in msg.get("payload", {}).get("headers", [])}
 
-        # Parse date
-        parsed_date = None
-        if date:
-            with contextlib.suppress(TypeError, ValueError):
-                parsed_date = email.utils.parsedate_to_datetime(str(date))
+        message_id = headers.get("message-id", msg.get("id", ""))
+        subject = headers.get("subject", "")
+        sender = headers.get("from", "")
+        date = headers.get("date", "")
 
+        # Extract body parts
         text_content = ""
         html_content = ""
+        payload = msg.get("payload", {})
 
-        if msg.is_multipart():
-            for part in msg.walk():
-                ct = part.get_content_type()
-                if ct == "text/plain":
-                    text_content += part.get_content() or ""
-                elif ct == "text/html":
-                    html_content += part.get_content() or ""
-        else:
-            ct = msg.get_content_type()
-            body = msg.get_content() or ""
-            if ct == "text/plain":
-                text_content = body
-            elif ct == "text/html":
-                html_content = body
+        self._extract_parts(payload, text_content, html_content)
+
+        # Walk through parts recursively
+        parts_text = []
+        parts_html = []
+        self._walk_parts(payload, parts_text, parts_html)
+        text_content = "\n".join(parts_text)
+        html_content = "\n".join(parts_html)
 
         # Extract links and readable text from HTML
         links = []
         if html_content:
             links = extract_links(html_content, "")
-            # If no plain text, extract from HTML
             if not text_content:
                 text_content = self._html_to_text(html_content)
 
@@ -217,65 +240,82 @@ class EmailCollector:
             message_id=message_id,
             subject=subject,
             sender=sender,
-            date=parsed_date,
+            date=date,
             text_content=text_content,
             html_content=html_content,
             links=links,
         )
 
+    def _walk_parts(
+        self,
+        payload: dict,
+        text_parts: list[str],
+        html_parts: list[str],
+    ):
+        """Recursively walk MIME parts to extract text and HTML."""
+        mime_type = payload.get("mimeType", "")
+        body = payload.get("body", {})
+        data = body.get("data", "")
+
+        if data:
+            decoded = base64.urlsafe_b64decode(data).decode("utf-8", errors="replace")
+            if mime_type == "text/plain":
+                text_parts.append(decoded)
+            elif mime_type == "text/html":
+                html_parts.append(decoded)
+
+        # Recurse into sub-parts
+        for part in payload.get("parts", []):
+            self._walk_parts(part, text_parts, html_parts)
+
+    def _extract_parts(self, payload: dict, text: str, html: str) -> tuple[str, str]:
+        """Extract text and HTML from a payload (non-recursive)."""
+        body = payload.get("body", {})
+        data = body.get("data", "")
+        mime = payload.get("mimeType", "")
+
+        if data:
+            decoded = base64.urlsafe_b64decode(data).decode("utf-8", errors="replace")
+            if mime == "text/plain":
+                text = decoded
+            elif mime == "text/html":
+                html = decoded
+
+        return text, html
+
     def _email_to_fetch_result(self, parsed: ParsedEmail) -> FetchResult:
         """Convert a parsed email into a FetchResult for the pipeline."""
-        # Combine subject + body for extraction
         combined_text = f"{parsed.subject}\n\n{parsed.text_content}"
 
         return FetchResult(
-            source_id=0,  # Email sources get ID 0 (inbox)
+            source_id=0,
             url=f"email://{parsed.sender}/{parsed.message_id}",
             status_code=200,
             content=combined_text,
             content_hash=content_hash(combined_text),
             links=parsed.links,
-            fetched_at=parsed.date or datetime.utcnow(),
+            fetched_at=datetime.utcnow(),
         )
 
-    def _mark_read(self, conn: imaplib.IMAP4_SSL, msg_id: bytes):
-        """Mark an email as read (SEEN)."""
-        conn.store(msg_id, "+FLAGS", "\\Seen")
-
-    def _dry_run_collect(
-        self, since_date: datetime | None
-    ) -> list[FetchResult]:
-        """Connect, count unread, but don't download."""
+    def _mark_read(self, service, msg_id: str):
+        """Mark an email as read by removing the UNREAD label."""
         try:
-            conn = self._connect()
-            message_ids = self._search_unread(conn, since_date)
-            count = len(message_ids)
-            conn.close()
-            conn.logout()
-            logger.info(f"[DRY RUN] Found {count} unread emails")
-            return [
-                FetchResult(
-                    source_id=0,
-                    url=f"email://{self.email_address}/dry-run",
-                    content=f"[DRY RUN] {count} unread emails found",
-                )
-            ]
+            service.users().messages().modify(
+                userId="me",
+                id=msg_id,
+                body={"removeLabelIds": ["UNREAD"]},
+            ).execute()
         except Exception as exc:
-            logger.error(f"[DRY RUN] Email connection failed: {exc}")
-            return []
+            logger.warning(f"Failed to mark {msg_id} as read: {exc}")
 
     @staticmethod
     def _html_to_text(html: str) -> str:
         """Convert HTML to readable plain text."""
         soup = BeautifulSoup(html, "lxml")
 
-        # Remove script, style, and header elements
         for tag in soup(["script", "style", "head", "nav", "footer"]):
             tag.decompose()
 
         text = soup.get_text(separator="\n", strip=True)
-
-        # Collapse multiple newlines
         text = re.sub(r"\n{3,}", "\n\n", text)
-
         return text.strip()

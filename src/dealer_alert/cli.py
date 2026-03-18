@@ -122,9 +122,7 @@ def crawl(ctx, limit, dry_run):
         return
 
     dry_run_label = "  [DRY RUN]" if dry_run else ""
-    console.print(
-        f"[bold]Crawling {len(sources)} sources{dry_run_label}...[/bold]"
-    )
+    console.print(f"[bold]Crawling {len(sources)} sources{dry_run_label}...[/bold]")
 
     asyncio.run(_run_crawl(config, db, sources, dry_run))
 
@@ -161,8 +159,9 @@ async def _run_crawl(config: Config, db: Database, sources: list[Source], dry_ru
             console.print(
                 f"  [{score_color}]{lead.score.value.upper()}[/{score_color}] "
                 f"{lead.dealer_name or 'Unknown'} — {lead.title[:60]} "
-                f"({lead.city}, {lead.state})" if lead.city else
-                f"  [{score_color}]{lead.score.value.upper()}[/{score_color}] "
+                f"({lead.city}, {lead.state})"
+                if lead.city
+                else f"  [{score_color}]{lead.score.value.upper()}[/{score_color}] "
                 f"{lead.dealer_name or 'Unknown'} — {lead.title[:60]}"
             )
 
@@ -287,6 +286,7 @@ def status(ctx):
         table.add_column("Enabled", justify="right")
 
         from collections import Counter
+
         cat_counts = Counter(s.category.value for s in sources)
         cat_enabled = Counter(s.category.value for s in sources if s.enabled)
 
@@ -316,26 +316,23 @@ def check_email(ctx, hours, dry_run):
     db: Database = ctx.obj["db"]
     db.init_schema()
 
-    if not config.email_address or not config.email_app_password:
+    if not config.gmail_credentials_file.exists():
         console.print(
-            "[red]Email not configured.[/red] "
-            "Set GMAIL_ADDRESS and GMAIL_APP_PASSWORD in .env"
+            "[red]Gmail not configured.[/red] "
+            "Place your client_secret*.json in the project "
+            "root and set GMAIL_CREDENTIALS_FILE in .env"
         )
         return
 
     collector = EmailCollector(
+        credentials_file=config.gmail_credentials_file,
+        token_file=config.gmail_token_file,
         email_address=config.email_address,
-        app_password=config.email_app_password,
-        imap_host=config.email_imap_host,
-        imap_port=config.email_imap_port,
-        folder=config.email_folder,
         max_emails=config.email_max_per_run,
     )
 
     since = datetime.utcnow() - timedelta(hours=hours)
-    console.print(
-        f"[bold]Checking inbox ({config.email_address})...[/bold]"
-    )
+    console.print(f"[bold]Checking inbox ({config.email_address})...[/bold]")
 
     results = collector.collect(
         since_date=since,
@@ -348,9 +345,7 @@ def check_email(ctx, hours, dry_run):
         return
 
     # Run through the lead extraction pipeline
-    extractor = LeadExtractor(
-        hot_min_mentions=config.hot_lead_min_mentions
-    )
+    extractor = LeadExtractor(hot_min_mentions=config.hot_lead_min_mentions)
     total_leads = 0
 
     for result in results:
@@ -359,9 +354,7 @@ def check_email(ctx, hours, dry_run):
             if not dry_run:
                 db.add_lead(lead)
             total_leads += 1
-            score_color = {
-                "hot": "red", "warm": "yellow", "cold": "blue"
-            }[lead.score.value]
+            score_color = {"hot": "red", "warm": "yellow", "cold": "blue"}[lead.score.value]
             console.print(
                 f"  [{score_color}]{lead.score.value.upper()}"
                 f"[/{score_color}] "
@@ -370,8 +363,7 @@ def check_email(ctx, hours, dry_run):
             )
 
     console.print(
-        f"\n[bold]Email check complete:[/bold] "
-        f"{len(results)} emails → {total_leads} leads"
+        f"\n[bold]Email check complete:[/bold] {len(results)} emails → {total_leads} leads"
     )
 
 
@@ -401,13 +393,9 @@ def check_social(ctx, dry_run, url, search_keywords):
 
     if dry_run:
         if url:
-            console.print(
-                f"[DRY RUN] Would scrape {len(url)} social URLs"
-            )
+            console.print(f"[DRY RUN] Would scrape {len(url)} social URLs")
         if search_keywords:
-            console.print(
-                f"[DRY RUN] Would search X for: {search_keywords}"
-            )
+            console.print(f"[DRY RUN] Would search X for: {search_keywords}")
         return
 
     # Gather URLs from CLI args and from DB (social source type)
@@ -427,13 +415,9 @@ def check_social(ctx, dry_run, url, search_keywords):
         )
         return
 
-    console.print(
-        f"[bold]Checking {len(social_urls)} social profiles...[/bold]"
-    )
+    console.print(f"[bold]Checking {len(social_urls)} social profiles...[/bold]")
 
-    asyncio.run(
-        _run_social_check(config, db, social_urls, search_keywords)
-    )
+    asyncio.run(_run_social_check(config, db, social_urls, search_keywords))
 
 
 async def _run_social_check(
@@ -446,9 +430,7 @@ async def _run_social_check(
     from .collectors import SocialMonitor
 
     monitor = SocialMonitor()
-    extractor = LeadExtractor(
-        hot_min_mentions=config.hot_lead_min_mentions
-    )
+    extractor = LeadExtractor(hot_min_mentions=config.hot_lead_min_mentions)
     total_leads = 0
 
     # Scrape known profiles
@@ -460,19 +442,14 @@ async def _run_social_check(
 
         for result in results:
             if result.error:
-                console.print(
-                    f"  [red]ERROR[/red] {result.url}: "
-                    f"{result.error[:80]}"
-                )
+                console.print(f"  [red]ERROR[/red] {result.url}: {result.error[:80]}")
                 continue
 
             leads = extractor.extract(result)
             for lead in leads:
                 db.add_lead(lead)
                 total_leads += 1
-                score_color = {
-                    "hot": "red", "warm": "yellow", "cold": "blue"
-                }[lead.score.value]
+                score_color = {"hot": "red", "warm": "yellow", "cold": "blue"}[lead.score.value]
                 console.print(
                     f"  [{score_color}]{lead.score.value.upper()}"
                     f"[/{score_color}] "
@@ -482,12 +459,8 @@ async def _run_social_check(
 
     # Keyword search on X/Twitter
     if search_keywords:
-        keywords = [
-            kw.strip() for kw in search_keywords.split(",")
-        ]
-        console.print(
-            f"[bold]Searching X for: {', '.join(keywords)}[/bold]"
-        )
+        keywords = [kw.strip() for kw in search_keywords.split(",")]
+        console.print(f"[bold]Searching X for: {', '.join(keywords)}[/bold]")
         search_results = await monitor.keyword_search(keywords)
         for result in search_results:
             leads = extractor.extract(result)
@@ -495,10 +468,7 @@ async def _run_social_check(
                 db.add_lead(lead)
                 total_leads += 1
 
-    console.print(
-        f"\n[bold]Social check complete:[/bold] "
-        f"{total_leads} leads found"
-    )
+    console.print(f"\n[bold]Social check complete:[/bold] {total_leads} leads found")
 
 
 if __name__ == "__main__":

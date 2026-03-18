@@ -17,6 +17,8 @@ env/
 .env
 *.key
 credentials/
+client_secret*.json
+gmail_token.json
 
 # IDE
 .vscode/

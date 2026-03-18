@@ -1,6 +1,8 @@
 """Tests for the email collector module."""
 
-from dealer_alert.collectors.email_collector import EmailCollector
+from pathlib import Path
+
+from dealer_alert.collectors.email_collector import EmailCollector, ParsedEmail
 
 
 class TestHtmlToText:
@@ -28,7 +30,6 @@ class TestHtmlToText:
     def test_collapses_whitespace(self):
         html = "<p>Line 1</p><br><br><br><br><p>Line 2</p>"
         result = EmailCollector._html_to_text(html)
-        # Should not have more than 2 consecutive newlines
         assert "\n\n\n" not in result
 
     def test_empty_input(self):
@@ -39,21 +40,19 @@ class TestEmailToFetchResult:
     """Test conversion of parsed emails to FetchResults."""
 
     def test_combines_subject_and_body(self):
-        from dealer_alert.collectors.email_collector import ParsedEmail
-
         parsed = ParsedEmail(
             message_id="<test@example.com>",
             subject="Grand Opening: New Dealer in Dallas",
             sender="newsletter@trade.com",
-            date=None,
+            date="Wed, 18 Mar 2026 10:00:00 -0500",
             text_content="A new dealer has opened in Dallas, TX.",
             html_content="",
             links=["https://example.com/article"],
         )
 
         collector = EmailCollector(
-            email_address="test@test.com",
-            app_password="fake",
+            credentials_file=Path("/fake/creds.json"),
+            token_file=Path("/fake/token.json"),
         )
         result = collector._email_to_fetch_result(parsed)
 

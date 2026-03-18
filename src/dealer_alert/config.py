@@ -46,12 +46,10 @@ class Config:
         default_factory=lambda: ["hiring", "construction", "coming-soon", "teaser"]
     )
 
-    # Email collector
+    # Email collector (Gmail OAuth2)
     email_address: str = ""
-    email_app_password: str = ""
-    email_imap_host: str = "imap.gmail.com"
-    email_imap_port: int = 993
-    email_folder: str = "INBOX"
+    gmail_credentials_file: Path = Path("client_secret.json")
+    gmail_token_file: Path = Path("data/gmail_token.json")
     email_max_per_run: int = 100
     email_mark_read: bool = True
 
@@ -90,27 +88,23 @@ class Config:
                 if warm_raw
                 else ["hiring", "construction", "coming-soon", "teaser"]
             ),
-            # Email collector
+            # Email collector (Gmail OAuth2)
             email_address=os.getenv("GMAIL_ADDRESS", ""),
-            email_app_password=os.getenv("GMAIL_APP_PASSWORD", ""),
-            email_imap_host=os.getenv(
-                "EMAIL_IMAP_HOST", "imap.gmail.com"
+            gmail_credentials_file=Path(
+                os.getenv(
+                    "GMAIL_CREDENTIALS_FILE",
+                    "client_secret.json",
+                )
             ),
-            email_imap_port=int(
-                os.getenv("EMAIL_IMAP_PORT", "993")
+            gmail_token_file=Path(
+                os.getenv(
+                    "GMAIL_TOKEN_FILE",
+                    "data/gmail_token.json",
+                )
             ),
-            email_folder=os.getenv("EMAIL_FOLDER", "INBOX"),
-            email_max_per_run=int(
-                os.getenv("EMAIL_MAX_PER_RUN", "100")
-            ),
-            email_mark_read=_bool(
-                os.getenv("EMAIL_MARK_READ", "true")
-            ),
+            email_max_per_run=int(os.getenv("EMAIL_MAX_PER_RUN", "100")),
+            email_mark_read=_bool(os.getenv("EMAIL_MARK_READ", "true")),
             # Social monitor
-            social_max_concurrent=int(
-                os.getenv("SOCIAL_MAX_CONCURRENT", "5")
-            ),
-            social_delay_seconds=float(
-                os.getenv("SOCIAL_DELAY_SECONDS", "2")
-            ),
+            social_max_concurrent=int(os.getenv("SOCIAL_MAX_CONCURRENT", "5")),
+            social_delay_seconds=float(os.getenv("SOCIAL_DELAY_SECONDS", "2")),
         )
