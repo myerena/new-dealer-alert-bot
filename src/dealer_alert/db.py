@@ -50,7 +50,10 @@ CREATE TABLE IF NOT EXISTS leads (
     score TEXT NOT NULL DEFAULT 'cold',
     mention_count INTEGER NOT NULL DEFAULT 1,
     discovered_at TEXT NOT NULL DEFAULT (datetime('now')),
-    raw_text TEXT NOT NULL DEFAULT ''
+    raw_text TEXT NOT NULL DEFAULT '',
+    summary TEXT NOT NULL DEFAULT '',
+    feedback TEXT NOT NULL DEFAULT '',
+    feedback_notes TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE IF NOT EXISTS discovered_sources (
@@ -215,10 +218,11 @@ class Database:
         with self.connect() as conn:
             cursor = conn.execute(
                 """INSERT INTO leads
-                   (source_id, source_url, title, snippet, dealer_name, dealer_group,
-                    city, state, people, keywords_matched, outbound_links, score,
-                    mention_count, raw_text)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                   (source_id, source_url, title, snippet, dealer_name,
+                    dealer_group, city, state, people, keywords_matched,
+                    outbound_links, score, mention_count, raw_text,
+                    summary, feedback, feedback_notes)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                 (
                     lead.source_id,
                     lead.source_url,
@@ -234,9 +238,24 @@ class Database:
                     lead.score.value,
                     lead.mention_count,
                     lead.raw_text,
+                    lead.summary,
+                    lead.feedback,
+                    lead.feedback_notes,
                 ),
             )
             return cursor.lastrowid or 0
+
+    def update_lead_feedback(
+        self, lead_id: int, feedback: str, notes: str = ""
+    ):
+        """Update the human feedback on a lead."""
+        with self.connect() as conn:
+            conn.execute(
+                """UPDATE leads
+                   SET feedback = ?, feedback_notes = ?
+                   WHERE id = ?""",
+                (feedback, notes, lead_id),
+            )
 
     def get_leads_since(self, since: datetime) -> list[Lead]:
         """Get all leads discovered since a given timestamp."""
@@ -363,4 +382,7 @@ class Database:
                 datetime.fromisoformat(row["discovered_at"]) if row["discovered_at"] else None
             ),
             raw_text=row["raw_text"],
+            summary=row["summary"] if "summary" in row.keys() else "",  # noqa: SIM118
+            feedback=row["feedback"] if "feedback" in row.keys() else "",  # noqa: SIM118
+            feedback_notes=row["feedback_notes"] if "feedback_notes" in row.keys() else "",  # noqa: SIM118
         )

@@ -635,6 +635,27 @@ def browser_fetch(ctx, url, headless):
         console.print("[yellow]No leads found in page content[/yellow]")
 
 
+@main.command("review")
+@click.option("--port", default=5000, help="Port to run the review app on")
+@click.pass_context
+def review(ctx, port):
+    """Launch the lead review web app in your browser."""
+    import webbrowser
+
+    from .webapp import create_app
+
+    config: Config = ctx.obj["config"]
+    app = create_app(config)
+
+    console.print(
+        f"[bold]Starting lead review app at "
+        f"http://localhost:{port}[/bold]"
+    )
+    console.print("[dim]Press Ctrl+C to stop[/dim]")
+    webbrowser.open(f"http://localhost:{port}")
+    app.run(host="127.0.0.1", port=port, debug=False)
+
+
 @main.command("report")
 @click.option("--hours", default=24, help="Include leads from the last N hours")
 @click.option("--open", "open_browser", is_flag=True, help="Open report in browser")

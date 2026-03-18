@@ -1,0 +1,3076 @@
+{
+  "summary": {
+    "period_start": "2026-03-17T11:20:43.953831",
+    "period_end": "2026-03-18T11:20:43.961759",
+    "total_leads": 90,
+    "hot": 67,
+    "warm": 0,
+    "cold": 23,
+    "files": [
+      "data\\digests\\digest_20260318_112043.csv"
+    ]
+  },
+  "leads": [
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read MoreMiami tourism is way down. ‘Hybrid’ meetings, TV production, parks are keys in reco",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "cold",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read MoreTri-Rail to start test runs to Brightline's MiamiCentral | Greater Miami Chamber of Commerce11/10/2022Tri",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "ward teacher salaries ...\nDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More\nDeveloper breaks ground on apart",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 5,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "2023, Members from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...\nJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 6,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read More\nMiami-Dade College‘s North Campus Vaccination Site Opens, Begins Admin",
+      "keywords_matched": [
+        "now open",
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 6,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...Read MoreWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 2,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "resident & Chief Executive Officer | Greater Miami Chamber of Commerce11/10/2022– The Miami-Dade Beacon Council, the County’s official public-private economic development partnership, names Rodrick Miller President and Chief ...Read More\nMiami-Dade Beacon Council Names Rodrick Miller President & Chief Executive Officer",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 5,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "elocations | Greater Miami Chamber of Commerce11/10/2022Miami-Dade County Mayor Daniella Levine Cava on Thursday announced the launch of RENEW305, am economic development plan intended to spark business ...Read More\nMiami-Dade launches CEO ambassador program with Manny Medina, Marcelo Claure, Jorge Pérez to boost busin",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 5,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "economic development",
+      "snippet": "kers is banging into a shortage of people in the employment arena, a Greater Miami Chamber of Commerce Economic Summit panel ...\nWorkforce housing is economic development, chamber session told | Greater Miami Chamber of Commerce11/10/2022Workforce housing gaps are really economic development issues as much as real esta",
+      "keywords_matched": [
+        "economic development"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 11,
+      "discovered_at": "2026-03-18T11:20:35"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "broke ground",
+      "snippet": "cher salaries ...Read MoreDeveloper breaks ground on apartments in Opa-locka | Greater Miami Chamber of Commerce11/10/2022Redwood National Properties broke ground on an apartment complex in Opa-locka as it aims to ramp up development of multifamily for working-class ...Read More2020-The Impact of COVID-19 Third",
+      "keywords_matched": [
+        "broke ground"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:34"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "Now Open",
+      "snippet": "embers from the Greater Miami Chamber of Commerce will travel to Tallahassee to advocate on behalf of the South Florida ...Read MoreJPMorgan Chase Is Now Open To Relocating To Miami After Vetoing The Move A Few Years Ago | Greater Miami Chamber of Commerce11/10/2022The CEO of JPMorgan Chase has reportedly c",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:34"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "shared with our group",
+      "dealer_group": "",
+      "city": "Dade County",
+      "state": "FL",
+      "title": "now open",
+      "snippet": "stering Johnson & Johnson Vaccine | Greater Miami Chamber of Commerce11/10/2022MIAMI (CBSMiami) – The first federal vaccination site in Miami-Dade is now open and it is among the first in the nation to administer the Johnson ...Read MoreMiami venture capitalists: Inclusion must be defining characteristic of",
+      "keywords_matched": [
+        "now open"
+      ],
+      "people": [
+        "of Grapefruit Health",
+        "of CITT",
+        "of the Greater",
+        "of Communications",
+        "Christine Barney on"
+      ],
+      "source_url": "https://www.miamichamber.com/news/",
+      "outbound_links": [
+        "https://www.miamichamber.com/news/impact-covid-19-pandemic-floridas-small-business",
+        "https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0",
+        "https://www.miamichamber.com/news/spotlight-on-apprenticeship-success",
+        "https://www.miamichamber.com/news/technology-alters-leadership-says-chamber-commerce-chairman",
+        "https://www.miamichamber.com/news/gmcc-president-honored-2022-ultimate-ceo",
+        "https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing",
+        "https://www.miamichamber.com/news/2025-small-diverse-business-program-recipients-announced",
+        "https://www.miamichamber.com/our-priorities/resilience",
+        "https://www.miamichamber.com/news/2021-alvah-h-chapman-jr-award-excellence-recap",
+        "https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:34"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Lexus stores for certified",
+      "dealer_group": "",
+      "city": "Indiana",
+      "state": "WI",
+      "title": "acquisition of",
+      "snippet": "t platform designed to empower Canadian consumers throughout the entire vehicle ownership lifecycle, has added another piece to that mission with the acquisition of FIX4 Capital Lending Inc.’s dealer network and repair financing originations. “This acquisition aligns with autologiQ’s strategy to expand our adviso",
+      "keywords_matched": [
+        "acquisition of"
+      ],
+      "people": [
+        "Scott Painter",
+        "Chris Gillman in",
+        "to offer consignment",
+        "Todd Case tried",
+        "Dave Blake was"
+      ],
+      "source_url": "https://www.autoremarketing.com/feed",
+      "outbound_links": [
+        "https://www.autoremarketing.com/ar/retail/best-cpo-dealers-top-10-lexus-stores-for-certified-sales-in-2025/",
+        "https://www.autoremarketing.com/ar/retail/truecar-launches-new-dealer-program-standards/",
+        "https://www.autoremarketing.com/ar/retail/best-cpo-dealers-top-10-kia-stores-for-certified-sales-in-2025/",
+        "https://www.autoremarketing.com/ar/retail/best-cpo-dealers-top-10-infiniti-stores-for-certified-sales-in-2025/",
+        "https://www.autoremarketing.com/arcanada/autotrader-set-to-launch-transformational-new-platform-powered-by-ai-demand-infrastructure/",
+        "https://www.autoremarketing.com/ar/retail/gilchrist-automotive-expands-texas-footprint-with-houston-dealership-purchase/",
+        "https://www.autoremarketing.com/ar/retail/best-cpo-dealers-top-10-hyundai-stores-for-certified-sales-in-2025/",
+        "https://www.autoremarketing.com/ar/retail/retail-my-ride-carpro-partner-to-offer-consignment-instant-offer-options-for-consumer-cars/",
+        "https://www.autoremarketing.com/ar/technology/cox-automotive-reaches-milestone-in-ev-battery-recycling/",
+        "https://www.autoremarketing.com/ar/retail/best-cpo-dealers-top-10-honda-stores-for-certified-sales-in-2025/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:32"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new dealership",
+      "snippet": "our brands\nSearchDealersCourtesy of Porsche of GreenvilleThird-generation dealers branch out with RBM Automotive GroupThird-generation dealers form a new dealership group and acquire their first franchises.ByAlysha Webb•March 17, 2026Tim Boyle via Getty ImagesFTC warns 97 auto dealership groups about deceptive pr",
+      "keywords_matched": [
+        "new dealership"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new owner",
+      "snippet": "es nabs BMW dealership in Southern CaliforniaIt’s rare to find a single-point, family-owned luxury franchise for sale in an affluent market. Now, the new owners are looking to leverage it by improving the customer experience.ByAlysha Webb•Feb. 20, 2026Courtesy of Scout MotorsColumnAutomakers and dealers rely",
+      "keywords_matched": [
+        "new owner"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new dealership",
+      "snippet": "es / Do Not Sell\nDealersCourtesy of Porsche of GreenvilleThird-generation dealers branch out with RBM Automotive GroupThird-generation dealers form a new dealership group and acquire their first franchises.ByAlysha Webb•March 17, 2026Tim Boyle via Getty ImagesFTC warns 97 auto dealership groups about deceptive pr",
+      "keywords_matched": [
+        "new dealership"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new owner",
+      "snippet": "es nabs BMW dealership in Southern CaliforniaIt’s rare to find a single-point, family-owned luxury franchise for sale in an affluent market. Now, the new owners are looking to leverage it by improving the customer experience.ByAlysha Webb•Feb. 20, 2026Courtesy of Scout MotorsColumnAutomakers and dealers rely",
+      "keywords_matched": [
+        "new owner"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new dealership",
+      "snippet": "es / Do Not Sell\nDealersCourtesy of Porsche of GreenvilleThird-generation dealers branch out with RBM Automotive GroupThird-generation dealers form a new dealership group and acquire their first franchises.ByAlysha Webb•March 17, 2026Tim Boyle via Getty ImagesFTC warns 97 auto dealership groups about deceptive pr",
+      "keywords_matched": [
+        "new dealership"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new owner",
+      "snippet": "es nabs BMW dealership in Southern CaliforniaIt’s rare to find a single-point, family-owned luxury franchise for sale in an affluent market. Now, the new owners are looking to leverage it by improving the customer experience.ByAlysha Webb•Feb. 20, 2026Courtesy of Scout MotorsColumnAutomakers and dealers rely",
+      "keywords_matched": [
+        "new owner"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new dealership",
+      "snippet": "CEO SaysView all\nDealersCourtesy of Porsche of GreenvilleThird-generation dealers branch out with RBM Automotive GroupThird-generation dealers form a new dealership group and acquire their first franchises.ByAlysha Webb•March 17, 2026Tim Boyle via Getty ImagesFTC warns 97 auto dealership groups about deceptive pr",
+      "keywords_matched": [
+        "new dealership"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new owner",
+      "snippet": "es nabs BMW dealership in Southern CaliforniaIt’s rare to find a single-point, family-owned luxury franchise for sale in an affluent market. Now, the new owners are looking to leverage it by improving the customer experience.ByAlysha Webb•Feb. 20, 2026Courtesy of Scout MotorsColumnAutomakers and dealers rely",
+      "keywords_matched": [
+        "new owner"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new dealership",
+      "snippet": "CEO SaysView all\nDealersCourtesy of Porsche of GreenvilleThird-generation dealers branch out with RBM Automotive GroupThird-generation dealers form a new dealership group and acquire their first franchises.ByAlysha Webb•March 17, 2026Tim Boyle via Getty ImagesFTC warns 97 auto dealership groups about deceptive pr",
+      "keywords_matched": [
+        "new dealership"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new owner",
+      "snippet": "es nabs BMW dealership in Southern CaliforniaIt’s rare to find a single-point, family-owned luxury franchise for sale in an affluent market. Now, the new owners are looking to leverage it by improving the customer experience.ByAlysha Webb•Feb. 20, 2026Courtesy of Scout MotorsColumnAutomakers and dealers rely",
+      "keywords_matched": [
+        "new owner"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 1,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new dealership",
+      "snippet": "ships, CEO SaysView all\nCourtesy of Porsche of GreenvilleThird-generation dealers branch out with RBM Automotive GroupThird-generation dealers form a new dealership group and acquire their first franchises.ByAlysha Webb•March 17, 2026\nCourtesy of Porsche of Greenville\nCourtesy of Porsche of Greenville\nThird-gener",
+      "keywords_matched": [
+        "new dealership"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 3,
+      "discovered_at": "2026-03-18T11:20:31"
+    },
+    {
+      "score": "hot",
+      "dealer_name": "Don't miss tomorrow's automotive",
+      "dealer_group": "",
+      "city": "",
+      "state": "",
+      "title": "new owner",
+      "snippet": "es nabs BMW dealership in Southern CaliforniaIt’s rare to find a single-point, family-owned luxury franchise for sale in an affluent market. Now, the new owners are looking to leverage it by improving the customer experience.ByAlysha Webb•Feb. 20, 2026\nPermission granted by Fletcher Jones Automotive Group\nPe",
+      "keywords_matched": [
+        "new owner"
+      ],
+      "people": [
+        "merging its CPO",
+        "looks to boost",
+        "has since signaled",
+        "and CEO says",
+        "Mike Manley says"
+      ],
+      "source_url": "https://www.wardsauto.com/dealers",
+      "outbound_links": [
+        "https://www.wardsauto.com/feeds/news/",
+        "https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says",
+        "https://www.freep.com/story/money/cars/ford/2026/03/16/ford-buyback-shares-stock/89178939007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z116707p118850l001150c118850e1189xxv116707d--54--b--54--&gca-ft=132&gca-ds=sophi",
+        "https://www.informatechtarget.com/our-brands/",
+        "https://www.informatechtarget.com/terms-of-use/",
+        "https://www.supplychaindive.com/",
+        "https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/",
+        "https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/",
+        "https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/",
+        "https://www.industrydive.com/takedown-policy/"
+      ],
+      "mention_count": 3,
+      "discovered_at": "2026-03-18T11:20:31"
+    }
+  ]
+}

@@ -84,6 +84,7 @@ class Lead:
     source_url: str = ""
     title: str = ""
     snippet: str = ""  # The text fragment that triggered the match
+    summary: str = ""  # Human-readable summary of what this lead is about
     dealer_name: str = ""
     dealer_group: str = ""
     city: str = ""
@@ -95,6 +96,9 @@ class Lead:
     mention_count: int = 1
     discovered_at: datetime | None = None
     raw_text: str = ""
+    # Feedback from human review
+    feedback: str = ""  # "good", "bad", or "" (unreviewed)
+    feedback_notes: str = ""  # Optional notes from reviewer
 
 
 @dataclass

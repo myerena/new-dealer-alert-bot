@@ -1,0 +1,548 @@
+2026-03-18 06:19:00,289 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=True, crawl_limit=100)
+2026-03-18 06:19:00,290 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 06:19:00,292 [INFO] dealer_alert.runner: Crawling 27 sources
+2026-03-18 06:19:00,292 [INFO] dealer_alert.fetcher.manager: [DRY RUN] Would fetch 27 sources
+2026-03-18 06:19:00,295 [INFO] dealer_alert.runner: Crawl complete: 27 sources, 0 leads
+2026-03-18 06:19:00,295 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 06:19:02,404 [INFO] dealer_alert.collectors.email_collector: No cached token found. Opening browser for Gmail authorization...
+2026-03-18 06:19:02,743 [INFO] google_auth_oauthlib.flow: Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=1070982058304-4835d8o37u7fvq00auvksf5235s47t48.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A63490%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.modify&state=1DqVRMPfUodPyHS19HWojRqjgTkioE&code_challenge=0iFGJSi7GZhKsKIPxtGAf8WAcgoj929BOfaaUGqBEFE&code_challenge_method=S256&access_type=offline
+2026-03-18 06:19:20,742 [INFO] google_auth_oauthlib.flow: "GET /?state=1DqVRMPfUodPyHS19HWojRqjgTkioE&iss=https://accounts.google.com&code=4/0AfrIepCLbQY1XBD3igQoZewybsULolag9pK_vIA3qXkBOncV9QnIBHN5hAWLGz44GhmOsg&scope=https://www.googleapis.com/auth/gmail.readonly%20https://www.googleapis.com/auth/gmail.modify HTTP/1.1" 200 65
+2026-03-18 06:19:21,109 [INFO] dealer_alert.collectors.email_collector: Gmail token cached at data\gmail_token.json
+2026-03-18 06:19:21,112 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 06:19:21,838 [INFO] dealer_alert.collectors.email_collector: Found 5 unread emails
+2026-03-18 06:19:21,838 [INFO] dealer_alert.runner: Email check complete: 1 emails processed
+2026-03-18 06:19:21,840 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 06:19:21,843 [INFO] dealer_alert.runner: No social sources registered — skipping
+2026-03-18 06:19:21,843 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 06:19:21,845 [INFO] dealer_alert.runner: Promoted 0 new sources to registry
+2026-03-18 06:19:21,845 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 06:19:21,847 [INFO] dealer_alert.output.digest: No leads found for digest period.
+2026-03-18 06:19:21,847 [INFO] dealer_alert.runner: Digest: 0 leads (0 hot, 0 warm, 0 cold)
+2026-03-18 06:19:21,847 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 06:19:21,848 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 06:19:21,848 [INFO] dealer_alert.runner:   Duration: 21.6s
+2026-03-18 06:19:21,848 [INFO] dealer_alert.runner:   Sources crawled: 27
+2026-03-18 06:19:21,849 [INFO] dealer_alert.runner:   Emails processed: 1
+2026-03-18 06:19:21,849 [INFO] dealer_alert.runner:   Social profiles: 0
+2026-03-18 06:19:21,849 [INFO] dealer_alert.runner:   Leads found: 0
+2026-03-18 06:19:21,850 [INFO] dealer_alert.runner:   New sources discovered: 0
+2026-03-18 06:19:21,850 [INFO] dealer_alert.runner:   Errors: 0
+2026-03-18 06:19:21,850 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 06:20:28,819 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 06:20:28,820 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 06:20:28,822 [INFO] dealer_alert.runner: Crawling 27 sources
+2026-03-18 06:20:29,259 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:20:29,356 [INFO] httpx: HTTP Request: GET https://www.nada.org/nada/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 06:20:29,356 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.nada.org/nada/press-releases: Client error '403 Forbidden' for url 'https://www.nada.org/nada/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:20:29,392 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/topic/dealers/ "HTTP/1.1 200 OK"
+2026-03-18 06:20:29,398 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.houstonchamber.com/news/: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.houstonchamber.com'. (_ssl.c:1032)
+2026-03-18 06:20:29,488 [INFO] httpx: HTTP Request: GET https://www.txiada.org/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:20:29,495 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.txiada.org/news: Client error '404 Not Found' for url 'https://www.txiada.org/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:20:29,515 [INFO] httpx: HTTP Request: GET https://www.penskeautomotive.com/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:20:29,515 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.penskeautomotive.com/news/: Client error '403 Forbidden' for url 'https://www.penskeautomotive.com/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:20:29,555 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:20:29,580 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:20:29,610 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 06:20:29,736 [INFO] httpx: HTTP Request: GET https://www.autonation.com/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 06:20:29,737 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.atlantachamber.com/news/: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)
+2026-03-18 06:20:29,739 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news "HTTP/1.1 200 OK"
+2026-03-18 06:20:29,924 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.autonation.com/press-releases: Client error '403 Forbidden' for url 'https://www.autonation.com/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:20:29,956 [INFO] httpx: HTTP Request: GET https://www.hendrickcars.com/news.htm "HTTP/1.1 200 OK"
+2026-03-18 06:20:36,823 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.phoenixchamber.com/news/: second argument (exceptions) must be a non-empty sequence
+2026-03-18 06:20:38,836 [ERROR] dealer_alert.runner: Crawl step failed: attempt to write a readonly database
+2026-03-18 06:20:38,837 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 06:20:39,710 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 06:20:40,176 [INFO] dealer_alert.collectors.email_collector: Found 5 unread emails
+2026-03-18 06:20:43,533 [INFO] dealer_alert.collectors.email_collector: Collected 5 emails as FetchResults
+2026-03-18 06:20:43,589 [INFO] dealer_alert.runner: Email check complete: 5 emails processed
+2026-03-18 06:20:43,589 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 06:20:43,592 [INFO] dealer_alert.runner: No social sources registered — skipping
+2026-03-18 06:20:43,592 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 06:20:43,951 [ERROR] dealer_alert.runner: Source promotion failed: attempt to write a readonly database
+2026-03-18 06:20:43,952 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 06:20:43,963 [INFO] dealer_alert.output.digest: CSV digest written to data\digests\digest_20260318_112043.csv
+2026-03-18 06:20:43,968 [INFO] dealer_alert.output.digest: JSON digest written to data\digests\digest_20260318_112043.json
+2026-03-18 06:20:43,968 [INFO] dealer_alert.runner: Digest: 90 leads (67 hot, 0 warm, 23 cold)
+2026-03-18 06:20:43,969 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 06:20:43,969 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 06:20:43,969 [INFO] dealer_alert.runner:   Duration: 15.2s
+2026-03-18 06:20:43,970 [INFO] dealer_alert.runner:   Sources crawled: 8
+2026-03-18 06:20:43,970 [INFO] dealer_alert.runner:   Emails processed: 5
+2026-03-18 06:20:43,971 [INFO] dealer_alert.runner:   Social profiles: 0
+2026-03-18 06:20:43,971 [INFO] dealer_alert.runner:   Leads found: 90
+2026-03-18 06:20:43,971 [INFO] dealer_alert.runner:   New sources discovered: 398
+2026-03-18 06:20:43,972 [INFO] dealer_alert.runner:   Errors: 7
+2026-03-18 06:20:43,972 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_112043.csv
+2026-03-18 06:20:43,972 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_112043.json
+2026-03-18 06:20:43,973 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 06:29:25,449 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 06:29:25,449 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 06:29:25,451 [INFO] dealer_alert.runner: Crawling 61 sources
+2026-03-18 06:29:25,865 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 06:29:25,868 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:29:25,880 [INFO] httpx: HTTP Request: GET https://www.penskeautomotive.com/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:29:25,881 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.penskeautomotive.com/news/: Client error '403 Forbidden' for url 'https://www.penskeautomotive.com/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:29:25,900 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/mazda-ceo-tom-donnelly-redesigned-cx5-sales-popular-consumers-dealers/813314/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:25,904 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:26,170 [INFO] httpx: HTTP Request: GET https://www.dealernews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:26,193 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ohio-based-dealership-group-moves-into-ultra-luxury-realm/811397/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:26,195 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/auto-lenders-share-dealers-affordability-dilemma/811217/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:26,215 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:26,293 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/topic/dealers/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:26,481 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ftc-warns-97-auto-dealership-groups-about-deceptive-pricing/814730/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:26,482 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/trump-vows-new-10-tariff-supreme-court-ruling/812846/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:26,550 [INFO] httpx: HTTP Request: GET https://dealernews.com/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:27,970 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/first-drive-mercedes-benz-c-class-electric/814850/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:28,166 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/about/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:28,428 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/how-creating-forddirect-helped-avert-a-potential-automaker-dealer-showdown/814211/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:28,527 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/feeds/news/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:28,671 [INFO] httpx: HTTP Request: GET https://www.lithiamotors.com/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:28,894 [INFO] httpx: HTTP Request: GET https://www.nada.org/nada/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 06:29:28,896 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.nada.org/nada/press-releases: Client error '403 Forbidden' for url 'https://www.nada.org/nada/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:29:28,927 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:28,979 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/lithia-zigs-toward-older-used-cars-while-others-zag/812631/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:28,997 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news "HTTP/1.1 200 OK"
+2026-03-18 06:29:29,254 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/press-release/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:29,256 [INFO] httpx: HTTP Request: GET https://www.lithiadriveway.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:29:29,391 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.lithiamotors.com/news: Client error '404 Not Found' for url 'https://www.lithiadriveway.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:29:29,671 [INFO] httpx: HTTP Request: GET https://www.fiada.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:29:29,756 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.fiada.com/news: Client error '404 Not Found' for url 'https://www.fiada.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:29:30,547 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ny-fed-says-subprime-auto-loans-gain-in-q4-but-remain-below-pre-pandemic-l/812000/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:30,574 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/penske-automotive-saw-premium-luxury-sales-miss-targets-in-q4-2025/812265/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:30,900 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/auto-dealers-seek-more-policy-wins-in-2026-including-curtailing-direct-sal/811741/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:31,062 [INFO] httpx: HTTP Request: GET https://www.autonation.com/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 06:29:31,064 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.autonation.com/press-releases: Client error '403 Forbidden' for url 'https://www.autonation.com/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:29:31,586 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.houstonchamber.com/news/: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.houstonchamber.com'. (_ssl.c:1032)
+2026-03-18 06:29:31,597 [INFO] httpx: HTTP Request: GET https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says "HTTP/1.1 200 OK"
+2026-03-18 06:29:31,797 [INFO] httpx: HTTP Request: GET https://www.ciada.org/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:32,069 [INFO] httpx: HTTP Request: GET https://www.cbtnews.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:32,328 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/supreme-court-tariff-ruling-auto-industry-reactions/812782/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:32,344 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/asbury-automotive-posts-record-revenues-despite-new-dms-ma-costs/811898/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:32,718 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ford-recalls-413K-explorer-suvs-rear-suspension-toe-link-nhtsa/814107/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:32,725 [INFO] httpx: HTTP Request: GET https://ciada.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:33,129 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:33,325 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/a-deal-is-a-deal-eu-halts-us-pact-over-trumps-new-global-tariff/812844/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:33,640 [INFO] httpx: HTTP Request: GET https://www.hendrickcars.com/news.htm "HTTP/1.1 200 OK"
+2026-03-18 06:29:33,843 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:33,875 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:33,992 [INFO] httpx: HTTP Request: GET https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/ "HTTP/1.1 404 Not Found"
+2026-03-18 06:29:34,032 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/: Client error '404 Not Found' for url 'https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:29:34,525 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/third-generation-dealers-branch-out-with-rbm-automotive-group/814386/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:34,607 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/inventory-increase-drives-profitable-2025-for-carvana/813895/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:34,933 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:35,014 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/GM-merging-dealer-cpo-program-with-carbravo-june2/813782/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:35,015 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/selfservice/event-listings/contact "HTTP/1.1 200 OK"
+2026-03-18 06:29:35,395 [INFO] httpx: HTTP Request: GET https://www.businesswire.com/portal/site/home/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:29:35,397 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.businesswire.com/portal/site/home/news/: Client error '403 Forbidden' for url 'https://www.businesswire.com/portal/site/home/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:29:35,651 [INFO] httpx: HTTP Request: GET https://www.dallaschamber.org/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:29:35,653 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dallaschamber.org/news/: Client error '403 Forbidden' for url 'https://www.dallaschamber.org/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:29:36,166 [INFO] httpx: HTTP Request: GET https://www.niada.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:36,188 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/press-release/get-started/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:36,204 [INFO] httpx: HTTP Request: GET https://www.txiada.org/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:29:36,205 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.txiada.org/news: Client error '404 Not Found' for url 'https://www.txiada.org/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:29:36,447 [INFO] httpx: HTTP Request: GET https://niada.com/dashboard/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:37,017 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/the-top-automotive-industry-trends-to-follow-in-2026/811030/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:37,057 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ford-motor-recalls-4M-trucks-suvs-trailer-module-fseries-nhtsa/814204/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:37,242 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/mitsubishi-dealership-acquisition-heralds-birth-of-new-auto-group-with-used/811400/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:37,420 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:37,880 [INFO] httpx: HTTP Request: GET https://www.uschamber.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:29:37,888 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.uschamber.com/news: Client error '404 Not Found' for url 'https://www.uschamber.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:29:37,942 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:38,032 [INFO] httpx: HTTP Request: GET https://www.phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:38,195 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:38,213 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:38,232 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:38,250 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:38,268 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:38,270 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.phoenixchamber.com/news/: Exceeded maximum allowed redirects.
+2026-03-18 06:29:38,645 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.atlantachamber.com/news/: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)
+2026-03-18 06:29:38,727 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/automakers-and-dealers-rely-on-each-other-can-they-get-along-better/812489/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:38,936 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/autonation-wants-cheaper-used-cars-but-not-too-cheap/812384/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:39,321 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ford-motor-recalls-640k-vehicles-for-wiper-motor-failures-nhtsa/814225/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:39,474 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+general+manager&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 06:29:39,479 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+general+manager&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+general+manager&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:29:39,481 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers/ "HTTP/1.1 302 Moved Temporarily"
+2026-03-18 06:29:39,767 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/dealers-seek-to-acquire-ferrari-dealers-ultra-luxury/813439/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:39,908 [INFO] httpx: HTTP Request: GET https://www.lachamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:40,160 [INFO] httpx: HTTP Request: GET http://lachamber.com/news/ "HTTP/1.1 302 Found"
+2026-03-18 06:29:40,465 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:29:40,645 [INFO] httpx: HTTP Request: GET https://lachamber.com/news/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:41,496 [INFO] httpx: HTTP Request: GET https://www.autonews.com/retail/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:42,202 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/ "HTTP/1.1 200 OK"
+2026-03-18 06:29:50,843 [ERROR] dealer_alert.runner: Crawl step failed: attempt to write a readonly database
+2026-03-18 06:29:50,845 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 06:29:51,986 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 06:29:52,477 [INFO] dealer_alert.collectors.email_collector: Found 0 unread emails
+2026-03-18 06:29:52,477 [INFO] dealer_alert.collectors.email_collector: Collected 0 emails as FetchResults
+2026-03-18 06:29:52,478 [INFO] dealer_alert.runner: Email check complete: 0 emails processed
+2026-03-18 06:29:52,478 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 06:29:52,487 [INFO] dealer_alert.runner: No social sources registered — skipping
+2026-03-18 06:29:52,487 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 06:29:53,384 [ERROR] dealer_alert.runner: Source promotion failed: attempt to write a readonly database
+2026-03-18 06:29:53,385 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 06:29:53,407 [INFO] dealer_alert.output.digest: CSV digest written to data\digests\digest_20260318_112953.csv
+2026-03-18 06:29:53,419 [INFO] dealer_alert.output.digest: JSON digest written to data\digests\digest_20260318_112953.json
+2026-03-18 06:29:53,421 [INFO] dealer_alert.runner: Digest: 189 leads (143 hot, 0 warm, 46 cold)
+2026-03-18 06:29:53,421 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 06:29:53,422 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 06:29:53,422 [INFO] dealer_alert.runner:   Duration: 28.0s
+2026-03-18 06:29:53,423 [INFO] dealer_alert.runner:   Sources crawled: 16
+2026-03-18 06:29:53,423 [INFO] dealer_alert.runner:   Emails processed: 0
+2026-03-18 06:29:53,424 [INFO] dealer_alert.runner:   Social profiles: 0
+2026-03-18 06:29:53,424 [INFO] dealer_alert.runner:   Leads found: 99
+2026-03-18 06:29:53,424 [INFO] dealer_alert.runner:   New sources discovered: 197
+2026-03-18 06:29:53,425 [INFO] dealer_alert.runner:   Errors: 5
+2026-03-18 06:29:53,425 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_112953.csv
+2026-03-18 06:29:53,426 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_112953.json
+2026-03-18 06:29:53,426 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 06:45:04,227 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 06:45:04,228 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 06:45:04,229 [INFO] dealer_alert.runner: Crawling 27 sources
+2026-03-18 06:45:04,613 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+general+manager&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:04,618 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+general+manager&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+general+manager&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:04,636 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:04,638 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:04,639 [INFO] httpx: HTTP Request: GET https://www.dallaschamber.org/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:04,645 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dallaschamber.org/news/: Client error '403 Forbidden' for url 'https://www.dallaschamber.org/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:04,679 [INFO] httpx: HTTP Request: GET https://www.autonation.com/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:04,681 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.autonation.com/press-releases: Client error '403 Forbidden' for url 'https://www.autonation.com/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:04,773 [INFO] httpx: HTTP Request: GET https://www.lithiamotors.com/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:04,850 [INFO] httpx: HTTP Request: GET https://houston.org/news "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:04,851 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://houston.org/news: Client error '403 Forbidden' for url 'https://houston.org/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:04,854 [INFO] httpx: HTTP Request: GET https://www.dealernews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:04,929 [INFO] httpx: HTTP Request: GET https://www.lithiadriveway.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:45:04,930 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.lithiamotors.com/news: Client error '404 Not Found' for url 'https://www.lithiadriveway.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:45:05,090 [INFO] httpx: HTTP Request: GET https://dealernews.com/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:05,605 [INFO] httpx: HTTP Request: GET https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/ "HTTP/1.1 404 Not Found"
+2026-03-18 06:45:05,613 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/: Client error '404 Not Found' for url 'https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:45:06,729 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:06,803 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:06,824 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:06,833 [INFO] httpx: HTTP Request: GET https://www.penskeautomotive.com/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:06,834 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.penskeautomotive.com/news/: Client error '403 Forbidden' for url 'https://www.penskeautomotive.com/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:07,005 [INFO] httpx: HTTP Request: GET https://metroatlantachamber.com/about-the-chamber/news-and-events/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:07,008 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://metroatlantachamber.com/about-the-chamber/news-and-events/: Client error '403 Forbidden' for url 'https://metroatlantachamber.com/about-the-chamber/news-and-events/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:07,161 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/topic/dealers/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:07,236 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:07,303 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:07,479 [INFO] httpx: HTTP Request: GET https://www.hendrickcars.com/news.htm "HTTP/1.1 200 OK"
+2026-03-18 06:45:07,508 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:07,546 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news "HTTP/1.1 200 OK"
+2026-03-18 06:45:08,574 [INFO] httpx: HTTP Request: GET https://www.txiada.org/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:09,024 [INFO] httpx: HTTP Request: GET https://www.businesswire.com/portal/site/home/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:09,025 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.businesswire.com/portal/site/home/news/: Client error '403 Forbidden' for url 'https://www.businesswire.com/portal/site/home/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:09,101 [INFO] httpx: HTTP Request: GET https://www.nada.org/nada/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 06:45:09,102 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.nada.org/nada/press-releases: Client error '403 Forbidden' for url 'https://www.nada.org/nada/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 06:45:09,237 [INFO] httpx: HTTP Request: GET https://www.phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:09,288 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:09,305 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:09,323 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:09,342 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:09,360 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:09,361 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.phoenixchamber.com/news/: Exceeded maximum allowed redirects.
+2026-03-18 06:45:09,436 [INFO] httpx: HTTP Request: GET https://www.cbtnews.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:09,793 [INFO] httpx: HTTP Request: GET https://www.niada.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:09,890 [INFO] httpx: HTTP Request: GET https://www.uschamber.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:45:09,909 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.uschamber.com/news: Client error '404 Not Found' for url 'https://www.uschamber.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:45:09,957 [INFO] httpx: HTTP Request: GET https://niada.com/dashboard/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:10,141 [INFO] httpx: HTTP Request: GET https://www.lachamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:10,323 [INFO] httpx: HTTP Request: GET https://www.fiada.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 06:45:10,369 [INFO] httpx: HTTP Request: GET http://lachamber.com/news/ "HTTP/1.1 302 Found"
+2026-03-18 06:45:10,420 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.fiada.com/news: Client error '404 Not Found' for url 'https://www.fiada.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 06:45:10,927 [INFO] httpx: HTTP Request: GET https://lachamber.com/news/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:11,441 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:11,593 [INFO] httpx: HTTP Request: GET https://www.ciada.org/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 06:45:11,684 [INFO] httpx: HTTP Request: GET https://ciada.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:11,737 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers/ "HTTP/1.1 302 Moved Temporarily"
+2026-03-18 06:45:11,800 [INFO] httpx: HTTP Request: GET https://www.autonews.com/retail/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:12,329 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/ "HTTP/1.1 200 OK"
+2026-03-18 06:45:19,809 [ERROR] dealer_alert.runner: Crawl step failed: attempt to write a readonly database
+2026-03-18 06:45:19,810 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 06:45:21,057 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 06:45:21,596 [INFO] dealer_alert.collectors.email_collector: Found 0 unread emails
+2026-03-18 06:45:21,597 [INFO] dealer_alert.collectors.email_collector: Collected 0 emails as FetchResults
+2026-03-18 06:45:21,599 [INFO] dealer_alert.runner: Email check complete: 0 emails processed
+2026-03-18 06:45:21,599 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 06:45:21,601 [INFO] dealer_alert.runner: No social sources registered — skipping
+2026-03-18 06:45:21,602 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 06:45:22,270 [INFO] dealer_alert.runner: Promoted 72 new sources to registry
+2026-03-18 06:45:22,270 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 06:45:22,279 [INFO] dealer_alert.output.digest: CSV digest written to data\digests\digest_20260318_114522.csv
+2026-03-18 06:45:22,285 [INFO] dealer_alert.output.digest: JSON digest written to data\digests\digest_20260318_114522.json
+2026-03-18 06:45:22,286 [INFO] dealer_alert.runner: Digest: 90 leads (67 hot, 0 warm, 23 cold)
+2026-03-18 06:45:22,286 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 06:45:22,287 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 06:45:22,287 [INFO] dealer_alert.runner:   Duration: 18.1s
+2026-03-18 06:45:22,287 [INFO] dealer_alert.runner:   Sources crawled: 15
+2026-03-18 06:45:22,288 [INFO] dealer_alert.runner:   Emails processed: 0
+2026-03-18 06:45:22,289 [INFO] dealer_alert.runner:   Social profiles: 0
+2026-03-18 06:45:22,289 [INFO] dealer_alert.runner:   Leads found: 90
+2026-03-18 06:45:22,289 [INFO] dealer_alert.runner:   New sources discovered: 604
+2026-03-18 06:45:22,290 [INFO] dealer_alert.runner:   Errors: 10
+2026-03-18 06:45:22,290 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_114522.csv
+2026-03-18 06:45:22,291 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_114522.json
+2026-03-18 06:45:22,291 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 07:14:57,507 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 07:14:57,507 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 07:14:57,508 [INFO] dealer_alert.runner: Crawling 27 sources
+2026-03-18 07:14:57,872 [INFO] httpx: HTTP Request: GET https://houston.org/news "HTTP/1.1 403 Forbidden"
+2026-03-18 07:14:57,872 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://houston.org/news: Client error '403 Forbidden' for url 'https://houston.org/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:14:57,886 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 07:14:57,893 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+now+hiring&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:14:57,906 [INFO] httpx: HTTP Request: GET https://www.penskeautomotive.com/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 07:14:57,907 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.penskeautomotive.com/news/: Client error '403 Forbidden' for url 'https://www.penskeautomotive.com/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:14:57,914 [INFO] httpx: HTTP Request: GET https://www.dallaschamber.org/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 07:14:57,915 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dallaschamber.org/news/: Client error '403 Forbidden' for url 'https://www.dallaschamber.org/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:14:57,961 [INFO] httpx: HTTP Request: GET https://www.autonation.com/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 07:14:57,963 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.autonation.com/press-releases: Client error '403 Forbidden' for url 'https://www.autonation.com/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:14:57,973 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:14:58,025 [INFO] httpx: HTTP Request: GET https://metroatlantachamber.com/about-the-chamber/news-and-events/ "HTTP/1.1 403 Forbidden"
+2026-03-18 07:14:58,026 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://metroatlantachamber.com/about-the-chamber/news-and-events/: Client error '403 Forbidden' for url 'https://metroatlantachamber.com/about-the-chamber/news-and-events/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:14:58,094 [INFO] httpx: HTTP Request: GET https://www.lithiamotors.com/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:14:58,191 [INFO] httpx: HTTP Request: GET https://www.dealernews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:14:58,291 [INFO] httpx: HTTP Request: GET https://www.lithiadriveway.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 07:14:58,292 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.lithiamotors.com/news: Client error '404 Not Found' for url 'https://www.lithiadriveway.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 07:14:58,361 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/topic/dealers/ "HTTP/1.1 200 OK"
+2026-03-18 07:14:58,377 [INFO] httpx: HTTP Request: GET https://dealernews.com/ "HTTP/1.1 200 OK"
+2026-03-18 07:14:58,606 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:14:58,630 [INFO] httpx: HTTP Request: GET https://www.autoremarketing.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:00,036 [INFO] httpx: HTTP Request: GET https://www.nada.org/nada/press-releases "HTTP/1.1 403 Forbidden"
+2026-03-18 07:15:00,036 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.nada.org/nada/press-releases: Client error '403 Forbidden' for url 'https://www.nada.org/nada/press-releases'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:15:00,118 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,137 [INFO] httpx: HTTP Request: GET https://www.businesswire.com/portal/site/home/news/ "HTTP/1.1 403 Forbidden"
+2026-03-18 07:15:00,138 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.businesswire.com/portal/site/home/news/: Client error '403 Forbidden' for url 'https://www.businesswire.com/portal/site/home/news/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:15:00,160 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news "HTTP/1.1 200 OK"
+2026-03-18 07:15:00,506 [INFO] httpx: HTTP Request: GET https://www.txiada.org/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:00,573 [INFO] httpx: HTTP Request: GET https://www.phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,618 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,632 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,646 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,660 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,674 [INFO] httpx: HTTP Request: GET https://phoenixchamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,675 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.phoenixchamber.com/news/: Exceeded maximum allowed redirects.
+2026-03-18 07:15:00,852 [INFO] httpx: HTTP Request: GET https://www.hendrickcars.com/news.htm "HTTP/1.1 200 OK"
+2026-03-18 07:15:00,941 [INFO] httpx: HTTP Request: GET https://www.niada.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:00,954 [INFO] httpx: HTTP Request: GET https://www.cbtnews.com/feed/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:01,069 [INFO] httpx: HTTP Request: GET https://niada.com/dashboard/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:01,250 [INFO] httpx: HTTP Request: GET https://www.uschamber.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 07:15:01,255 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.uschamber.com/news: Client error '404 Not Found' for url 'https://www.uschamber.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 07:15:01,328 [INFO] httpx: HTTP Request: GET https://www.fiada.com/news "HTTP/1.1 404 Not Found"
+2026-03-18 07:15:01,420 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.fiada.com/news: Client error '404 Not Found' for url 'https://www.fiada.com/news'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 07:15:02,308 [INFO] httpx: HTTP Request: GET https://www.lachamber.com/news/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:02,405 [INFO] httpx: HTTP Request: GET https://www.ciada.org/news "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:02,578 [INFO] httpx: HTTP Request: GET http://lachamber.com/news/ "HTTP/1.1 302 Found"
+2026-03-18 07:15:02,598 [INFO] httpx: HTTP Request: GET https://www.indeed.com/jobs?q=dealership+general+manager&sort=date "HTTP/1.1 403 Forbidden"
+2026-03-18 07:15:02,601 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indeed.com/jobs?q=dealership+general+manager&sort=date: Client error '403 Forbidden' for url 'https://www.indeed.com/jobs?q=dealership+general+manager&sort=date'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-03-18 07:15:02,774 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:02,955 [INFO] httpx: HTTP Request: GET https://www.chicagolandchamber.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:03,070 [INFO] httpx: HTTP Request: GET https://lachamber.com/news/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:03,094 [INFO] httpx: HTTP Request: GET https://www.autonews.com/dealers/ "HTTP/1.1 302 Moved Temporarily"
+2026-03-18 07:15:03,186 [INFO] httpx: HTTP Request: GET https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/ "HTTP/1.1 404 Not Found"
+2026-03-18 07:15:03,205 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/: Client error '404 Not Found' for url 'https://www.prnewswire.com/news-releases/automotive-transportation-latest-news/automobile-dealers-list/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-18 07:15:03,308 [INFO] httpx: HTTP Request: GET https://ciada.org/news/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:04,645 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/ "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:15:05,090 [INFO] httpx: HTTP Request: GET https://www.autonews.com/retail/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:10,575 [INFO] httpx: HTTP Request: GET https://www.usedcarnews.com/index.php/en/ "HTTP/1.1 200 OK"
+2026-03-18 07:15:23,383 [INFO] dealer_alert.runner: Crawl complete: 27 sources, 107 leads
+2026-03-18 07:15:23,384 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 07:15:24,529 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 07:15:25,077 [INFO] dealer_alert.collectors.email_collector: Found 1 unread emails
+2026-03-18 07:15:25,691 [INFO] dealer_alert.collectors.email_collector: Collected 1 emails as FetchResults
+2026-03-18 07:15:25,695 [ERROR] dealer_alert.runner: Email step failed: FOREIGN KEY constraint failed
+2026-03-18 07:15:25,695 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 07:15:25,697 [INFO] dealer_alert.runner: No social sources registered — skipping
+2026-03-18 07:15:25,697 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 07:15:26,297 [INFO] dealer_alert.runner: Promoted 100 new sources to registry
+2026-03-18 07:15:26,297 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 07:15:26,304 [INFO] dealer_alert.output.digest: CSV digest written to data\digests\digest_20260318_121526.csv
+2026-03-18 07:15:26,309 [INFO] dealer_alert.output.digest: JSON digest written to data\digests\digest_20260318_121526.json
+2026-03-18 07:15:26,309 [INFO] dealer_alert.runner: Digest: 107 leads (84 hot, 0 warm, 23 cold)
+2026-03-18 07:15:26,310 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 07:15:26,310 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 07:15:26,311 [INFO] dealer_alert.runner:   Duration: 28.8s
+2026-03-18 07:15:26,311 [INFO] dealer_alert.runner:   Sources crawled: 27
+2026-03-18 07:15:26,311 [INFO] dealer_alert.runner:   Emails processed: 1
+2026-03-18 07:15:26,312 [INFO] dealer_alert.runner:   Social profiles: 0
+2026-03-18 07:15:26,312 [INFO] dealer_alert.runner:   Leads found: 107
+2026-03-18 07:15:26,314 [INFO] dealer_alert.runner:   New sources discovered: 2253
+2026-03-18 07:15:26,314 [INFO] dealer_alert.runner:   Errors: 15
+2026-03-18 07:15:26,315 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_121526.csv
+2026-03-18 07:15:26,315 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_121526.json
+2026-03-18 07:15:26,315 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 07:30:39,370 [INFO] dealer_alert.runner: Starting pipeline run (dry_run=False, crawl_limit=100)
+2026-03-18 07:30:39,371 [INFO] dealer_alert.runner: Step 1/5: Web crawl
+2026-03-18 07:30:39,372 [INFO] dealer_alert.runner: Crawling 100 sources
+2026-03-18 07:30:39,966 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ftc-warns-97-auto-dealership-groups-about-deceptive-pricing/814730/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,063 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.indianachamber.org: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.indianachamber.org'. (_ssl.c:1032)
+2026-03-18 07:30:40,069 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/bdo-hosts-2022-giving-guide-reception "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,101 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/when-recognition-changes-everything-the-real-power-of-novo-awards "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,103 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/2024-goals-conference-showcasing-impact-and-vision-for-south-floridas-future "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,142 [INFO] httpx: HTTP Request: GET https://www.indianachamber.com "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,145 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-webinar-series-what-it-takes-be-table-part-1 "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,215 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/auto-lenders-share-dealers-affordability-dilemma/811217/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,217 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-webinar-series-part-2-talent-management "HTTP/1.1 200 OK"
+2026-03-18 07:30:40,354 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/auto-dealers-seek-more-policy-wins-in-2026-including-curtailing-direct-sal/811741/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,266 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/about/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,318 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/join-us-at-the-2024-sand-in-my-shoes-award-ceremony-to-honor-trish-and-dan-bell-on-october-9th "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,401 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-dade-county-workforce-housing-press-release "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,430 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.chamberofindiana.com: [Errno 11001] getaddrinfo failed
+2026-03-18 07:30:42,464 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-dade-county-workforce-housing-resource-guide-2nd-edition "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,598 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/a-very-rare-opportunity-fletcher-jones-nabs-bmw-dealership-in-southern-c/812653/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,654 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-music-project-experiencing-significant-health-insurance-savings-switching-ght "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,706 [INFO] httpx: HTTP Request: GET https://indianachamber.com "HTTP/1.1 301 Moved Permanently"
+2026-03-18 07:30:42,723 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/unique-greater-miami-chamber-health-plan-aims-go-statewide "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,759 [INFO] httpx: HTTP Request: GET https://www.indianachamber.com/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:42,943 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/autonation-wants-cheaper-used-cars-but-not-too-cheap/812384/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:44,486 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/third-generation-dealers-branch-out-with-rbm-automotive-group/814386/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:44,601 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-county-introduces-local-solutions-for-metrobus-riders-impacted-by-new-better-bus-network-service-press-release "HTTP/1.1 200 OK"
+2026-03-18 07:30:44,680 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/low-taxes-and-high-temperatures-lure-finance-firms-miami "HTTP/1.1 200 OK"
+2026-03-18 07:30:44,738 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-navigating-covid-19 "HTTP/1.1 200 OK"
+2026-03-18 07:30:44,850 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-april-trustee-luncheon-spotlighting-women-sports-leadership "HTTP/1.1 200 OK"
+2026-03-18 07:30:44,879 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/messis-world-cup-triumph-leaves-america-his-last-frontier-conquer-inter-miami-waits "HTTP/1.1 200 OK"
+2026-03-18 07:30:44,956 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/chamber-bringing-professors-teach-leadership-miami-classes "HTTP/1.1 200 OK"
+2026-03-18 07:30:45,115 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/press-release/get-started/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:45,222 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/christine-duffy-was-rejected-flight-attendant-now-she-runs-carnival-cruise-line "HTTP/1.1 200 OK"
+2026-03-18 07:30:45,454 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/lithia-zigs-toward-older-used-cars-while-others-zag/812631/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:46,842 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/seven-illustrious-m-dcps-graduates-inducted-alumni-hall-fame-class-2023 "HTTP/1.1 200 OK"
+2026-03-18 07:30:46,845 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-honor-legislative-champion-ana-maria-rodriguez "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,013 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/new-political-action-action-committee-targets-november "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,038 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/new-car-affordability-challenges-may-drive-used-vehicle-demand/814450/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,164 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/selfservice/event-listings/contact "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,165 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/watch-ppp-loans-ask-experts-what-you-need-know-get-funded "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,324 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/encuesta-en-el-sur-de-florida-revela-como-los-negocios-se-han-ido-recuperando-tras-el-golpe "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,520 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-1-0-0 "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,785 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ohio-based-dealership-group-moves-into-ultra-luxury-realm/811397/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:47,933 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-americas-linkage-mission-israel-0-0 "HTTP/1.1 200 OK"
+2026-03-18 07:30:48,957 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/university-miami-joins-elite-group-north-americas-top-research-institutions "HTTP/1.1 200 OK"
+2026-03-18 07:30:49,098 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/press-release/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:49,262 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ford-recalls-413K-explorer-suvs-rear-suspension-toe-link-nhtsa/814107/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:49,336 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/fixing-florida-property-insurance-mess-slow-process "HTTP/1.1 200 OK"
+2026-03-18 07:30:49,449 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/greater-miami-chamber-commerce-launches-political-action-committee-pac-advancing "HTTP/1.1 200 OK"
+2026-03-18 07:30:49,473 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-september-trustee-luncheon-ft-20th-annual-novo-awards "HTTP/1.1 200 OK"
+2026-03-18 07:30:49,532 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/inventory-increase-drives-profitable-2025-for-carvana/813895/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:49,879 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-voters-overwhelmingly-approve-school-districts-measure-boost-teacher-pay "HTTP/1.1 200 OK"
+2026-03-18 07:30:50,203 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/your-voice-matters-take-our-member-satisfaction-survey-now "HTTP/1.1 200 OK"
+2026-03-18 07:30:50,388 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/GM-merging-dealer-cpo-program-with-carbravo-june2/813782/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:51,253 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/the-healing-heroes-of-miami-celebrating-26-years-of-healthcare "HTTP/1.1 200 OK"
+2026-03-18 07:30:51,420 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/hr-insights-summit-celebrating-excellence-and-innovation-in-human-resources "HTTP/1.1 200 OK"
+2026-03-18 07:30:51,539 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/tri-rail-start-test-runs-brightlines-miamicentral "HTTP/1.1 200 OK"
+2026-03-18 07:30:51,614 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-progress-foundation-announces-name-change-to-greater-miami-chamber-foundation-press-release "HTTP/1.1 200 OK"
+2026-03-18 07:30:51,718 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/trump-vows-new-10-tariff-supreme-court-ruling/812846/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:51,797 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/a-deal-is-a-deal-eu-halts-us-pact-over-trumps-new-global-tariff/812844/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:51,967 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/gmcc-south-florida-progress-foundation-launch-surfside-small-business-recovery-fund "HTTP/1.1 200 OK"
+2026-03-18 07:30:52,094 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/feeds/news/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:52,579 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/ultimate-ceo-hector-ponte-importance-tackling-issues-early-good-communication "HTTP/1.1 200 OK"
+2026-03-18 07:30:52,855 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/4th-survey-results-impact-covid-19 "HTTP/1.1 200 OK"
+2026-03-18 07:30:53,704 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-chamber-of-commerce-celebrates-legislative-triumphs "HTTP/1.1 200 OK"
+2026-03-18 07:30:53,907 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-tech-and-real-estate-city-future-real-estate-summit-part-1 "HTTP/1.1 200 OK"
+2026-03-18 07:30:53,933 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/automakers-and-dealers-rely-on-each-other-can-they-get-along-better/812489/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:54,239 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ford-motor-recalls-640k-vehicles-for-wiper-motor-failures-nhtsa/814225/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:54,247 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/penske-automotive-saw-premium-luxury-sales-miss-targets-in-q4-2025/812265/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:54,316 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/demand-smart-cities-two-part-webinar-series "HTTP/1.1 200 OK"
+2026-03-18 07:30:54,317 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/how-miami-achieved-nations-lowest-homelessness-rate "HTTP/1.1 200 OK"
+2026-03-18 07:30:54,707 [INFO] httpx: HTTP Request: GET https://dealernews.com/news/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:54,921 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/wall-street-heads-south-florida-braces-gold-plated-makeover "HTTP/1.1 200 OK"
+2026-03-18 07:30:55,391 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/mitsubishi-dealership-acquisition-heralds-birth-of-new-auto-group-with-used/811400/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:55,990 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/childcare-as-an-economic-imperative "HTTP/1.1 200 OK"
+2026-03-18 07:30:56,434 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/americas-linkage-program-visits-colombia "HTTP/1.1 200 OK"
+2026-03-18 07:30:56,508 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/dealers-seek-to-acquire-ferrari-dealers-ultra-luxury/813439/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:56,511 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ny-fed-says-subprime-auto-loans-gain-in-q4-but-remain-below-pre-pandemic-l/812000/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:56,523 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/south-florida-region-designated-as-national-tech-hub-for-resilience-press-release "HTTP/1.1 200 OK"
+2026-03-18 07:30:56,622 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/first-drive-mercedes-benz-c-class-electric/814850/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:56,704 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-dade-united-way-uber-partner-help-people-get-covid-vaccination-sites "HTTP/1.1 200 OK"
+2026-03-18 07:30:57,005 [INFO] httpx: HTTP Request: GET https://www.thedrive.com/news/scout-can-do-better-customer-experience-without-dealerships-ceo-says "HTTP/1.1 200 OK"
+2026-03-18 07:30:57,079 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/desantis-allow-covid-vaccines-teachers-law-enforcement-50-and-older-expects-175k-new-johnson "HTTP/1.1 200 OK"
+2026-03-18 07:30:58,020 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/sonic-automotive-has-big-plans-to-revitalize-used-car-unit/813572/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:58,264 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-distribute-85m-business-grants-and-grocery-gift-cards-covid-relief "HTTP/1.1 200 OK"
+2026-03-18 07:30:58,498 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/the-top-automotive-industry-trends-to-follow-in-2026/811030/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:58,756 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/supreme-court-tariff-ruling-auto-industry-reactions/812782/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:58,870 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dadecountychamber.org: [Errno 11001] getaddrinfo failed
+2026-03-18 07:30:59,054 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/covid-19-daily-activities-and-going-out "HTTP/1.1 200 OK"
+2026-03-18 07:30:59,152 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/subaru-takes-a-233m-loss-points-to-tariffs/811661/ "HTTP/1.1 200 OK"
+2026-03-18 07:30:59,458 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/rising-hiring-demand-collides-shortage-workers "HTTP/1.1 200 OK"
+2026-03-18 07:30:59,727 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/how-creating-forddirect-helped-avert-a-potential-automaker-dealer-showdown/814211/ "HTTP/1.1 200 OK"
+2026-03-18 07:31:00,858 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/mazda-ceo-tom-donnelly-redesigned-cx5-sales-popular-consumers-dealers/813314/ "HTTP/1.1 200 OK"
+2026-03-18 07:31:00,930 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/asbury-automotive-posts-record-revenues-despite-new-dms-ma-costs/811898/ "HTTP/1.1 200 OK"
+2026-03-18 07:31:01,080 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/ford-motor-recalls-4M-trucks-suvs-trailer-module-fseries-nhtsa/814204/ "HTTP/1.1 200 OK"
+2026-03-18 07:31:01,229 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/irish-consulate-aims-expand-irish-presence-america-catering-miami-trade-nexus "HTTP/1.1 200 OK"
+2026-03-18 07:31:01,256 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.chamberofdadecounty.com: [Errno 11001] getaddrinfo failed
+2026-03-18 07:31:01,704 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/alfred-sanchez-president-ceo-of-the-gmcc-engages-in-a-thought-provoking-discussion-on-mobility-challenges-with-javier-a.-betancourt-the-executive-director-o-1708631120186 "HTTP/1.1 200 OK"
+2026-03-18 07:31:01,784 [INFO] httpx: HTTP Request: GET https://www.wardsauto.com/news/matt-bowers-buys-dealership-from-asbury-automotive-group-expanding-empire/813157/ "HTTP/1.1 200 OK"
+2026-03-18 07:31:02,431 [INFO] httpx: HTTP Request: GET https://www.linkedin.com/company/wardsauto/ "HTTP/1.1 200 OK"
+2026-03-18 07:31:03,327 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/developer-breaks-ground-apartments-opa-locka "HTTP/1.1 200 OK"
+2026-03-18 07:31:03,514 [INFO] httpx: HTTP Request: GET https://www.miamichamber.com/news/miami-prevails-ft-nikkei-ranking-expanding-appeal-beyond-latin-america "HTTP/1.1 200 OK"
+2026-03-18 07:31:19,719 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://www.dadecountychamber.com: All connection attempts failed
+2026-03-18 07:31:21,470 [WARNING] dealer_alert.fetcher.html: HTML fetch failed for https://dadecountychamber.com: All connection attempts failed
+2026-03-18 07:31:36,657 [INFO] dealer_alert.runner: Crawl complete: 100 sources, 125 leads
+2026-03-18 07:31:36,659 [INFO] dealer_alert.runner: Step 2/5: Email check
+2026-03-18 07:31:39,247 [INFO] dealer_alert.collectors.email_collector: Refreshing expired Gmail token...
+2026-03-18 07:31:39,610 [INFO] dealer_alert.collectors.email_collector: Gmail token cached at data\gmail_token.json
+2026-03-18 07:31:39,613 [INFO] googleapiclient.discovery_cache: file_cache is only supported with oauth2client<4.0.0
+2026-03-18 07:31:40,141 [INFO] dealer_alert.collectors.email_collector: Found 0 unread emails
+2026-03-18 07:31:40,141 [INFO] dealer_alert.collectors.email_collector: Collected 0 emails as FetchResults
+2026-03-18 07:31:40,142 [INFO] dealer_alert.runner: Email check complete: 0 emails processed
+2026-03-18 07:31:40,142 [INFO] dealer_alert.runner: Step 3/5: Social check
+2026-03-18 07:31:40,921 [INFO] httpx: HTTP Request: GET https://www.linkedin.com/company/wardsauto/ "HTTP/1.1 200 OK"
+2026-03-18 07:31:42,955 [INFO] dealer_alert.collectors.social_monitor: Social monitor collected 1 results from 1 URLs
+2026-03-18 07:31:42,959 [INFO] dealer_alert.runner: Social check complete: 1 profiles
+2026-03-18 07:31:42,959 [INFO] dealer_alert.runner: Step 4/5: Promote discovered sources
+2026-03-18 07:31:43,557 [INFO] dealer_alert.runner: Promoted 100 new sources to registry
+2026-03-18 07:31:43,557 [INFO] dealer_alert.runner: Step 5/5: Generate digest
+2026-03-18 07:31:43,650 [INFO] dealer_alert.output.digest: CSV digest written to data\digests\digest_20260318_123143.csv
+2026-03-18 07:31:43,651 [INFO] dealer_alert.output.digest: JSON digest written to data\digests\digest_20260318_123143.json
+2026-03-18 07:31:43,652 [INFO] dealer_alert.runner: Digest: 9 leads (9 hot, 0 warm, 0 cold)
+2026-03-18 07:31:43,652 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 07:31:43,653 [INFO] dealer_alert.runner: PIPELINE RUN COMPLETE
+2026-03-18 07:31:43,653 [INFO] dealer_alert.runner:   Duration: 64.3s
+2026-03-18 07:31:43,653 [INFO] dealer_alert.runner:   Sources crawled: 100
+2026-03-18 07:31:43,654 [INFO] dealer_alert.runner:   Emails processed: 0
+2026-03-18 07:31:43,654 [INFO] dealer_alert.runner:   Social profiles: 1
+2026-03-18 07:31:43,654 [INFO] dealer_alert.runner:   Leads found: 125
+2026-03-18 07:31:43,655 [INFO] dealer_alert.runner:   New sources discovered: 1585
+2026-03-18 07:31:43,655 [INFO] dealer_alert.runner:   Errors: 6
+2026-03-18 07:31:43,655 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_123143.csv
+2026-03-18 07:31:43,656 [INFO] dealer_alert.runner:   Digest: data\digests\digest_20260318_123143.json
+2026-03-18 07:31:43,656 [INFO] dealer_alert.runner: ============================================================
+2026-03-18 07:33:31,680 [INFO] dealer_alert.output.report: Report written to data\digests\report_20260318_123331.html
