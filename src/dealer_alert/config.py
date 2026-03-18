@@ -17,8 +17,8 @@ def _bool(val: str) -> bool:
 class Config:
     """Application configuration loaded from environment."""
 
-    # Database
-    database_path: Path = Path("data/dealer_alert.db")
+    # Database — defaults to AppData to avoid OneDrive sync conflicts
+    database_path: Path = Path.home() / "AppData" / "Local" / "DealerAlertBot" / "dealer_alert.db"
 
     # Crawl settings
     max_concurrent_fetches: int = 10
@@ -27,8 +27,8 @@ class Config:
     user_agent: str = "DealerAlertBot/1.0 (lead-research)"
     max_redirects: int = 5
 
-    # Output
-    output_dir: Path = Path("data/digests")
+    # Output — also in AppData to avoid OneDrive sync conflicts
+    output_dir: Path = Path.home() / "AppData" / "Local" / "DealerAlertBot" / "digests"
     output_format: str = "both"  # csv, json, or both
 
     # Logging
@@ -49,7 +49,9 @@ class Config:
     # Email collector (Gmail OAuth2)
     email_address: str = ""
     gmail_credentials_file: Path = Path("client_secret.json")
-    gmail_token_file: Path = Path("data/gmail_token.json")
+    gmail_token_file: Path = (
+        Path.home() / "AppData" / "Local" / "DealerAlertBot" / "gmail_token.json"
+    )
     email_max_per_run: int = 100
     email_mark_read: bool = True
 
@@ -69,13 +71,23 @@ class Config:
         warm_raw = os.getenv("WARM_LEAD_KEYWORDS", "")
 
         return cls(
-            database_path=Path(os.getenv("DATABASE_PATH", "data/dealer_alert.db")),
+            database_path=Path(
+                os.getenv(
+                    "DATABASE_PATH",
+                    str(Path.home() / "AppData" / "Local" / "DealerAlertBot" / "dealer_alert.db"),
+                )
+            ),
             max_concurrent_fetches=int(os.getenv("MAX_CONCURRENT_FETCHES", "10")),
             fetch_timeout_seconds=int(os.getenv("FETCH_TIMEOUT_SECONDS", "30")),
             crawl_delay_seconds=float(os.getenv("CRAWL_DELAY_SECONDS", "2")),
             user_agent=os.getenv("USER_AGENT", "DealerAlertBot/1.0 (lead-research)"),
             max_redirects=int(os.getenv("MAX_REDIRECTS", "5")),
-            output_dir=Path(os.getenv("OUTPUT_DIR", "data/digests")),
+            output_dir=Path(
+                os.getenv(
+                    "OUTPUT_DIR",
+                    str(Path.home() / "AppData" / "Local" / "DealerAlertBot" / "digests"),
+                )
+            ),
             output_format=os.getenv("OUTPUT_FORMAT", "both"),
             log_level=os.getenv("LOG_LEVEL", "INFO"),
             log_file=Path(log_file_raw) if log_file_raw else None,
@@ -99,7 +111,7 @@ class Config:
             gmail_token_file=Path(
                 os.getenv(
                     "GMAIL_TOKEN_FILE",
-                    "data/gmail_token.json",
+                    str(Path.home() / "AppData" / "Local" / "DealerAlertBot" / "gmail_token.json"),
                 )
             ),
             email_max_per_run=int(os.getenv("EMAIL_MAX_PER_RUN", "100")),
